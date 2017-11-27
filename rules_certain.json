@@ -174,13 +174,13 @@
      },
      { 
         "rule":"11",
-         "non_empty":["titre.value","titreSource.value","datePubli.value","auteur.value"],
+         "non_empty":["titre.value","titreSourceJ.value","datePubli.value","auteur.value"],
          "query":{
             
                  "bool": {
                          "must": [
                              {"match": {"titre.normalized": "titre.value"}},
-                             {"match": {"titreSource.normalized": "titreSource.value"}},
+                             {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
@@ -206,13 +206,13 @@
      },
      { 
         "rule":"13",
-         "non_empty":["titre.value","titreSource.value","datePubli.value","auteur_init.value"],
+         "non_empty":["titre.value","titreSourceJ.value","datePubli.value","auteur_init.value"],
          "query":{
             
                 "bool": {
                         "must": [
                             {"match": {"titre.normalized": "titre.value"}},
-                            {"match": {"titreSource.normalized": "titreSource.value"}},
+                            {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteur_init.normalized": "auteur_init.value"}}
                         ],
@@ -494,13 +494,13 @@
      },
      { 
         "rule":"31",
-         "non_empty":["titrefr.value","titreSource.value","datePubli.value","auteur.value"],
+         "non_empty":["titrefr.value","titreSourceJ.value","datePubli.value","auteur.value"],
          "query":{
             
                  "bool": {
                          "must": [
                              {"match": {"titrefr.normalized": "titrefr.value"}},
-                             {"match": {"titreSource.normalized": "titreSource.value"}},
+                             {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
@@ -526,13 +526,13 @@
      },
      { 
         "rule":"33",
-         "non_empty":["titrefr.value","titreSource.value","datePubli.value","auteur_init.value"],
+         "non_empty":["titrefr.value","titreSourceJ.value","datePubli.value","auteur_init.value"],
          "query":{
             
                 "bool": {
                         "must": [
                             {"match": {"titrefr.normalized": "titrefr.value"}},
-                            {"match": {"titreSource.normalized": "titreSource.value"}},
+                            {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteur_init.normalized": "auteur_init.value"}}
                         ],
@@ -694,13 +694,13 @@
      },
      { 
         "rule":"43",
-         "non_empty":["titreen.value","titreSource.value","datePubli.value","auteur.value"],
+         "non_empty":["titreen.value","titreSourceJ.value","datePubli.value","auteur.value"],
          "query":{
             
                  "bool": {
                          "must": [
                              {"match": {"titreen.normalized": "titreen.value"}},
-                             {"match": {"titreSource.normalized": "titreSource.value"}},
+                             {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
@@ -726,13 +726,13 @@
      },
      { 
         "rule":"45",
-         "non_empty":["titreen.value","titreSource.value","datePubli.value","auteur_init.value"],
+         "non_empty":["titreen.value","titreSourceJ.value","datePubli.value","auteur_init.value"],
          "query":{
             
                 "bool": {
                         "must": [
                             {"match": {"titreen.normalized": "titreen.value"}},
-                            {"match": {"titreSource.normalized": "titreSource.value"}},
+                            {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteur_init.normalized": "auteur_init.value"}}
                         ],
@@ -1014,13 +1014,13 @@
      },
      { 
         "rule":"63",
-         "non_empty":["titre.value","titreSource.value","datePubli.value","auteur.value"],
+         "non_empty":["titre.value","titreSourceJ.value","datePubli.value","auteur.value"],
          "query":{
             
                  "bool": {
                          "must": [
                              {"match": {"titre.normalized50": "titre.value"}},
-                             {"match": {"titreSource.normalized": "titreSource.value"}},
+                             {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
@@ -1046,13 +1046,13 @@
      },
      { 
         "rule":"65",
-         "non_empty":["titre.value","titreSource.value","datePubli.value","auteur_init.value"],
+         "non_empty":["titre.value","titreSourceJ.value","datePubli.value","auteur_init.value"],
          "query":{
             
                 "bool": {
                         "must": [
                             {"match": {"titre.normalized50": "titre.value"}},
-                            {"match": {"titreSource.normalized": "titreSource.value"}},
+                            {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteur_init.normalized": "auteur_init.value"}}
                         ],
@@ -1334,13 +1334,13 @@
      },
      { 
         "rule":"83",
-         "non_empty":["titrefr.value","titreSource.value","datePubli.value","auteur.value"],
+         "non_empty":["titrefr.value","titreSourceJ.value","datePubli.value","auteur.value"],
          "query":{
             
                  "bool": {
                          "must": [
                              {"match": {"titrefr.normalized50": "titrefr.value"}},
-                             {"match": {"titreSource.normalized": "titreSource.value"}},
+                             {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
@@ -1366,13 +1366,13 @@
      },
      { 
         "rule":"85",
-         "non_empty":["titrefr.value","titreSource.value","datePubli.value","auteur_init.value"],
+         "non_empty":["titrefr.value","titreSourceJ.value","datePubli.value","auteur_init.value"],
          "query":{
             
                 "bool": {
                         "must": [
                             {"match": {"titrefr.normalized50": "titrefr.value"}},
-                            {"match": {"titreSource.normalized": "titreSource.value"}},
+                            {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteur_init.normalized": "auteur_init.value"}}
                         ],
@@ -1534,13 +1534,13 @@
      },
      { 
         "rule":"95",
-         "non_empty":["titreen.value","titreSource.value","datePubli.value","auteur.value"],
+         "non_empty":["titreen.value","titreSourceJ.value","datePubli.value","auteur.value"],
          "query":{
             
                  "bool": {
                          "must": [
                              {"match": {"titreen.normalized50": "titreen.value"}},
-                             {"match": {"titreSource.normalized": "titreSource.value"}},
+                             {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
@@ -1566,13 +1566,13 @@
      },
      { 
         "rule":"97",
-         "non_empty":["titreen.value","titreSource.value","datePubli.value","auteur_init.value"],
+         "non_empty":["titreen.value","titreSourceJ.value","datePubli.value","auteur_init.value"],
          "query":{
             
                 "bool": {
                         "must": [
                             {"match": {"titreen.normalized50": "titreen.value"}},
-                            {"match": {"titreSource.normalized": "titreSource.value"}},
+                            {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteur_init.normalized": "auteur_init.value"}}
                         ],
@@ -1734,13 +1734,13 @@
      },
      { 
         "rule":"107",
-         "non_empty":["titre.value","titreSource.value","datePubli.value","auteur.value"],
+         "non_empty":["titre.value","titreSourceJ.value","datePubli.value","auteur.value"],
          "query":{
             
                  "bool": {
                          "must": [
                              {"match": {"titre.normalized75": "titre.value"}},
-                             {"match": {"titreSource.normalized": "titreSource.value"}},
+                             {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
@@ -1766,13 +1766,13 @@
      },
      { 
         "rule":"109",
-         "non_empty":["titre.value","titreSource.value","datePubli.value","auteur_init.value"],
+         "non_empty":["titre.value","titreSourceJ.value","datePubli.value","auteur_init.value"],
          "query":{
             
                 "bool": {
                         "must": [
                             {"match": {"titre.normalized75": "titre.value"}},
-                            {"match": {"titreSource.normalized": "titreSource.value"}},
+                            {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteur_init.normalized": "auteur_init.value"}}
                         ],
@@ -2054,13 +2054,13 @@
      },
      { 
         "rule":"127",
-         "non_empty":["titrefr.value","titreSource.value","datePubli.value","auteur.value"],
+         "non_empty":["titrefr.value","titreSourceJ.value","datePubli.value","auteur.value"],
          "query":{
             
                  "bool": {
                          "must": [
                              {"match": {"titrefr.normalized75": "titrefr.value"}},
-                             {"match": {"titreSource.normalized": "titreSource.value"}},
+                             {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
@@ -2086,13 +2086,13 @@
      },
      { 
         "rule":"129",
-         "non_empty":["titrefr.value","titreSource.value","datePubli.value","auteur_init.value"],
+         "non_empty":["titrefr.value","titreSourceJ.value","datePubli.value","auteur_init.value"],
          "query":{
             
                 "bool": {
                         "must": [
                             {"match": {"titrefr.normalized75": "titrefr.value"}},
-                            {"match": {"titreSource.normalized": "titreSource.value"}},
+                            {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteur_init.normalized": "auteur_init.value"}}
                         ],
@@ -2254,13 +2254,13 @@
      },
      { 
         "rule":"139",
-         "non_empty":["titreen.value","titreSource.value","datePubli.value","auteur.value"],
+         "non_empty":["titreen.value","titreSourceJ.value","datePubli.value","auteur.value"],
          "query":{
             
                  "bool": {
                          "must": [
                              {"match": {"titreen.normalized75": "titreen.value"}},
-                             {"match": {"titreSource.normalized": "titreSource.value"}},
+                             {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
@@ -2286,13 +2286,13 @@
      },
      { 
         "rule":"141",
-         "non_empty":["titreen.value","titreSource.value","datePubli.value","auteur_init.value"],
+         "non_empty":["titreen.value","titreSourceJ.value","datePubli.value","auteur_init.value"],
          "query":{
             
                 "bool": {
                         "must": [
                             {"match": {"titreen.normalized75": "titreen.value"}},
-                            {"match": {"titreSource.normalized": "titreSource.value"}},
+                            {"match": {"titreSourceJ.normalized": "titreSourceJ.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteur_init.normalized": "auteur_init.value"}}
                         ],
