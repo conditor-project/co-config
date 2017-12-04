@@ -125,6 +125,7 @@
     { 
         "rule":"8",
          "non_empty":["titre.value","issn.value","numero.value","page.value","datePubli.value"],
+         "is_empty":["volume.value"],
          "query":{
             
                  "bool": {
@@ -142,6 +143,7 @@
      { 
         "rule":"9",
          "non_empty":["titre.value","issn.value","volume.value","page.value","datePubli.value"],
+         "is_empty":["numero.value"],
          "query":{
             
                  "bool": {
@@ -255,6 +257,7 @@
      { 
         "rule":"16",
          "non_empty":["titre.value","eissn.value","volume.value","page.value","datePubli.value"],
+         "is_empty":["numero.value"],
          "query":{
             
                  "bool": {
@@ -272,6 +275,7 @@
      { 
         "rule":"17",
          "non_empty":["titre.value","eissn.value","numero.value","page.value","datePubli.value"],
+         "is_empty":["volume.value"],
          "query":{
             
                  "bool": {
