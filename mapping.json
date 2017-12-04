@@ -42,12 +42,12 @@
                 },
                 "trunc_50":{
                     "type":"pattern_replace",
-                    "pattern":".*([0-9a-zA-Z]{50}).*",
+                    "pattern":"([0-9a-zA-Z]{50}).*",
                     "replacement":"$1"
                 },
                 "trunc_75":{
                     "type":"pattern_replace",
-                    "pattern":".*([0-9a-zA-Z]{75}).*",
+                    "pattern":"([0-9a-zA-Z]{75}).*",
                     "replacement":"$1"
                 }
             },
