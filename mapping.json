@@ -110,6 +110,9 @@
                 "idConditor":{
                     "type":"keyword"
                 },
+                "idIngest":{
+                    "type":"keyword"
+                },
                 "auteur": {
                     "properties":{
                         "value":{
@@ -397,7 +400,18 @@
                     }
                 },
                 "duplicate":{
-                    "type":"nested"
+                    "type":"nested",
+                    "properties":{
+                        "idConditor":{
+                            "type":"keyword"
+                        },
+                        "rules":{
+                            "type":"text"
+                        },
+                        "idIngest":{
+                            "type":"keyword"   
+                        }
+                    }
                 },
                 "idChain":{
                     "type":"keyword"
