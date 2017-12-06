@@ -18,7 +18,7 @@
                 "spacenum":{
                     "type": "pattern_replace",
                     "pattern": "[^0-9]",
-                    "replacement":" "
+                    "replacement":"_"
                 },
                 "num":{
                     "type": "pattern_replace",
@@ -37,7 +37,7 @@
                 },
                 "firstnum":{
                     "type": "pattern_replace",
-                    "pattern": ".*([0-9]+).*",
+                    "pattern": "^[_]*([0-9]+)[_]*.*",
                     "replacement":"$1"
                 },
                 "trunc_50":{
@@ -89,7 +89,7 @@
                 },
                 "volume:normalizer":{
                     "type":"custom",
-                    "char_filter":["firstnum"],
+                    "char_filter":["spacenum","firstnum"],
                     "filter":["lowercase"]
                 },
                 "numero:normalizer":{
