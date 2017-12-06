@@ -124,7 +124,7 @@
                         }
                     }
                 },
-                "auteur_init": {
+                "auteurInit": {
                     "properties":{
                         "value":{
                             "type":"text"
@@ -146,7 +146,7 @@
                         }
                     }
                 },
-                "idhal": {
+                "idHal": {
                     "properties":{
                         "value":{
                             "type":"text"
@@ -157,7 +157,7 @@
                         }
                     }
                 },
-                "idprodinra": {
+                "idProdinra": {
                     "properties":{
                         "value":{
                             "type":"text"
@@ -171,7 +171,7 @@
                 "halauthorid": {
                     "type":"nested"
                 },
-                "orcid": {
+                "orcId": {
                     "properties":{
                         "value":{
                             "type":"text"
@@ -182,7 +182,7 @@
                         }
                     }
                 },
-                "researcherid": {
+                "researcherId": {
                     "properties":{
                         "value":{
                             "type":"text"
@@ -215,7 +215,7 @@
                         }
                     }
                 },
-                "pubmed": {
+                "pubmedId": {
                     "properties":{
                         "value":{
                             "type":"text"
@@ -452,7 +452,7 @@
                         }
                     }
                 },
-                "date_creation":{
+                "dateCreation":{
                     "type":"date",
                     "format": "yyy-MM-dd HH:mm:ss||yyy-MM-dd||epoch_millis"
                 }
