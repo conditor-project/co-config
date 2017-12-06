@@ -408,6 +408,9 @@
                         "rules":{
                             "type":"text"
                         },
+                        "rules_keyword":{
+                            "type":"keyword"
+                        },
                         "idIngest":{
                             "type":"keyword"   
                         }
