@@ -15,7 +15,14 @@
         "HDR":{"type":"Autre"},
         "UNDEFINED":{"type":"Autre"},
         "DOUV":{"type":"Autre"},
-        "SON":{"type":"Autre"}
+        "SON":{"type":"Autre"},
+        "SOFTWARE":{"type":"Autre"},
+        "VIDEO":{"type":"Autre"},
+        "IMG":{"type":"Autre"},
+        "MEM":{"type":"Autre"},
+        "PRESCONF":{"type":"Autre"},
+        "OTHERREPORT":{"type":"Autre"},
+        "NOTE":{"type":"Autre"}
     }
 },
 {   "source":"wos",
