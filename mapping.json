@@ -110,7 +110,10 @@
                 "idConditor":{
                     "type":"keyword"
                 },
-                "idIngest":{
+                "ingestId":{
+                    "type":"keyword"
+                },
+                "ingestBaseName":{
                     "type":"keyword"
                 },
                 "auteur": {
