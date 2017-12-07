@@ -116,6 +116,10 @@
                 "ingestBaseName":{
                     "type":"keyword"
                 },
+                "path":{
+                    "type":"text",
+                    "index":false
+                },
                 "auteur": {
                     "properties":{
                         "value":{
