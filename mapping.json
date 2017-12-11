@@ -456,6 +456,9 @@
                         "normalized":{   
                             "type":"keyword",
                             "normalizer":"datePubli:normalizer"
+                        },
+                        "time": {
+                          "type":"date"
                         }
                     }
                 },
