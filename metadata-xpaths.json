@@ -92,7 +92,7 @@
   { "name":"halAutorId",
     "type":"iteration",
     "nb":"all",
-    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='halAuthorId']"},
+    "path":"//TEI:body//TEI:biblFull//TEI:idno[lower-case@type='halauthorid']"},
   { "name":"orcId",
     "type":"standard",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[lower-case(@type)='orcid']/text()"},
