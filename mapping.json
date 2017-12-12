@@ -55,6 +55,28 @@
                 "my_asciifolding":{
                     "type":"asciifolding",
                     "preserve_original" : false
+                },
+                "truncate50":{
+                    "type":"truncate",
+                    "length":50
+                },
+                "truncate75":{
+                    "type":"truncate",
+                    "length":75
+                }
+            },
+            "analyzer":{
+                "analyzer:trunc75":{
+                    "type":"custom",
+                    "tokenizer":"keyword",
+                    "char_filter":["whitespace_remove","punctuation_remove"],
+                    "filter":["lowercase","my_asciifolding","truncate75"]   
+                },
+                "analyzer:trunc50":{
+                    "type":"custom",
+                    "tokenizer":"keyword",
+                    "char_filter":["whitespace_remove","punctuation_remove"],
+                    "filter":["lowercase","my_asciifolding","truncate50"]   
                 }
             },
             "normalizer":{
@@ -334,12 +356,12 @@
                             "normalizer":"titre:normalizer"
                         },
                         "normalized50":{
-                            "type":"keyword",
-                            "normalizer":"titre50:normalizer"
+                            "type":"text",
+                            "analyzer":"analyzer:trunc50"
                         },
                         "normalized75":{
-                            "type":"keyword",
-                            "normalizer":"titre75:normalizer"
+                            "type":"text",
+                            "analyzer":"analyzer:trunc75"
                         }
                     }
                 },
@@ -353,12 +375,12 @@
                             "normalizer":"titre:normalizer"
                         },
                         "normalized50":{
-                            "type":"keyword",
-                            "normalizer":"titre50:normalizer"
+                            "type":"text",
+                            "analyzer":"analyzer:trunc50"
                         },
                         "normalized75":{
-                            "type":"keyword",
-                            "normalizer":"titre75:normalizer"
+                            "type":"text",
+                            "analyzer":"analyzer:trunc75"
                         }
                     }
                 },
@@ -372,12 +394,12 @@
                             "normalizer":"titre:normalizer"
                         },
                         "normalized50":{
-                            "type":"keyword",
-                            "normalizer":"titre50:normalizer"
+                            "type":"text",
+                            "analyzer":"analyzer:trunc50"
                         },
                         "normalized75":{
-                            "type":"keyword",
-                            "normalizer":"titre75:normalizer"
+                            "type":"text",
+                            "analyzer":"analyzer:trunc75"
                         }
                     }
                 },
