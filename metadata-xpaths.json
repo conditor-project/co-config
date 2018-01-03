@@ -25,6 +25,23 @@
       ]
     }
   },
+  { "name":"auteurFull",
+    "type":"bloc",
+    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']/TEI:persName",
+    "separateur":"",
+    "bloc":{
+      "separateur":" ",
+      "type":"iteration",
+      "nb":"all",
+      "champs":[{
+        "name":"surname",
+        "path":"//TEI:surname"},
+        {
+          "name":"forename",
+          "path":"//TEI:forename"}
+      ]
+    }
+  },
   { "name":"auteurInit",
     "type":"bloc",
     "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut']/TEI:persName",
@@ -127,6 +144,10 @@
   { "name":"artNo",
     "type":"standard",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='artNo']/text()"},
+  { "name":"articleNo",
+    "type":"standard",
+    "path":"//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='articleNo']/text()"
+  },
   { "name":"bibCode",
     "type":"standard",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='bibcode']/text()"},
