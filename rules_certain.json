@@ -2230,7 +2230,7 @@
                             {"match": {"page.normalized": "page.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}}
                         ],
-                        "_name":"titreen75+issn+volume+numero+page+annee"
+                        "_name":"Ti_75_ENG+issn+volume+numero+page+annee"
                 }
         }    
     },
@@ -2248,7 +2248,7 @@
                              {"match": {"page.normalized": "page.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}}
                          ],
-                         "_name":"titreen75+issn+numero+page+annee"
+                         "_name":"Ti_75_ENG+issn+numero+page+annee"
                  }
          }    
      },
@@ -2266,7 +2266,7 @@
                              {"match": {"page.normalized": "page.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}}
                          ],
-                         "_name":"titreen75+issn+volume+page+annee"
+                         "_name":"Ti_75_ENG+issn+volume+page+annee"
                  }
          }    
      },
@@ -2282,7 +2282,7 @@
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
-                         "_name":"titreen75+issn+auteur+annee"
+                         "_name":"Ti_75_ENG+issn+auteur+annee"
                  }
          }    
      },
@@ -2298,7 +2298,7 @@
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
-                         "_name":"titreen75+titre Source+auteur+annee"
+                         "_name":"Ti_75_ENG+Ti_Source+auteur+annee"
                  }
          }    
      },
@@ -2314,7 +2314,7 @@
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteurInit.normalized": "auteurInit.value"}}
                         ],
-                        "_name":"titreen75+issn+ (prénom initiale)+annee"
+                        "_name":"Ti_75_ENG+issn+ auteur_init+annee"
                 }
          }    
      },
@@ -2330,7 +2330,7 @@
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteurInit.normalized": "auteurInit.value"}}
                         ],
-                        "_name":"titreen75+titre Source+auteur (prénom initiale)+annee"
+                        "_name":"Ti_75_ENG+Ti_Source+auteur_init+annee"
                 }
          }    
      },
@@ -2346,7 +2346,7 @@
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteurInit.normalized": "auteurInit.value"}}
                         ],
-                        "_name":"titreen75+eissn+ (prénom initiale)+annee"
+                        "_name":"Ti_75_ENG+eissn+ auteur_init+annee"
                 }
          }    
      },
@@ -2362,7 +2362,7 @@
                              {"match": {"datePubli.normalized": "datePubli.value"}},
                              {"match": {"auteur.normalized": "auteur.value"}}
                          ],
-                         "_name":"titreen75+eissn+auteur+annee"
+                         "_name":"Ti_75_ENG+eissn+auteur+annee"
                  }
          }    
      },
@@ -2380,7 +2380,7 @@
                              {"match": {"page.normalized": "page.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}}
                          ],
-                         "_name":"titreen75+eissn+volume+page+annee"
+                         "_name":"Ti_75_ENG+eissn+volume+page+annee"
                  }
          }    
      },
@@ -2398,7 +2398,7 @@
                              {"match": {"page.normalized": "page.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}}
                          ],
-                         "_name":"titreen75+eissn+numero+page+annee"
+                         "_name":"Ti_75_ENG+eissn+numero+page+annee"
                  }
          }    
      },
@@ -2416,7 +2416,7 @@
                             {"match": {"page.normalized": "page.value"}},
                             {"match": {"datePubli.normalized": "datePubli.value"}}
                         ],
-                        "_name":"titreen75+eissn+volume+numero+page+annee"
+                        "_name":"Ti_75_ENG+eissn+volume+numero+page+annee"
                 }
         }    
     },
