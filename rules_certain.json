@@ -1086,7 +1086,7 @@
                             {"match": {"datePubli.normalized": "datePubli.value"}},
                             {"match": {"auteurInit.normalized": "auteurInit.value"}}
                         ],
-                        "_name":"titre+eissn+ (prénom initiale)+annee"
+                        "_name":"Ti50+eissn+auteurInit+annee"
                 }
          }    
      },
@@ -1720,7 +1720,7 @@
                              {"match": {"page.normalized": "page.value"}},
                              {"match": {"datePubli.normalized": "datePubli.value"}}
                          ],
-                         "_name":"titre+issn+numero+page+annee"
+                         "_name":"titre75+issn+numero+page+annee"
                  }
          }    
      },
@@ -2840,7 +2840,7 @@
                        {"match":{"auteur.normalized":"auteur.value"}},
                        {"match":{"datePubli.normalized":"datePubli.value"}}  
                    ],
-                   "_name":"titre75+auteur+datePubli"
+                   "_name":"titre75+auteur+annee"
            } 
         }
     },
@@ -2966,7 +2966,7 @@
                       {"match":{"auteurInit.normalized":"auteurInit.value"}},
                       {"match":{"datePubli.normalized":"datePubli.value"}}  
                   ],
-                  "_name":"titre75+auteurInit+datePubli"
+                  "_name":"titre75+auteurInit+annee"
           } 
        }
    },
@@ -2980,7 +2980,7 @@
                       {"match":{"auteurInit.normalized":"auteurInit.value"}},
                       {"match":{"datePubli.normalized":"datePubli.value"}}  
                   ],
-                  "_name":"titre50+auteurInit+datePubli"
+                  "_name":"titre50+auteurInit+annee"
           } 
        }
    }
