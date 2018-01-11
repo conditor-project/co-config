@@ -605,15 +605,7 @@
           "type":"nested"
         },
         "typeDocumentFlat": {
-          "properties":{
-            "value":{
-              "type":"text",
-              "index":true
-            },
-            "normalized":{
-              "type":"keyword"
-            }
-          }
+          "type":"keyword"
         },
         "typeConditor":{
           "properties":{
@@ -644,15 +636,7 @@
           }
         },
         "duplicateRules":{
-          "properties":{
-            "value":{
-              "type":"text",
-              "index":true
-            },
-            "normalized":{
-              "type":"keyword"
-            }
-          }
+          "type":"keyword"
         },
         "idChain":{
           "type":"keyword"
