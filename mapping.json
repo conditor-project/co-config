@@ -417,6 +417,17 @@
                 "typeDocument": {
                     "type":"nested"
                 },
+                "typeDocumentFlat": {
+                    "properties":{
+                        "value":{
+                            "type":"text",
+                            "index":true
+                        },
+                        "raw":{
+                            "type":"keyword"
+                        }
+                      }
+                  },
                 "typeConditor":{
                     "properties":{
                         "value":{
@@ -442,6 +453,17 @@
                         },
                         "idIngest":{
                             "type":"keyword"   
+                        }
+                    }
+                },
+                "duplicateRules": {
+                    "properties":{
+                        "value":{
+                            "type":"text",
+                            "index":true
+                        },
+                        "raw":{
+                            "type":"keyword"
                         }
                     }
                 },

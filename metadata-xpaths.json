@@ -117,5 +117,10 @@
   { "name":"typeDocument",
     "type":"iteration",
     "nb":"all",
+    "path":"//TEI:body//TEI:biblFull//TEI:classCode[@scheme='typology']"},
+  { "name":"typeDocumentFlat",
+    "type":"iteration",
+    "nb":"all",
     "path":"//TEI:body//TEI:biblFull//TEI:classCode[@scheme='typology']"}
+
 ]
