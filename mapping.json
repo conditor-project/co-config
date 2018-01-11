@@ -321,6 +321,193 @@
                         }
                     }
                 },
+                "isni": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "artNo": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "bibCode": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "eisbn": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "ensam": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "ineris": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "inspire": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "ird": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "irstea": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "localRef": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "oatao": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "okina": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "otherNumber": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "pubmedCentral": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "sciencespo": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "reportNumber": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
+                "cern": {
+                    "properties":{
+                        "value":{
+                            "type":"text"
+                        },
+                        "normalized":{   
+                            "type":"keyword",
+                            "normalizer":"id:normalizer"
+                        }
+                    }
+                },
                 "numero": {
                     "properties":{
                         "value":{
