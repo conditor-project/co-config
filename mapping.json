@@ -175,6 +175,9 @@
             }
           }
         },
+        "hasDoi": {
+          "type": "boolean"
+        },
         "idHal": {
           "properties":{
             "value":{
@@ -617,6 +620,9 @@
               "type":"keyword"
             }
           }
+        },
+        "isDuplicate": {
+          "type": "boolean"
         },
         "duplicate":{
           "type":"nested",
