@@ -10,7 +10,7 @@
                         {"match": {"titre.normalized": "titre.value"}},
                         {"match": {"doi.normalized": "doi.value"}}
                     ],
-                    "_name":"titre entier+doi"
+                    "_name":"titre entier + doi"
                 }
         }
     },
