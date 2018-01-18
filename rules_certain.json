@@ -25,7 +25,7 @@
                             {"match": {"titre.normalized": "titre.value"}},
                             {"match": {"ut.normalized": "ut.value"}}
                         ],
-                        "_name":"titre entier+ut"
+                        "_name":"Titre complet+ut"
                 }
         }
     },
