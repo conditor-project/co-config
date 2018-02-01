@@ -522,6 +522,17 @@
             }
           }
         },
+        "meetAbstrNo":{
+          "properties":{
+           "value":{
+             "type":"text"
+           },
+           "normalized":{
+            "type":"keyword",
+            "normalizer":"numero:normalizer" 
+           }
+          }
+        },
         "page": {
           "properties":{
             "value":{
@@ -591,6 +602,17 @@
               "type":"text",
               "analyzer":"analyzer:trunc75"
             }
+          }
+        },
+        "meetingTitle":{
+          "properties":{
+           "value":{
+            "type":"text" 
+           },
+           "normalized":{
+            "type":"keyword",
+            "normalizer":"titre:normalizer" 
+           }
           }
         },
         "volume": {
