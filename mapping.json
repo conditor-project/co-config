@@ -164,7 +164,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25"
+              "similarity":"BM25_sim"
             },
             "normalized":{
               "type":"keyword",
