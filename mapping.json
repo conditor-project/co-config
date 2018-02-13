@@ -2,12 +2,13 @@
   "settings":{
     "index": {
       "number_of_replicas": 0,
-      "similarity":[{
-        "BM25_sim":{
+      "similarity":{
+        "bm25_sim":{
           "type":"BM25",
-          "b":0
+          "b":0.75,
+          "k1":1.2
         }
-      }]
+      }
     },
     "analysis":{
       "char_filter":{
