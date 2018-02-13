@@ -6,8 +6,7 @@
         "BM25_sim":{
           "type":"BM25",
           "k1":"1.2",
-          "b":"0.75",
-          "discount_overlaps": true
+          "b":"0.75"
         }
       }
     },
@@ -165,7 +164,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"BM25"
             },
             "normalized":{
               "type":"keyword",
