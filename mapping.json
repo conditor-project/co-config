@@ -3,7 +3,7 @@
     "index": {
       "number_of_replicas": 0,
       "similarity":{
-        "BM25_sim":{
+        "my_sim":{
           "type":"BM25",
           "k1":"1.2",
           "b":"0.75",
@@ -154,7 +154,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -166,7 +166,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -178,7 +178,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -193,7 +193,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -205,7 +205,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -220,7 +220,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -232,7 +232,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -244,7 +244,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -256,7 +256,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -268,7 +268,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -280,7 +280,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -292,7 +292,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -304,7 +304,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -316,7 +316,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -328,7 +328,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -340,7 +340,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -352,7 +352,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -364,7 +364,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -376,7 +376,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -388,7 +388,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -400,7 +400,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -412,7 +412,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -424,7 +424,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -436,7 +436,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -448,7 +448,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -460,7 +460,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -472,7 +472,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -484,7 +484,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -496,7 +496,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -508,7 +508,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -520,7 +520,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -532,7 +532,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -544,7 +544,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -556,7 +556,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -568,7 +568,7 @@
           "properties":{
            "value":{
              "type":"text",
-             "similarity":"BM25_sim"
+             "similarity":"my_sim"
            },
            "normalized":{
             "type":"keyword",
@@ -580,7 +580,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -595,7 +595,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -615,7 +615,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -635,7 +635,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -655,7 +655,7 @@
           "properties":{
            "value":{
             "type":"text",
-            "similarity":"BM25_sim"
+            "similarity":"my_sim"
            },
            "normalized":{
             "type":"keyword",
@@ -667,7 +667,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -725,7 +725,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -737,7 +737,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
@@ -749,7 +749,7 @@
           "properties":{
             "value":{
               "type":"text",
-              "similarity":"BM25_sim"
+              "similarity":"my_sim"
             },
             "normalized":{
               "type":"keyword",
