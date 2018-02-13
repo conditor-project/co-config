@@ -1,7 +1,15 @@
 {
   "settings":{
     "index": {
-      "number_of_replicas": 0
+      "number_of_replicas": 0,
+      "similarity":{
+        "BM25_sim":{
+          "type":"BM25",
+          "k1":"1.2",
+          "b":"0.75",
+          "discount_overlaps": true
+        }
+      }
     },
     "analysis":{
       "char_filter":{
