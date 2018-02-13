@@ -164,7 +164,8 @@
         "auteurInit": {
           "properties":{
             "value":{
-              "type":"text"
+              "type":"text",
+              "similarity":"BM25_sim"
             },
             "normalized":{
               "type":"keyword",
