@@ -1,15 +1,7 @@
 {
   "settings":{
     "index": {
-      "number_of_replicas": 0,
-      "similarity":{
-        "my_sim":{
-          "type":"BM25",
-          "k1":"1.2",
-          "b":"0.75",
-          "discount_overlaps": true
-        }
-      }
+      "number_of_replicas": 0
     },
     "analysis":{
       "char_filter":{
@@ -153,8 +145,7 @@
         "auteur": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -165,8 +156,7 @@
         "auteurInit": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -177,8 +167,7 @@
         "doi": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -192,8 +181,7 @@
         "idHal": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -204,8 +192,7 @@
         "idProdinra": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -219,8 +206,7 @@
         "orcId": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -231,8 +217,7 @@
         "researcherId": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -243,8 +228,7 @@
         "viaf": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -255,8 +239,7 @@
         "arxiv": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -267,8 +250,7 @@
         "pubmedId": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -279,8 +261,7 @@
         "nnt": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -291,8 +272,7 @@
         "patentNumber": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -303,8 +283,7 @@
         "ut": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -315,8 +294,7 @@
         "issn": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -327,8 +305,7 @@
         "eissn": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -339,8 +316,7 @@
         "isbn": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -351,8 +327,7 @@
         "isni": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -363,8 +338,7 @@
         "artNo": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -375,8 +349,7 @@
         "bibCode": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -387,8 +360,7 @@
         "eisbn": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -399,8 +371,7 @@
         "ensam": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -411,8 +382,7 @@
         "ineris": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -423,8 +393,7 @@
         "inspire": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -435,8 +404,7 @@
         "ird": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -447,8 +415,7 @@
         "irstea": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -459,8 +426,7 @@
         "localRef": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -471,8 +437,7 @@
         "oatao": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -483,8 +448,7 @@
         "okina": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -495,8 +459,7 @@
         "otherNumber": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -507,8 +470,7 @@
         "pubmedCentral": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -519,8 +481,7 @@
         "sciencespo": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -531,8 +492,7 @@
         "reportNumber": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -543,8 +503,7 @@
         "cern": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -555,8 +514,7 @@
         "numero": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -567,8 +525,7 @@
         "meetAbstrNo":{
           "properties":{
            "value":{
-             "type":"text",
-             "similarity":"my_sim"
+             "type":"text"
            },
            "normalized":{
             "type":"keyword",
@@ -579,8 +536,7 @@
         "page": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -594,8 +550,7 @@
         "titre": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -614,8 +569,7 @@
         "titrefr": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -634,8 +588,7 @@
         "titreen": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -654,8 +607,7 @@
         "meetingTitle":{
           "properties":{
            "value":{
-            "type":"text",
-            "similarity":"my_sim"
+            "type":"text" 
            },
            "normalized":{
             "type":"keyword",
@@ -666,8 +618,7 @@
         "volume": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -724,8 +675,7 @@
         "titreSourceM": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -736,8 +686,7 @@
         "titreSourceJ": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -748,8 +697,7 @@
         "datePubli": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_sim"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
