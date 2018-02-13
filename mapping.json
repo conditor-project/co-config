@@ -5,7 +5,7 @@
       "similarity":{
         "BM25_sim":{
           "type":"BM25",
-          "b":0.75
+          "b":0
         }
       }
     },
