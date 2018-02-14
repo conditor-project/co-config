@@ -1,14 +1,11 @@
 {
   "settings":{
     "index": {
-      "number_of_replicas": 0,
       "similarity":{
         "my_similarity":{
-          "type" : "DFR",
-          "basic_model" : "g",
-          "after_effect" : "l",
-          "normalization" : "h2",
-          "normalization.h2.c" : "3.0"
+          "type" : "BM25",
+          "b" : 0.75,
+          "k1":1.2
         }
       }
     },
