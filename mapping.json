@@ -154,7 +154,8 @@
         "auteur": {
           "properties":{
             "value":{
-              "type":"text"
+              "type":"text",
+              "similarity":"my_similarity"
             },
             "normalized":{
               "type":"keyword",
