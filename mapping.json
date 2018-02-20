@@ -4,7 +4,7 @@
       "number_of_replicas": 0
     },
     "similarity":{
-      "my_similarity":{
+      "bm25_similarity":{
         "type" : "BM25",
         "b" : 0.75,
         "k1":1.2
@@ -152,8 +152,7 @@
         "auteur": {
           "properties":{
             "value":{
-              "type":"text",
-              "similarity":"my_similarity"
+              "type":"text"
             },
             "normalized":{
               "type":"keyword",
@@ -667,6 +666,9 @@
               "type":"keyword"
             },
             "idIngest":{
+              "type":"keyword"
+            },
+            "source":{
               "type":"keyword"
             }
           }
