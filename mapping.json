@@ -665,7 +665,7 @@
             "rules_keyword":{
               "type":"keyword"
             },
-            "idIngest":{
+            "ingestId":{
               "type":"keyword"
             },
             "source":{
