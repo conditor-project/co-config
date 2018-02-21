@@ -73,12 +73,6 @@
         }
       },
       "analyzer":{
-        "analyzer:trunc75":{
-          "type":"custom",
-          "tokenizer":"keyword",
-          "char_filter":["whitespace_remove","punctuation_remove"],
-          "filter":["lowercase","my_asciifolding","truncate75"]
-        },
         "analyzer:trunc50":{
           "type":"custom",
           "tokenizer":"keyword",
@@ -93,11 +87,6 @@
           "filter":["lowercase","my_asciifolding"]
         },
         "titre50:normalizer":{
-          "type":"custom",
-          "char_filter":["whitespace_remove","punctuation_remove","trunc_50"],
-          "filter":["lowercase","my_asciifolding"]
-        },
-        "titre75:normalizer":{
           "type":"custom",
           "char_filter":["whitespace_remove","punctuation_remove","trunc_50"],
           "filter":["lowercase","my_asciifolding"]
@@ -566,10 +555,6 @@
             "normalized50":{
               "type":"text",
               "analyzer":"analyzer:trunc50"
-            },
-            "normalized75":{
-              "type":"text",
-              "analyzer":"analyzer:trunc75"
             }
           }
         },
@@ -585,10 +570,6 @@
             "normalized50":{
               "type":"text",
               "analyzer":"analyzer:trunc50"
-            },
-            "normalized75":{
-              "type":"text",
-              "analyzer":"analyzer:trunc75"
             }
           }
         },
@@ -604,10 +585,6 @@
             "normalized50":{
               "type":"text",
               "analyzer":"analyzer:trunc50"
-            },
-            "normalized75":{
-              "type":"text",
-              "analyzer":"analyzer:trunc75"
             }
           }
         },
@@ -661,9 +638,6 @@
             },
             "rules":{
               "type":"text"
-            },
-            "rules_keyword":{
-              "type":"keyword"
             },
             "ingestId":{
               "type":"keyword"
