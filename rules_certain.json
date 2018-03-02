@@ -3981,24 +3981,6 @@
 		}
 	},
 	{
-		"rule": "246",
-		"non_empty": ["doi.value", "nnt.value"],
-		"query": {
-			"bool": {
-				"must": [{
-					"match": {
-						"doi.normalized": "doi.value"
-					}
-				}, {
-					"match": {
-						"nnt.normalized": "nnt.value"
-					}
-				}],
-				"_name": "1 ID : doi+nnt"
-			}
-		}
-	},
-	{
 		"rule": "247",
 		"non_empty": ["titre.value", "isbn.value", "page.value"],
 		"query": {
@@ -4054,7 +4036,7 @@
 	},
 	{
 		"rule": "250",
-		"non_empty": ["titre.value", "titreSourceM.value", "page.value"],
+		"non_empty": ["titre.value", "titreSourceM.value", "page.value", "datePubli.value"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4065,6 +4047,14 @@
 					"match": {
 						"titreSourceM.normalized": "titreSourceM.value"
 					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
 				}],
 				"_name": "2 Collation : Ti_50+Ti_Source+page+annee"
 			}
@@ -4072,7 +4062,7 @@
 	},
 	{
 		"rule": "251",
-		"non_empty": ["titrefr.value", "titreSourceM.value", "page.value"],
+		"non_empty": ["titrefr.value", "titreSourceM.value", "page.value", "datePubli.value"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4083,6 +4073,14 @@
 					"match": {
 						"titreSourceM.normalized": "titreSourceM.value"
 					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
 				}],
 				"_name": "2 Collation : Ti_50_FRE+Ti_Source+page+annee"
 			}
@@ -4090,7 +4088,7 @@
 	},
 	{
 		"rule": "252",
-		"non_empty": ["titreen.value", "titreSourceM.value", "page.value"],
+		"non_empty": ["titreen.value", "titreSourceM.value", "page.value", "datePubli.value"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4100,6 +4098,14 @@
 				}, {
 					"match": {
 						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
 					}
 				}],
 				"_name": "2 Collation : Ti_50_ENG+Ti_Source+page+annee"
@@ -5699,6 +5705,3186 @@
 					}
 				}],
 				"_name": "2 Collation : Ti+Ti_SourceM+volume+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "305",
+		"non_empty": ["titreen.value", "meetingTitle.value", "numero.value", "page.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "306",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "page.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+volume+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "307",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "numero.value", "page.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "308",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "page.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+volume+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "309",
+		"non_empty": ["titre.value", "meetingTitle.value", "numero.value", "page.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "310",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "page.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+volume+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "311",
+		"non_empty": ["titreen.value", "meetingTitle.value", "numero.value", "page.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "312",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "page.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+volume+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "313",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "numero.value", "page.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "314",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "page.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+volume+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "315",
+		"non_empty": ["titre.value", "meetingTitle.value", "numero.value", "page.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "316",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "page.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+volume+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "317",
+		"non_empty": ["titreen.value", "meetingTitle.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "318",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+volume+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "319",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "320",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+volume+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "321",
+		"non_empty": ["titre.value", "meetingTitle.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "322",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+volume+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "323",
+		"non_empty": ["titreen.value", "meetingTitle.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "324",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+volume+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "325",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "326",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+volume+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "327",
+		"non_empty": ["titre.value", "meetingTitle.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "328",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "articleNo.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+volume+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "329",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "numero.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+volume+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "330",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "numero.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+volume+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "331",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "numero.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+volume+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "332",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "numero.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+volume+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "333",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "numero.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+volume+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "334",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "numero.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+volume+numero+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "335",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+volume+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "336",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+volume+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "337",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+volume+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "338",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+volume+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "339",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+volume+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "340",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+volume+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "341",
+		"non_empty": ["titreen.value", "meetingTitle.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "342",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "343",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "344",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "345",
+		"non_empty": ["titre.value", "meetingTitle.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "346",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "347",
+		"non_empty": ["titreen.value", "meetingTitle.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "348",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "349",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "350",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "351",
+		"non_empty": ["titre.value", "meetingTitle.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "352",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "353",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "354",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "355",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "356",
+		"non_empty": ["titreen.value", "meetingTitle.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "357",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "358",
+		"non_empty": ["titre.value", "meetingTitle.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "359",
+		"non_empty": ["titreen.value", "titreSourceJ.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+Ti_Source+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "360",
+		"non_empty": ["titreen.value", "titreSourceJ.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+Ti_Source+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "361",
+		"non_empty": ["titrefr.value", "titreSourceJ.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+Ti_Source+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "362",
+		"non_empty": ["titrefr.value", "titreSourceJ.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+Ti_Source+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "363",
+		"non_empty": ["titre.value", "titreSourceJ.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+Ti_Source+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "364",
+		"non_empty": ["titre.value", "titreSourceJ.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+Ti_Source+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "365",
+		"non_empty": ["titreen.value", "titreSourceJ.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+Ti_Source+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "366",
+		"non_empty": ["titreen.value", "titreSourceJ.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+Ti_Source+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "367",
+		"non_empty": ["titrefr.value", "titreSourceJ.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+Ti_Source+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "368",
+		"non_empty": ["titrefr.value", "titreSourceJ.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+Ti_Source+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "369",
+		"non_empty": ["titre.value", "titreSourceJ.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+Ti_Source+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "370",
+		"non_empty": ["titre.value", "titreSourceJ.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+Ti_Source+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "371",
+		"non_empty": ["titreen.value", "titreSourceJ.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+Ti_Source+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "372",
+		"non_empty": ["titrefr.value", "titreSourceJ.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+Ti_Source+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "373",
+		"non_empty": ["titre.value", "titreSourceJ.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+Ti_Source+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "374",
+		"non_empty": ["titreen.value", "titreSourceJ.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+Ti_Source+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "375",
+		"non_empty": ["titrefr.value", "titreSourceJ.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+Ti_Source+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "376",
+		"non_empty": ["titre.value", "titreSourceJ.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceJ.normalized": "titreSourceJ.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+Ti_Source+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "377",
+		"non_empty": ["titreen.value", "titreSourceM.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+Ti_SourceM+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "378",
+		"non_empty": ["titreen.value", "titreSourceM.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+Ti_SourceM+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "379",
+		"non_empty": ["titrefr.value", "titreSourceM.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+Ti_SourceM+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "380",
+		"non_empty": ["titrefr.value", "titreSourceM.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+Ti_SourceM+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "381",
+		"non_empty": ["titre.value", "titreSourceM.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+Ti_SourceM+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "382",
+		"non_empty": ["titre.value", "titreSourceM.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+Ti_SourceM+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "383",
+		"non_empty": ["titreen.value", "titreSourceM.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+Ti_SourceM+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "384",
+		"non_empty": ["titreen.value", "titreSourceM.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+Ti_SourceM+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "385",
+		"non_empty": ["titrefr.value", "titreSourceM.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+Ti_SourceM+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "386",
+		"non_empty": ["titrefr.value", "titreSourceM.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+Ti_SourceM+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "387",
+		"non_empty": ["titre.value", "titreSourceM.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["volume.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+Ti_SourceM+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "388",
+		"non_empty": ["titre.value", "titreSourceM.value", "volume.value", "meetAbstNum.value", "datePubli.value"],
+		"is_empty": ["numero.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+Ti_SourceM+volume+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "389",
+		"non_empty": ["titreen.value", "titreSourceM.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+Ti_SourceM+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "390",
+		"non_empty": ["titrefr.value", "titreSourceM.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+Ti_SourceM+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "391",
+		"non_empty": ["titre.value", "titreSourceM.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+Ti_SourceM+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "392",
+		"non_empty": ["titreen.value", "titreSourceM.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+Ti_SourceM+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "393",
+		"non_empty": ["titrefr.value", "titreSourceM.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+Ti_SourceM+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "394",
+		"non_empty": ["titre.value", "titreSourceM.value", "volume.value", "numero.value", "meetAbstNum.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"meetAbstNum.normalized": "meetAbstNum.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+Ti_SourceM+volume+numero+meetAbstNum+annee"
+			}
+		}
+	},
+	{
+		"rule": "395",
+		"non_empty": ["titrefr.value", "titreSourceM.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+Ti_Source+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "396",
+		"non_empty": ["titreen.value", "titreSourceM.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+Ti_Source+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "397",
+		"non_empty": ["titre.value", "titreSourceM.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"titreSourceM.normalized": "titreSourceM.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+Ti_Source+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "398",
+		"non_empty": ["titre.value", "isbn.value", "page.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"isbn.normalized": "isbn.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+isbn+page"
+			}
+		}
+	},
+	{
+		"rule": "399",
+		"non_empty": ["titrefr.value", "isbn.value", "page.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"isbn.normalized": "isbn.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+isbn+page"
+			}
+		}
+	},
+	{
+		"rule": "400",
+		"non_empty": ["titreen.value", "isbn.value", "page.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"isbn.normalized": "isbn.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+isbn+page"
+			}
+		}
+	},
+	{
+		"rule": "401",
+		"non_empty": ["titre.value", "meetingTitle.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized50": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50+MeetingTitle+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "402",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized50": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "403",
+		"non_empty": ["titreen.value", "meetingTitle.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+MeetingTitle+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "404",
+		"non_empty": ["titre.value", "meetingTitle.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titre.normalized": "titre.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti+MeetingTitle+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "405",
+		"non_empty": ["titrefr.value", "meetingTitle.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titrefr.normalized": "titrefr.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_FRE+MeetingTitle+page+annee"
+			}
+		}
+	},
+	{
+		"rule": "406",
+		"non_empty": ["titreen.value", "meetingTitle.value", "page.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized": "titreen.value"
+					}
+				}, {
+					"match": {
+						"meetingTitle.normalized": "meetingTitle.value"
+					}
+				}, {
+					"match": {
+						"page.normalized": "page.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_ENG+MeetingTitle+page+annee"
 			}
 		}
 	}
