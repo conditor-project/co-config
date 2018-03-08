@@ -3171,6 +3171,74 @@
 		}
 	},
 	{
+		"rule": "222",
+		"non_empty": ["titreen.value", "eissn.value", "volume.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"eissn.normalized": "eissn.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+eissn+volume+numero+numArt+annee"
+			}
+		}
+	},
+	{
+		"rule": "223",
+		"non_empty": ["titreen.value", "issn.value", "volume.value", "numero.value", "articleNo.value", "datePubli.value"],
+		"query": {
+			"bool": {
+				"must": [{
+					"match": {
+						"titreen.normalized50": "titreen.value"
+					}
+				}, {
+					"match": {
+						"issn.normalized": "issn.value"
+					}
+				}, {
+					"match": {
+						"volume.normalized": "volume.value"
+					}
+				}, {
+					"match": {
+						"numero.normalized": "numero.value"
+					}
+				}, {
+					"match": {
+						"articleNo.normalized": "articleNo.value"
+					}
+				}, {
+					"match": {
+						"datePubli.normalized": "datePubli.value"
+					}
+				}],
+				"_name": "2 Collation : Ti_50_ENG+issn+volume+numero+numArt+annee"
+			}
+		}
+	},
+	{
 		"rule": "220",
 		"non_empty": ["titre.value", "issn.value", "numero.value", "articleNo.value", "datePubli.value"],
 		"is_empty": ["volume.value"],
