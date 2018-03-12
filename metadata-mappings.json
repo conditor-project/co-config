@@ -98,5 +98,12 @@
       "AUDIOVISUAL_DOCUMENT":{"type":"Autre"},
       "SOFTWARE":{"type":"Autre"}
     }
+},
+{
+    "source":"sudoc",
+    "nameID":"ppn",
+    "mapping":{
+      "Thèse d'exercice":{"type":"Thèse"},
+      "Thèse de doctorat":{"type":"Thèse"}    }
 }
 ]
