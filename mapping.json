@@ -138,6 +138,9 @@
           "type":"text",
           "index":false
         },
+        "teiBlob":{
+          "type":"binary"
+        },
         "auteur": {
           "properties":{
             "value":{
