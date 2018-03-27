@@ -118,7 +118,7 @@
   { "name":"idProdinra",
     "type":"standard",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='idprodinra']/text()"},
-  { "name":"halAutorId",
+  { "name":"halAuthorId",
     "type":"iteration",
     "nb":"all",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[lower-case(@type)='halauthorid']"},
