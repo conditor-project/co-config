@@ -633,6 +633,9 @@
         "isDuplicate": {
           "type": "boolean"
         },
+        "isDeduplicable":{
+          "type":"boolean"
+        },
         "duplicate":{
           "type":"nested",
           "properties":{
