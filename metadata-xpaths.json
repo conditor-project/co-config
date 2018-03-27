@@ -208,5 +208,8 @@
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='reportNumber']/text()"},
   { "name":"cern",
     "type":"standard",
-    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='cern']/text()"}
+    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='cern']/text()"},
+  { "name":"part",
+    "type":"standard",
+    "path":"//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='part']/text()"}
 ]

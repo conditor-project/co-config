@@ -613,6 +613,17 @@
             }
           }
         },
+        "part":{
+          "properties":{
+            "value":{
+              "type":"text"
+            },
+            "normalized":{
+              "type":"keyword",
+              "normalizer":"volume:normalizer"
+            }
+          }
+        },
         "typeDocument": {
           "type":"nested"
         },
