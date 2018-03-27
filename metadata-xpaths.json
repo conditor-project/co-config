@@ -91,7 +91,7 @@
   { "name":"arxiv",
     "type":"standard",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='arxiv']/text()"},
-  { "name":"pubmedId",
+  { "name":"pmId",
     "type":"standard",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='pubmed']/text()"},
   { "name":"nnt",

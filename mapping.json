@@ -199,7 +199,7 @@
             }
           }
         },
-        "halauthorid": {
+        "halAuthorId": {
           "type":"nested"
         },
         "orcId": {
@@ -246,7 +246,7 @@
             }
           }
         },
-        "pubmedId": {
+        "pmId": {
           "properties":{
             "value":{
               "type":"text"
