@@ -528,7 +528,7 @@
            },
            "normalized":{
             "type":"keyword",
-            "normalizer":"issue:normalizer" 
+            "normalizer":"id:normalizer" 
            }
           }
         },
