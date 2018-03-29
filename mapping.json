@@ -76,24 +76,24 @@
         "analyzer:trunc50":{
           "type":"custom",
           "tokenizer":"keyword",
-          "char_filter":["whitespace_remove","punctuation_remove"],
+          "char_filter":["whitespace_remove","punctuation_remove","icu_normalizer"],
           "filter":["lowercase","my_asciifolding","truncate50"]
         }
       },
       "normalizer":{
         "title:normalizer":{
           "type": "custom",
-          "char_filter":["whitespace_remove","punctuation_remove"],
+          "char_filter":["whitespace_remove","punctuation_remove","icu_normalizer"],
           "filter":["lowercase","my_asciifolding"]
         },
         "titre50:normalizer":{
           "type":"custom",
-          "char_filter":["whitespace_remove","punctuation_remove","trunc_50"],
+          "char_filter":["whitespace_remove","punctuation_remove","icu_normalizer","trunc_50"],
           "filter":["lowercase","my_asciifolding"]
         },
         "author:normalizer":{
           "type":"custom",
-          "char_filter":["whitespace_remove","punctuation_remove"],
+          "char_filter":["whitespace_remove","punctuation_remove","icu_normalizer"],
           "filter":["lowercase","my_asciifolding"]
         },
         "id:normalizer":{
