@@ -312,6 +312,9 @@
             }
           }
         },
+        "xissn": {
+          "type":"keyword"
+        },
         "isbn": {
           "properties":{
             "value":{
