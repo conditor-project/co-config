@@ -76,6 +76,7 @@
   { "name":"xissn",
     "type":"iteration",
     "nb":"all",
+    "structured":"no",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='issn' or @type='eissn']/text()"},
   { "name":"isbn",
     "type":"standard",
