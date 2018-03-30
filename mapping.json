@@ -313,7 +313,8 @@
           }
         },
         "xissn": {
-          "type":"keyword"
+          "type":"keyword",
+          "normalizer":"id:normalizer"
         },
         "isbn": {
           "properties":{
