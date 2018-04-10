@@ -149,8 +149,8 @@
     "path":"//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:monogr//TEI:title[@level='j']/text()"},
   { "name":"abstract",
     "type":"standard",
-    "path":"//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract/text()",
-    "indexed":false },
+    "path":"//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract/text()"
+  },
   { "name":"typeDocument",
     "type":"iteration",
     "nb":"all",
