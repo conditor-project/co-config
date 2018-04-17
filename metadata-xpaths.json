@@ -42,6 +42,7 @@
     "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut']/TEI:persName",
     "separator":" ",
     "concat":true,
+    "attributeName":"value",
     "fields":{
       "type":"array",
       "concat":true,
@@ -63,6 +64,7 @@
     "separator":" ",
     "limit":3,
     "concat":true,
+    "attributeName":"value",
     "fields":{
       "separator":" ",
       "type":"array",
