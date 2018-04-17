@@ -88,33 +88,31 @@
   { "name":"authorRef",
     "type":"bloc",
     "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut']",
-    "fields":{
-      "type":"array",
+    "fields":
+    {
+      "type":"struct",
       "fields":[{
-        "type":"struct",
-        "fields":[{
-          "name":"surname",
-          "type":"simpleString",
-          "path":"string(//TEI:persName//TEI:surname)"},
-          {
-          "name":"forename",
-          "type":"simpleString",
-          "path":"string(//TEI:persName//TEI:forename)"},
-          {
-          "name":"halAuthorId",
-          "type":"simpleString",
-          "path":"string(//TEI:idno[@type='halauthorid'])"
-          },
-          {"type":"bloc",
-            "name":"affiliations",
-            "path":"//TEI:affiliation",
-            "fields":
-            {"type":"simpleString",
-              "path":"normalize-space(//@ref)" 
-             } 
-          }
-        ]
-      }]
+        "name":"surname",
+        "type":"simpleString",
+        "path":"string(//TEI:persName//TEI:surname)"},
+        {
+        "name":"forename",
+        "type":"simpleString",
+        "path":"string(//TEI:persName//TEI:forename)"},
+        {
+        "name":"halAuthorId",
+        "type":"simpleString",
+        "path":"string(//TEI:idno[@type='halauthorid'])"
+        },
+        {"type":"bloc",
+          "name":"affiliations",
+          "path":"//TEI:affiliation",
+          "fields":
+          {"type":"simpleString",
+            "path":"normalize-space(//@ref)" 
+            } 
+        }
+      ]
     }
   },
   { "name":"issn",
