@@ -163,6 +163,9 @@
             }
           }
         },
+        "authorRef":{
+          "type":"nested"
+        },
         "doi": {
           "properties":{
             "value":{
