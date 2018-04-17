@@ -142,7 +142,7 @@
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='doi']/text()"},
   { "name":"hasDoi",
     "type":"boolean",
-    "path":"string(//TEI:body//TEI:biblFull//TEI:idno[@type='doi']/text()) != ''"},
+    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='doi']/text() != ''"},
   { "name":"ut",
     "type":"simpleString",
     "attributeName":"value",
@@ -221,6 +221,7 @@
     "fields":
     {
       "type":"simpleString",
+      "attributeName":"value",
       "path":"//TEI:idno"
       }
     
