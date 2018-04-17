@@ -199,7 +199,8 @@
     "fields":
     {
       "type":"simpleString",
-      "path":"//TEI:idno"
+      "path":"//TEI:idno",
+      "attributeName":"value"
       }
     
   },
