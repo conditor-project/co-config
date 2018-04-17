@@ -21,6 +21,7 @@
     "separator":" ",
     "limit":3,
     "concat":true,
+    "attributeName":"value",
     "fields":{
       "type":"array",
       "concat":true,
