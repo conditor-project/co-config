@@ -105,12 +105,13 @@
           "type":"simpleString",
           "path":"string(//TEI:idno[@type='halauthorid'])"
           },
-          {"type":"array",
-           "name":"affiliations",
-           "fields":[
+          {"type":"bloc",
+            "name":"affiliations",
+            "path":"//TEI:affiliation",
+            "fields":
             {"type":"simpleString",
-             "path":"normalize-space(//TEI:affiliation//@ref)" } 
-           ]
+              "path":"normalize-space(//@ref)" 
+             } 
           }
         ]
       }]
