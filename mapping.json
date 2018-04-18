@@ -22,17 +22,17 @@
           "pattern": "\\p{P}",
           "replacement": ""
         },
-        "spacenum":{
+        "extract_number_space":{
           "type": "pattern_replace",
           "pattern": "[^0-9]",
           "replacement":"_"
         },
-        "num":{
+        "extract_number":{
           "type": "pattern_replace",
           "pattern": "[^0-9]",
           "replacement":""
         },
-        "annee":{
+        "extract_year":{
           "type": "pattern_replace",
           "pattern": ".*([0-9]{4}).*",
           "replacement":"$1"
@@ -103,20 +103,20 @@
         },
         "page:normalizer":{
           "type":"custom",
-          "char_filter":["spacenum","firstnum"]
+          "char_filter":["extract_number_space","firstnum"]
         },
         "volume:normalizer":{
           "type":"custom",
-          "char_filter":["spacenum","firstnum"],
+          "char_filter":["extract_number_space","firstnum"],
           "filter":["lowercase"]
         },
         "issue:normalizer":{
           "type":"custom",
-          "char_filter":["num"]
+          "char_filter":["extract_number"]
         },
         "publicationDate:normalizer":{
           "type":"custom",
-          "char_filter":["annee"]
+          "char_filter":["extract_year"]
         }
       }
     }
