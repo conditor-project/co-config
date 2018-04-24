@@ -102,7 +102,7 @@
         {
         "name":"halAuthorId",
         "type":"simpleString",
-        "path":"string(//TEI:idno[@type='halauthorid'])"
+        "path":"string(//TEI:idno[lower-case(@type)='halauthorid'])"
         },
         {"type":"bloc",
           "name":"affiliations",
