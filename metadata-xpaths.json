@@ -104,6 +104,11 @@
         "type":"simpleString",
         "path":"string(//TEI:idno[lower-case(@type)='halauthorid'])"
         },
+        {
+        "name":"researcherId",
+        "type":"simpleString",
+        "path":"string(//TEI:idno[lower-case(@type)='researcherid'])"
+        },
         {"type":"bloc",
           "name":"affiliations",
           "path":"//TEI:affiliation",
