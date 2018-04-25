@@ -102,12 +102,12 @@
         {
         "name":"halAuthorId",
         "type":"simpleString",
-        "path":"string(//TEI:idno[lower-case(@type)='halauthorid'])"
+        "path":"//TEI:idno[lower-case(@type)='halauthorid']"
         },
         {
         "name":"researcherId",
         "type":"simpleString",
-        "path":"string(//TEI:idno[lower-case(@type)='researcherid'])"
+        "path":"//TEI:idno[lower-case(@type)='researcherid']"
         },
         {"type":"bloc",
           "name":"affiliations",
