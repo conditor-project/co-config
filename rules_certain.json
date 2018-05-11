@@ -991,7 +991,7 @@
 	{
 		"rule": "61",
 		"non_empty": ["title.value", "issn.value", "volume.value", "page.value", "publicationDate.value"],
-		"is_empty": ["numero.value"],
+		"is_empty": ["issue.value"],
 		"query": {
 			"bool": {
 				"must": [{
