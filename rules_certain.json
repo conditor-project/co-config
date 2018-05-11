@@ -2894,7 +2894,7 @@
 						"publicationDate.normalized": "publicationDate.value"
 					}
 				}],
-				"_name": "2 Collation : Ti_ENG+eissn+issue+numArt+annee"
+				"_name": "2 Collation : Ti_ENG+eissn+numero+numArt+annee"
 			}
 		}
 	},
@@ -6244,7 +6244,7 @@
 						"publicationDate.normalized": "publicationDate.value"
 					}
 				}],
-				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+issue+numArt+annee"
+				"_name": "2 Collation : Ti_50_FRE+MeetingTitle+numero+numArt+annee"
 			}
 		}
 	},
@@ -6492,7 +6492,7 @@
 						"publicationDate.normalized": "publicationDate.value"
 					}
 				}],
-				"_name": "2 Collation : Ti+MeetingTitle+issue+numArt+annee"
+				"_name": "2 Collation : Ti+MeetingTitle+numero+numArt+annee"
 			}
 		}
 	},
