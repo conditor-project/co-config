@@ -126,18 +126,15 @@
 	},
 	{
 		"rule": "7",
-		"non_empty": ["title.value", "issn.value", "volume.value", "issue.value", "page.value", "publicationDate.value"],
+		"non_empty": ["title.value","volume.value", "issue.value", "page.value", "publicationDate.value"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
 						"title.normalized": "title.value"
 					}
-				}, {
-					"match": {
-						"issn.normalized": "issn.value"
-					}
-				}, {
+				},
+				{
 					"match": {
 						"volume.normalized": "volume.value"
 					}
@@ -153,7 +150,17 @@
 					"match": {
 						"publicationDate.normalized": "publicationDate.value"
 					}
-				}],
+				},
+				{
+					"bool":{
+						"should":[
+							{"term":{"xissn":"issn.value"}},
+							{"term":{"xissn":"eissn.value"}}
+						],
+						"minimum_should_match":1
+					}
+				}
+			],
 				"_name": "2 Collation : Ti+issn+volume+numero+page+annee"
 			}
 		}
