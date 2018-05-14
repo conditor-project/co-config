@@ -221,22 +221,10 @@
           }
         },
         "researcherId": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
-            }
-          }
+          "type":"nested"
         },
         "viaf": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
-            }
-          }
+          "type":"nested"
         },
         "arxiv": {
           "type":"text",
