@@ -175,6 +175,9 @@
             }
           }
         },
+        "authorRef":{
+          "type":"nested"
+        },
         "doi": {
           "type":"text",
           "fields":{
