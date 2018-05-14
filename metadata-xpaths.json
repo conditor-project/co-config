@@ -218,7 +218,6 @@
     "fields":
    {
       "type":"simpleString",
-      "attributeName":"value",
       "path":"//TEI:idno"
     }
     
