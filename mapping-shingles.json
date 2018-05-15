@@ -81,8 +81,7 @@
         },
         "filter_french_word":{
           "type":"stop",
-          "stopwords":"_french_",
-          "enable_position_increments":"false"
+          "stopwords":"_french_"
         }
       },
       "analyzer":{
