@@ -74,8 +74,12 @@
         "filter_shingles":{
           "type":"shingle",
           "max_shingle_size":5,
-          "min_shingle_size":2,
+          "min_shingle_size":1,
           "output_unigrams":"true"
+        },
+        "filter_french_word":{
+          "type":"stop",
+          "stopwords":"_french_"
         }
       },
       "analyzer":{
@@ -88,7 +92,7 @@
         "analyzer:shingles":{
           "type":"custom",
           "tokenizer":"standard",
-          "filter":["lowercase","my_asciifolding","filter_shingles"]
+          "filter":["lowercase","my_asciifolding","filter_french_word","filter_shingles"]
         }
       },
       "normalizer":{
@@ -185,7 +189,8 @@
               "type":"keyword",
               "normalizer":"id:normalizer"
             }
-          }
+          },
+          "copy_to":"fingerprint"
         },
         "hasDoi": {
           "type": "boolean"
@@ -291,7 +296,8 @@
         },
         "xissn": {
           "type":"keyword",
-          "normalizer":"id:normalizer"
+          "normalizer":"id:normalizer",
+          "copy_to":"fingerprint"
         },
         "isbn": {
           "type":"text",
@@ -510,7 +516,8 @@
               "type":"text",
               "analyzer":"analyzer:trunc50"
             }
-          }
+          },
+          "copy_to":"fingerprint"
         },
         "titleen": {
           "type":"text",
@@ -608,7 +615,8 @@
               "type":"keyword",
               "normalizer":"title:normalizer"
             }
-          }
+          },
+          "copy_to":"fingerprint"
         },
         "titreSourceJ": {
           "type":"text",
