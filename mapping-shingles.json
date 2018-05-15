@@ -73,11 +73,9 @@
         },
         "filter_shingles":{
           "type":"shingle",
-          "max_shingle_size":5,
+          "max_shingle_size":10,
           "min_shingle_size":2,
-          "output_unigrams":"false",
-          "output_unigrams_if_no_shingles":"true",
-          "filler_token":" "
+          "output_unigrams":"true"
         },
         "filter_french_word":{
           "type":"stop",
@@ -191,8 +189,7 @@
               "type":"keyword",
               "normalizer":"id:normalizer"
             }
-          },
-          "copy_to":"fingerprint"
+          }
         },
         "hasDoi": {
           "type": "boolean"
@@ -298,8 +295,7 @@
         },
         "xissn": {
           "type":"keyword",
-          "normalizer":"id:normalizer",
-          "copy_to":"fingerprint"
+          "normalizer":"id:normalizer"
         },
         "isbn": {
           "type":"text",
