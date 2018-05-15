@@ -638,6 +638,9 @@
         "nearDuplicate":{
           "type":"nested"
         },
+        "isNearDuplicate":{
+          "type":"boolean"
+        },
         "creationDate":{
           "type":"date",
           "format": "yyy-MM-dd HH:mm:ss||yyy-MM-dd||epoch_millis"
