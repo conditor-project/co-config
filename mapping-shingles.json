@@ -74,12 +74,15 @@
         "filter_shingles":{
           "type":"shingle",
           "max_shingle_size":5,
-          "min_shingle_size":1,
-          "output_unigrams":"true"
+          "min_shingle_size":2,
+          "output_unigrams":"false",
+          "output_unigrams_if_no_shingles":"true"
         },
         "filter_french_word":{
           "type":"stop",
-          "stopwords":"_french_"
+          "stopwords":"_french_",
+          "enable_position_increments":"false",
+          "filler_token":" "
         }
       },
       "analyzer":{
