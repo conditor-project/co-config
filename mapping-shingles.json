@@ -92,6 +92,7 @@
         "analyzer:shingles":{
           "type":"custom",
           "tokenizer":"standard",
+          "char_filter":["icu_normalizer"],
           "filter":["lowercase","my_asciifolding","filter_french_word","filter_shingles"]
         }
       },
