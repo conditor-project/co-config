@@ -76,13 +76,13 @@
           "max_shingle_size":5,
           "min_shingle_size":2,
           "output_unigrams":"false",
-          "output_unigrams_if_no_shingles":"true"
+          "output_unigrams_if_no_shingles":"true",
+          "filler_token":" "
         },
         "filter_french_word":{
           "type":"stop",
           "stopwords":"_french_",
-          "enable_position_increments":"false",
-          "filler_token":" "
+          "enable_position_increments":"false"
         }
       },
       "analyzer":{
