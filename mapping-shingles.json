@@ -86,31 +86,30 @@
         "analyzer:trunc50":{
           "type":"custom",
           "tokenizer":"keyword",
-          "char_filter":["whitespace_remove","punctuation_remove","icu_normalizer"],
-          "filter":["lowercase","my_asciifolding","truncate50"]
+          "char_filter":["whitespace_remove","punctuation_remove"],
+          "filter":["lowercase","my_asciifolding","icu_normalizer","truncate50"]
         },
         "analyzer:shingles":{
           "type":"custom",
           "tokenizer":"standard",
-          "char_filter":["icu_normalizer"],
-          "filter":["lowercase","my_asciifolding","filter_french_word","filter_shingles"]
+          "filter":["lowercase","my_asciifolding","icu_normalizer","filter_french_word","filter_shingles"]
         }
       },
       "normalizer":{
         "title:normalizer":{
           "type": "custom",
-          "char_filter":["whitespace_remove","punctuation_remove","icu_normalizer"],
-          "filter":["lowercase","my_asciifolding"]
+          "char_filter":["whitespace_remove","punctuation_remove"],
+          "filter":["lowercase","my_asciifolding","icu_normalizer"]
         },
         "titre50:normalizer":{
           "type":"custom",
-          "char_filter":["whitespace_remove","punctuation_remove","icu_normalizer","trunc_50"],
-          "filter":["lowercase","my_asciifolding"]
+          "char_filter":["whitespace_remove","punctuation_remove","trunc_50"],
+          "filter":["lowercase","my_asciifolding","icu_normalizer"]
         },
         "author:normalizer":{
           "type":"custom",
-          "char_filter":["whitespace_remove","punctuation_remove","icu_normalizer"],
-          "filter":["lowercase","my_asciifolding"]
+          "char_filter":["whitespace_remove","punctuation_remove"],
+          "filter":["lowercase","my_asciifolding","icu_normalizer"]
         },
         "id:normalizer":{
           "type":"custom",
