@@ -180,8 +180,7 @@
     "fields":
     {
       "type":"simpleString",
-      "path":"//TEI:idno",
-      "attributeName":"value"
+      "path":"//TEI:idno"
       }
     
   },
