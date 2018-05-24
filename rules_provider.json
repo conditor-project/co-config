@@ -13,11 +13,11 @@
     },
     {
         "source":"wos",
-        "non_empty":["ut.value"],
+        "non_empty":["ut"],
         "query":{
             "bool": {
                     "must":[
-                        {"term": {"ut.normalized": "ut.value"}}
+                        {"term": {"ut.normalized": "ut"}}
                     ],
                     "_name":"provider::wos"
             }
@@ -25,11 +25,11 @@
     },
     {
         "source":"prodinra",
-        "non_empty":["idProdinra.value"],
+        "non_empty":["idProdinra"],
         "query":{
             "bool":{
                 "must":[
-                    {"term":{"idProdinra.normalized":"idProdinra.value"}}  
+                    {"term":{"idProdinra.normalized":"idProdinra"}}  
                 ] ,
                 "_name":"provider::prodinra"
             }
