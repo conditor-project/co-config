@@ -230,16 +230,6 @@
       }
     
   },
-  { "name":"typeDocumentFlat",
-    "type":"bloc",
-    "path":"//TEI:body//TEI:biblFull//TEI:classCode[@scheme='typology']",
-    "fields":
-    {
-      "type":"simpleString",
-      "path":"//TEI:classCode"
-      }
-    
-  },
   { "name":"isni",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='isni']/text()"},

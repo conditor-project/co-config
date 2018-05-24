@@ -560,9 +560,6 @@
           }
         },
         "typeDocument": {
-          "type":"nested"
-        },
-        "typeDocumentFlat": {
           "type":"keyword"
         },
         "typeConditor":{
