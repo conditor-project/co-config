@@ -213,7 +213,7 @@
           }
         },
         "halAuthorId": {
-          "type":"nested"
+          "type":"keyword"
         },
         "orcId": {
           "type":"text",
@@ -225,10 +225,10 @@
           }
         },
         "researcherId": {
-          "type":"nested"
+          "type":"keyword"
         },
         "viaf": {
-          "type":"nested"
+          "type":"keyword"
         },
         "arxiv": {
           "type":"text",
