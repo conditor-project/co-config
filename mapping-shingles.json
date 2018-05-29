@@ -623,6 +623,10 @@
           },
           "copy_to":"fingerprint"
         },
+        "abstract":{
+          "type":"text",
+          "copy_to":"fingerprint"
+        },
         "publicationDate": {
           "type":"text",
           "fields":{
