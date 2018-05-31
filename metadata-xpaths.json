@@ -13,7 +13,7 @@
     "path":"normalize-space(//TEI:body//TEI:meeting//TEI:title)"},
   { "name":"author",
     "type":"bloc",
-    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut']//TEI:persName",
+    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']//TEI:persName",
     "separator":" ",
     "limit":3,
     "concat":true,
@@ -34,7 +34,7 @@
   },
   { "name":"authorFull",
     "type":"bloc",
-    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut']/TEI:persName",
+    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']/TEI:persName",
     "separator":" ",
     "concat":true,
     "fields":{
@@ -54,7 +54,7 @@
   },
   { "name":"authorInit",
     "type":"bloc",
-    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut']//TEI:persName",
+    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']//TEI:persName",
     "separator":" ",
     "limit":3,
     "concat":true,
@@ -80,7 +80,7 @@
   },
   { "name":"authorRef",
     "type":"bloc",
-    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut']",
+    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']",
     "fields":
     {
       "type":"struct",
