@@ -117,6 +117,30 @@
             "type":"simpleString",
             "path":"normalize-space(//TEI:idno)" 
           }
+        },
+        {"type":"bloc",
+          "name":"isni",
+          "path":"//TEI:idno[lower-case(@type)='isni'])",
+          "fields":{
+            "type":"simpleString",
+            "path":"normalize-space(//TEI:idno)" 
+          }
+        },
+        {"type":"bloc",
+          "name":"orcid",
+          "path":"//TEI:idno[lower-case(@type)='orcid'])",
+          "fields":{
+            "type":"simpleString",
+            "path":"normalize-space(//TEI:idno)" 
+          }
+        },
+        {"type":"bloc",
+          "name":"viaf",
+          "path":"//TEI:idno[lower-case(@type)='viaf'])",
+          "fields":{
+            "type":"simpleString",
+            "path":"normalize-space(//TEI:idno)" 
+          }
         }
       ]
     }
@@ -160,6 +184,9 @@
   { "name":"doi",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='doi']/text()"},
+  { "name":"bibCode",
+    "type":"simpleString",
+    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='bibcode']/text()"},
   { "name":"hasDoi",
     "type":"boolean",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='doi']/text() != ''"},
