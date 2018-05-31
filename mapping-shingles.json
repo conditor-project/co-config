@@ -477,6 +477,15 @@
             }
           }
         },
+        "specialIssue": {
+          "type":"text",
+          "fields":{
+            "normalized":{
+              "type":"keyword",
+              "normalizer":"issue:normalizer"
+            }
+          }
+        },
         "meetAbstrNo":{
           "type":"text",
           "fields":{
