@@ -106,9 +106,19 @@
           "name":"affiliations",
           "path":"//TEI:affiliation",
           "fields":
-          {"type":"simpleString",
+          {"type":"struct",
+           "fields":[
+            {"type":"simpleString",
+            "name":"ref",
             "path":"normalize-space(//@ref)" 
-            } 
+            },
+            {"type":"simpleString",
+            "name":"adresse",
+            "path":"normalize-space(//TEI:idno)" 
+            }  
+           ]
+          }
+          
         },
         {"type":"bloc",
           "name":"idRef",
