@@ -315,7 +315,7 @@
             }
           }
         },
-        "artNo": {
+        "articleNo": {
           "type":"text",
           "fields":{
             "normalized":{
