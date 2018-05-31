@@ -315,6 +315,15 @@
             }
           }
         },
+        "ppn":{
+          "type":"text",
+          "fields":{
+            "normalized":{
+              "type":"keyword",
+              "normalizer":"id:normalizer"
+            }
+          }
+        },
         "articleNo": {
           "type":"text",
           "fields":{
