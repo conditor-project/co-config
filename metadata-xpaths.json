@@ -121,7 +121,7 @@
         },
         {"type":"bloc",
           "name":"idRef",
-          "path":"//TEI:idno[lower-case(@type)='idref'])",
+          "path":"//TEI:idno[lower-case(@type)='idref']",
           "fields":{
             "type":"simpleString",
             "path":"normalize-space(//TEI:idno)" 
@@ -129,7 +129,7 @@
         },
         {"type":"bloc",
           "name":"isni",
-          "path":"//TEI:idno[lower-case(@type)='isni'])",
+          "path":"//TEI:idno[lower-case(@type)='isni']",
           "fields":{
             "type":"simpleString",
             "path":"normalize-space(//TEI:idno)" 
@@ -137,7 +137,7 @@
         },
         {"type":"bloc",
           "name":"orcid",
-          "path":"//TEI:idno[lower-case(@type)='orcid'])",
+          "path":"//TEI:idno[lower-case(@type)='orcid']",
           "fields":{
             "type":"simpleString",
             "path":"normalize-space(//TEI:idno)" 
@@ -145,7 +145,7 @@
         },
         {"type":"bloc",
           "name":"viaf",
-          "path":"//TEI:idno[lower-case(@type)='viaf'])",
+          "path":"//TEI:idno[lower-case(@type)='viaf']",
           "fields":{
             "type":"simpleString",
             "path":"normalize-space(//TEI:idno)" 
@@ -156,7 +156,7 @@
   },
   { "name":"issn",
     "type":"bloc",
-    "path":"string(//TEI:body//TEI:biblFull//TEI:idno[@type='issn'])",
+    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='issn']",
     "fields":
     {
       "type":"simpleString",
