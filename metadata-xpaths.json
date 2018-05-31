@@ -109,6 +109,14 @@
           {"type":"simpleString",
             "path":"normalize-space(//@ref)" 
             } 
+        },
+        {"type":"bloc",
+          "name":"idRef",
+          "path":"//TEI:idno[lower-case(@type)='idref'])",
+          "fields":{
+            "type":"simpleString",
+            "path":"normalize-space(//TEI:idno)" 
+          }
         }
       ]
     }
