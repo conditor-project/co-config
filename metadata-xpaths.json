@@ -114,11 +114,22 @@
     }
   },
   { "name":"issn",
-    "type":"simpleString",
-    "path":"string(//TEI:body//TEI:biblFull//TEI:idno[@type='issn'])"},
+    "type":"bloc",
+    "path":"string(//TEI:body//TEI:biblFull//TEI:idno[@type='issn'])",
+    "fields":
+    {
+      "type":"simpleString",
+      "path":"//TEI:idno"
+    }
+  },
   { "name":"eissn",
-    "type":"simpleString",
-    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='eissn']/text()"},
+    "type":"bloc",
+    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='eissn']",
+    "fields":{
+      "type":"simpleString",
+      "path":"//TEI:idno"
+    }
+  },
   { "name":"xissn",
     "type":"bloc",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='issn' or @type='eissn']",
@@ -130,8 +141,14 @@
       
   },
   { "name":"isbn",
-    "type":"simpleString",
-    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='isbn']/text()"},
+    "type":"bloc",
+    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='isbn']",
+    "fields":
+    {
+      "type":"simpleString",
+      "path":"//TEI:idno"
+    }
+  },
   { "name":"doi",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='doi']/text()"},
@@ -185,8 +202,14 @@
     
   },
   { "name":"orcId",
-    "type":"simpleString",
-    "path":"//TEI:body//TEI:biblFull//TEI:idno[lower-case(@type)='orcid']/text()"},
+    "type":"bloc",
+    "path":"//TEI:body//TEI:biblFull//TEI:idno[lower-case(@type)='orcid']",
+    "fields":
+    {
+      "type":"simpleString",
+      "path":"//TEI:idno"
+    }
+  },
   { "name":"researcherId",
     "type":"bloc",
     "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='researcherId']",
@@ -230,8 +253,14 @@
     
   },
   { "name":"isni",
-    "type":"simpleString",
-    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='isni']/text()"},
+    "type":"bloc",
+    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='isni']",
+    "fields":
+    {
+      "type":"simpleString",
+      "path":"//TEI:idno"
+    }
+  },
   { "name":"articleNo",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='articleNo']/text()"},
