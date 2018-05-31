@@ -73,7 +73,7 @@
         },
         "filter_shingles":{
           "type":"shingle",
-          "max_shingle_size":10,
+          "max_shingle_size":5,
           "min_shingle_size":2,
           "output_unigrams":"true"
         },
