@@ -152,7 +152,7 @@
 				}
 			}, {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}]
 			,
@@ -184,7 +184,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti+xissn+issue+page+annee"
@@ -215,7 +215,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti+xissn+volume+page+annee"
@@ -393,7 +393,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_FRE+xissn+volume+issue+page+annee"
@@ -424,7 +424,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_FRE+xissn+issue+page+annee"
@@ -455,7 +455,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_FRE+xissn+volume+page+annee"
@@ -490,7 +490,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_ENG+xissn+volume+issue+page+annee"
@@ -521,7 +521,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_ENG+xissn+issue+page+annee"
@@ -552,7 +552,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_ENG+xissn+volume+page+annee"
@@ -659,7 +659,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50+xissn+volume+issue+page+annee"
@@ -690,7 +690,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50+xissn+issue+page+annee"
@@ -721,7 +721,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50+xissn+volume+page+annee"
@@ -900,7 +900,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_FRE+xissn+volume+issue+page+annee"
@@ -931,7 +931,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_FRE+xissn+issue+page+annee"
@@ -962,7 +962,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_FRE+xissn+volume+page+annee"
@@ -997,7 +997,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_ENG+xissn+volume+issue+page+annee"
@@ -1028,7 +1028,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_ENG+xissn+issue+page+annee"
@@ -1059,7 +1059,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_ENG+xissn+volume+page+annee"
@@ -1942,7 +1942,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_ENG+xissn+issue+numArt+annee"
@@ -1973,7 +1973,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_ENG+xissn+volume+numArt+annee"
@@ -2004,7 +2004,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_FRE+xissn+issue+numArt+annee"
@@ -2035,7 +2035,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_FRE+xissn+volume+numArt+annee"
@@ -2066,7 +2066,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50+xissn+issue+numArt+annee"
@@ -2097,7 +2097,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50+xissn+volume+numArt+annee"
@@ -2128,7 +2128,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_ENG+xissn+issue+numArt+annee"
@@ -2159,7 +2159,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_ENG+xissn+volume+numArt+annee"
@@ -2190,7 +2190,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_FRE+xissn+issue+numArt+annee"
@@ -2221,7 +2221,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_FRE+xissn+volume+numArt+annee"
@@ -2252,7 +2252,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti+xissn+issue+numArt+annee"
@@ -2283,7 +2283,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti+xissn+volume+numArt+annee"
@@ -2317,7 +2317,7 @@
 				}
 			},   {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_ENG+xissn+volume+issue+numArt+annee"
@@ -2351,7 +2351,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_FRE+xissn+volume+issue+numArt+annee"
@@ -2385,7 +2385,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50+xissn+volume+issue+numArt+annee"
@@ -2419,7 +2419,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_FRE+xissn+volume+issue+numArt+annee"
@@ -2453,7 +2453,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti+xissn+volume+issue+numArt+annee"
@@ -2487,7 +2487,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_ENG+xissn+volume+issue+numArt+annee"
@@ -8008,7 +8008,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_ENG+xissn+issue+meetAbstrNo+annee"
@@ -8039,7 +8039,7 @@
 				}
 			}, {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_ENG+xissn+volume+meetAbstrNo+annee"
@@ -8070,7 +8070,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_FRE+xissn+issue+meetAbstrNo+annee"
@@ -8101,7 +8101,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_FRE+xissn+volume+meetAbstrNo+annee"
@@ -8132,7 +8132,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50+xissn+issue+meetAbstrNo+annee"
@@ -8163,7 +8163,7 @@
 				}
 			}, {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50+xissn+volume+meetAbstrNo+annee"
@@ -8194,7 +8194,7 @@
 				}
 			}, {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_ENG+xissn+issue+meetAbstrNo+annee"
@@ -8225,7 +8225,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_ENG+xissn+volume+meetAbstrNo+annee"
@@ -8256,7 +8256,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_FRE+xissn+issue+meetAbstrNo+annee"
@@ -8287,7 +8287,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_FRE+xissn+volume+meetAbstrNo+annee"
@@ -8318,7 +8318,7 @@
 				}
 			}, {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti+xissn+issue+meetAbstrNo+annee"
@@ -8349,7 +8349,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti+xissn+volume+meetAbstrNo+annee"
@@ -8383,7 +8383,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_ENG+xissn+volume+issue+meetAbstrNo+annee"
@@ -8417,7 +8417,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50_FRE+xissn+volume+issue+meetAbstrNo+annee"
@@ -8451,7 +8451,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_50+xissn+volume+issue+meetAbstrNo+annee"
@@ -8485,7 +8485,7 @@
 				}
 			}, {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_FRE+xissn+volume+issue+meetAbstrNo+annee"
@@ -8519,7 +8519,7 @@
 				}
 			}, {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti+xissn+volume+issue+meetAbstrNo+annee"
@@ -8553,7 +8553,7 @@
 				}
 			},  {
 				"match": {
-					"xissn":"xissn"
+					"xissn.normalized":"xissn"
 				}
 			}],
 			"_name": "2 Collation : Ti_ENG+xissn+volume+issue+meetAbstrNo+annee"
