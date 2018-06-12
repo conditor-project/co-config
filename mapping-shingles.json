@@ -595,6 +595,9 @@
         "isDeduplicable":{
           "type":"boolean"
         },
+        "hadTransDuplicate":{
+          "type":"boolean"
+        },
         "duplicate":{
           "type":"nested",
           "properties":{
