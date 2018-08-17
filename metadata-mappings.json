@@ -14,7 +14,7 @@
         "MAP":{"type":"Autre"},
         "HDR":{"type":"Autre"},
         "UNDEFINED":{"type":"Autre"},
-        "DOUV":{"type":"Autre"},
+        "DOUV":{"type":"Ouvrage"},
         "SON":{"type":"Autre"},
         "SOFTWARE":{"type":"Autre"},
         "VIDEO":{"type":"Autre"},
