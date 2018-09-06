@@ -666,7 +666,24 @@
           }
         },
         "nearDuplicate":{
-          "type":"nested"
+          "type":"nested",
+          "properties":{
+            "idConditor":{
+              "type":"keyword"
+            },
+            "duplicateBySymmetry":{
+              "type":"boolean"
+            },
+            "score":{
+              "type":"float"
+            },
+            "source":{
+              "type":"keyword"
+            },
+            "type": {
+              "type":"text"
+            }
+          }
         },
         "isNearDuplicate":{
           "type":"boolean"
