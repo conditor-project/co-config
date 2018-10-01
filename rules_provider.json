@@ -34,5 +34,17 @@
                 "_name":"provider::prodinra"
             }
         }
+    },
+    {
+        "source":"pubmed",
+        "non_empty":["pmId"],
+        "query":{
+            "bool":{
+                "must":[
+                    {"term":{"idProdinra.normalized":"pmId"}}  
+                ] ,
+                "_name":"provider::pubmed"
+            }
+        }
     }
 ]
