@@ -1,7 +1,119 @@
 {
   "settings":{
     "index": {
-      "number_of_replicas": 0
+      "number_of_replicas": 0,
+      "query": {
+        "default_field":[
+          "_id",
+          "abstract",
+          "articleNo",
+          "articleNo.normalized",
+          "arxiv",
+          "arxiv.normalized",
+          "author",
+          "author.normalized",
+          "authorFull",
+          "authorInit",
+          "authorInit.normalized",
+          "bibCode",
+          "bibCode.normalized",
+          "cern",
+          "cern.normalized",
+          "doi",
+          "doi.normalized",
+          "duplicate.idConditor",
+          "duplicate.ingestId",
+          "duplicate.rules",
+          "duplicate.source",
+          "duplicateRules",
+          "eisbn",
+          "eisbn.normalized",
+          "eissn",
+          "eissn.normalized",
+          "ensam",
+          "ensam.normalized",
+          "halAuthorId",
+          "idChain",
+          "idConditor",
+          "idHal",
+          "idHal.normalized",
+          "idProdinra",
+          "idProdinra.normalized",
+          "ineris",
+          "ineris.normalized",
+          "ingestBaseName",
+          "ingestId",
+          "inspire",
+          "inspire.normalized",
+          "ird",
+          "ird.normalized",
+          "irstea",
+          "irstea.normalized",
+          "isbn",
+          "isbn.normalized",
+          "isni",
+          "isni.normalized",
+          "issn",
+          "issn.normalized",
+          "issue",
+          "localRef",
+          "localRef.normalized",
+          "meetAbstrNo",
+          "meetAbstrNo.normalized",
+          "meetingTitle",
+          "meetingTitle.normalized",
+          "nnt",
+          "nnt.normalized",
+          "oatao",
+          "oatao.normalized",
+          "okina",
+          "okina.normalized",
+          "orcId",
+          "orcId.normalized",
+          "otherNumber",
+          "otherNumber.normalized",
+          "page",
+          "part",
+          "patentNumber",
+          "patentNumber.normalized",
+          "pmId",
+          "pmId.normalized",
+          "ppn",
+          "ppn.normalized",
+          "publicationDate",
+          "publicationDate.normalized",
+          "pubmedCentral",
+          "pubmedCentral.normalized",
+          "reportNumber",
+          "reportNumber.normalized",
+          "researcherId",
+          "sciencespo",
+          "sciencespo.normalized",
+          "source",
+          "specialIssue",
+          "title",
+          "title.normalized",
+          "title.normalized50",
+          "titleen",
+          "titleen.normalized",
+          "titleen.normalized50",
+          "titlefr",
+          "titlefr.normalized",
+          "titlefr.normalized50",
+          "titreSourceJ",
+          "titreSourceJ.normalized",
+          "titreSourceM",
+          "titreSourceM.normalized",
+          "typeConditor",
+          "typeConditor.normalized",
+          "typeDocument",
+          "ut",
+          "ut.normalized",
+          "viaf",
+          "volume",
+          "xissn"
+        ]
+      }
     },
     "similarity":{
       "bm25_similarity":{
@@ -121,14 +233,9 @@
           "char_filter":["alphanum"],
           "filter":["lowercase"]
         },
-        "page:normalizer":{
+        "volpage:normalizer":{
           "type":"custom",
-          "char_filter":["spacenum","firstnum"]
-        },
-        "volume:normalizer":{
-          "type":"custom",
-          "char_filter":["spacenum","firstnum","remove_underscore"],
-          "filter":["lowercase"]
+          "char_filter":["spacenum","firstnum","remove_underscore"]
         },
         "issue:normalizer":{
           "type":"custom",
@@ -508,7 +615,7 @@
           "fields":{
             "normalized":{
               "type":"keyword",
-              "normalizer":"page:normalizer"
+              "normalizer":"volpage:normalizer"
             }
           }
         },
@@ -572,7 +679,7 @@
           "fields":{
             "normalized":{
               "type":"keyword",
-              "normalizer":"volume:normalizer"
+              "normalizer":"volpage:normalizer"
             }
           }
         },
@@ -581,7 +688,7 @@
           "fields":{
             "normalized":{
               "type":"keyword",
-              "normalizer":"volume:normalizer"
+              "normalizer":"volpage:normalizer"
             }
           }
         },
