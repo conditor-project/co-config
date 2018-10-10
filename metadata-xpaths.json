@@ -80,7 +80,7 @@
   },
   { "name":"authorRef",
     "type":"bloc",
-    "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']",
+    "path":"//TEI:body/TEI:listBibl/TEI:biblFull/TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']",
     "fields":
     {
       "type":"struct",
@@ -114,7 +114,7 @@
             },
             {"type":"simpleString",
             "name":"adresse",
-            "path":"normalize-space(//TEI:idno)" 
+            "path":"normalize-space(.)" 
             }  
            ]
           }
