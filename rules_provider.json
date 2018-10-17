@@ -41,7 +41,7 @@
         "query":{
             "bool":{
                 "must":[
-                    {"term":{"idProdinra.normalized":"pmId"}}  
+                    {"term":{"pmId.normalized":"pmId"}}  
                 ] ,
                 "_name":"provider::pubmed"
             }
