@@ -295,7 +295,44 @@
           "type":"text"
         },
         "authorRef":{
-          "type":"nested"
+          "type":"nested",
+          "properties": {
+            "surname":{
+              "type":"keyword"
+            },
+            "forename":{
+              "type":"keyword"
+            },
+            "halAuthorId":{
+              "type":"keyword"
+            },
+            "researcherId":{
+              "type":"keyword"
+            },
+            "affiliations":{
+              "type":"nested",
+              "properties": {
+                "ref":{
+                  "type":"keyword"
+                },
+                "adresse":{
+                  "type": "keyword"
+                }
+              }
+            },
+            "idRef":{
+              "type":"keyword"
+            },
+            "isni": {
+              "type":"keyword"
+            },
+            "orcid": {
+              "type":"keyword"
+            },
+            "viaf":{
+              "type":"keyword"
+            }
+          }
         },
         "doi": {
           "type":"text",
@@ -766,6 +803,11 @@
         "publicationDate": {
           "type":"text",
           "fields":{
+            "date":{
+              "type":"date",
+              "format": "yyy-MM-dd HH:mm:ss||yyy-MM-dd||yyy-MM||yyyy",
+              "ignore_malformed": true
+            },
             "normalized":{
               "type":"keyword",
               "normalizer":"publicationDate:normalizer"
