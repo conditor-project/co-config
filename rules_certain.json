@@ -36,7 +36,7 @@
 	},
 	{
 		"rule": "2",
-		"non_empty": ["title", "pmid"],
+		"non_empty": ["title", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -45,7 +45,7 @@
 					}
 				}, {
 					"match": {
-						"pmid.normalized": "pmid"
+						"pmId.normalized": "pmId"
 					}
 				}],
 				"_name": "1ID:pmid+TiC"
@@ -90,12 +90,12 @@
 	},
 	{
 		"rule": "5",
-		"non_empty": ["doi", "pmid"],
+		"non_empty": ["doi", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"pmid.normalized": "pmid"
+						"pmId.normalized": "pmId"
 					}
 				}, {
 					"match": {
@@ -108,7 +108,7 @@
 	},
 	{
 		"rule": "6",
-		"non_empty": ["ut", "pmid"],
+		"non_empty": ["ut", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -117,7 +117,7 @@
 					}
 				}, {
 					"match": {
-						"pmid.normalized": "pmid"
+						"pmId.normalized": "pmId"
 					}
 				}],
 				"_name": "1ID:pmid+ut"
@@ -295,7 +295,7 @@
 	},
 	{
 		"rule": "23",
-		"non_empty": ["titlefr", "pmid"],
+		"non_empty": ["titlefr", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -304,7 +304,7 @@
 					}
 				}, {
 					"match": {
-						"pmid.normalized": "pmid"
+						"pmId.normalized": "pmId"
 					}
 				}],
 				"_name": "1ID:pmid+TiC_FRE"
@@ -313,7 +313,7 @@
 	},
 	{
 		"rule": "24",
-		"non_empty": ["titleen", "pmid"],
+		"non_empty": ["titleen", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -322,7 +322,7 @@
 					}
 				}, {
 					"match": {
-						"pmid.normalized": "pmid"
+						"pmId.normalized": "pmId"
 					}
 				}],
 				"_name": "1ID:pmid+TiC_ENG"
@@ -597,7 +597,7 @@
 	},
 	{
 		"rule": "53",
-		"non_empty": ["title", "pmid"],
+		"non_empty": ["title", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -606,7 +606,7 @@
 					}
 				}, {
 					"match": {
-						"pmid.normalized": "pmid"
+						"pmId.normalized": "pmId"
 					}
 				}],
 				"_name": "1ID:pmid+Ti50"
@@ -802,7 +802,7 @@
 	},
 	{
 		"rule": "75",
-		"non_empty": ["titlefr", "pmid"],
+		"non_empty": ["titlefr", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -811,7 +811,7 @@
 					}
 				}, {
 					"match": {
-						"pmid.normalized": "pmid"
+						"pmId.normalized": "pmId"
 					}
 				}],
 				"_name": "1ID:pmid+Ti50_FRE"
@@ -820,7 +820,7 @@
 	},
 	{
 		"rule": "76",
-		"non_empty": ["titleen", "pmid"],
+		"non_empty": ["titleen", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -829,7 +829,7 @@
 					}
 				}, {
 					"match": {
-						"pmid.normalized": "pmid"
+						"pmId.normalized": "pmId"
 					}
 				}],
 				"_name": "1ID:pmid+Ti50_ENG"
@@ -8136,12 +8136,12 @@
 	},
 	{
 		"rule": "409",
-		"non_empty": ["arxiv", "pmid"],
+		"non_empty": ["arxiv", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"pmid.normalized": "pmid"
+						"pmId.normalized": "pmId"
 					}
 				}, {
 					"match": {
