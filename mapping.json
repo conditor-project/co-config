@@ -6,15 +6,15 @@
         "default_field":[
           "_id",
           "abstract",
-          "articleNo",
-          "articleNo.normalized",
+          "articleNumber",
+          "articleNumber.normalized",
           "arxiv",
           "arxiv.normalized",
-          "author",
-          "author.normalized",
-          "authorFull",
-          "authorInit",
-          "authorInit.normalized",
+          "first3AuthorNames",
+          "first3AuthorNames.normalized",
+          "authorNames",
+          "first3AuthorNamesWithInitials",
+          "first3AuthorNamesWithInitials.normalized",
           "bibCode",
           "bibCode.normalized",
           "cern",
@@ -22,7 +22,7 @@
           "doi",
           "doi.normalized",
           "duplicate.idConditor",
-          "duplicate.ingestId",
+          "duplicate.sessionName",
           "duplicate.rules",
           "duplicate.source",
           "duplicateRules",
@@ -42,7 +42,7 @@
           "ineris",
           "ineris.normalized",
           "ingestBaseName",
-          "ingestId",
+          "sessionName",
           "inspire",
           "inspire.normalized",
           "ird",
@@ -72,8 +72,9 @@
           "orcId.normalized",
           "otherNumber",
           "otherNumber.normalized",
-          "page",
+          "pageRange",
           "part",
+          "supplement",
           "patentNumber",
           "patentNumber.normalized",
           "pmId",
@@ -82,8 +83,8 @@
           "ppn.normalized",
           "publicationDate",
           "publicationDate.normalized",
-          "pubmedCentral",
-          "pubmedCentral.normalized",
+          "pmc",
+          "pmc.normalized",
           "reportNumber",
           "reportNumber.normalized",
           "researcherId",
@@ -259,7 +260,7 @@
         "idConditor":{
           "type":"keyword"
         },
-        "ingestId":{
+        "sessionName":{
           "type":"keyword"
         },
         "ingestBaseName":{
@@ -272,7 +273,7 @@
         "teiBlob":{
           "type":"binary"
         },
-        "author": {
+        "first3AuthorNames": {
           "type":"text",
           "fields":{
             "normalized":{
@@ -282,7 +283,7 @@
             },
           "copy_to":"fingerprint"
         },
-        "authorInit": {
+        "first3AuthorNamesWithInitials": {
           "type":"text",
           "fields":{
             "normalized":{
@@ -291,10 +292,10 @@
             }
           }
         },
-        "authorFull":{
+        "authorNames":{
           "type":"text"
         },
-        "authorRef":{
+        "authors":{
           "type":"nested",
           "properties": {
             "surname":{
@@ -315,7 +316,7 @@
                 "ref":{
                   "type":"keyword"
                 },
-                "adresse":{
+                "address":{
                   "type": "keyword"
                 }
               }
@@ -476,7 +477,7 @@
             }
           }
         },
-        "articleNo": {
+        "articleNumber": {
           "type":"text",
           "fields":{
             "normalized":{
@@ -584,7 +585,7 @@
             }
           }
         },
-        "pubmedCentral": {
+        "pmc": {
           "type":"text",
           "fields":{
             "normalized":{
@@ -647,7 +648,7 @@
            }
           }
         },
-        "page": {
+        "pageRange": {
           "type":"text",
           "fields":{
             "normalized":{
@@ -729,6 +730,15 @@
             }
           }
         },
+        "supplement":{
+          "type":"text",
+          "fields":{
+            "normalized":{
+              "type":"keyword",
+              "normalizer":"volpage:normalizer"
+            }
+          }
+        },
         "typeDocument": {
           "type":"keyword"
         },
@@ -747,7 +757,7 @@
         "isDeduplicable":{
           "type":"boolean"
         },
-        "hadTransDuplicate":{
+        "hasTransDuplicate":{
           "type":"boolean"
         },
         "duplicate":{
@@ -759,7 +769,7 @@
             "rules":{
               "type":"text"
             },
-            "ingestId":{
+            "sessionName":{
               "type":"keyword"
             },
             "source":{
