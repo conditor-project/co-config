@@ -18,7 +18,7 @@
 	},
 	{
 		"rule": "1",
-		"non_empty": ["title", "ut"],
+		"non_empty": ["title", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -27,10 +27,10 @@
 					}
 				}, {
 					"match": {
-						"ut.normalized": "ut"
+						"utKey.normalized": "utKey"
 					}
 				}],
-				"_name": "1ID:ut+TiC"
+				"_name": "1ID:utKey+TiC"
 			}
 		}
 	},
@@ -72,7 +72,7 @@
 	},
 	{
 		"rule": "4",
-		"non_empty": ["doi", "ut"],
+		"non_empty": ["doi", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -81,7 +81,7 @@
 					}
 				}, {
 					"match": {
-						"ut.normalized": "ut"
+						"utKey.normalized": "utKey"
 					}
 				}],
 				"_name": "1ID:doi+ut"
@@ -108,12 +108,12 @@
 	},
 	{
 		"rule": "6",
-		"non_empty": ["ut", "pmId"],
+		"non_empty": ["utKey", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"ut.normalized": "ut"
+						"utKey.normalized": "utKey"
 					}
 				}, {
 					"match": {
@@ -127,7 +127,7 @@
 	{
 		"rule": "7",
 		"non_empty": ["title", "volume", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -162,7 +162,7 @@
 	{
 		"rule": "8",
 		"non_empty": ["title", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -193,7 +193,7 @@
 	{
 		"rule": "9",
 		"non_empty": ["title", "volume", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -259,7 +259,7 @@
 	},
 	{
 		"rule": "21",
-		"non_empty": ["titlefr", "ut"],
+		"non_empty": ["titlefr", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -268,16 +268,16 @@
 					}
 				}, {
 					"match": {
-						"ut.normalized": "ut"
+						"utKey.normalized": "utKey"
 					}
 				}],
-				"_name": "1ID:ut+TiC_FRE"
+				"_name": "1ID:utKey+TiC_FRE"
 			}
 		}
 	},
 	{
 		"rule": "22",
-		"non_empty": ["titleen", "ut"],
+		"non_empty": ["titleen", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -286,10 +286,10 @@
 					}
 				}, {
 					"match": {
-						"ut.normalized": "ut"
+						"utKey.normalized": "utKey"
 					}
 				}],
-				"_name": "1ID:ut+TiC_ENG"
+				"_name": "1ID:utKey+TiC_ENG"
 			}
 		}
 	},
@@ -368,7 +368,7 @@
 	{
 		"rule": "27",
 		"non_empty": ["titlefr", "volume", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -403,7 +403,7 @@
 	{
 		"rule": "28",
 		"non_empty": ["titlefr", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -434,7 +434,7 @@
 	{
 		"rule": "29",
 		"non_empty": ["titlefr", "volume", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["issue", "meetAbstrNo", "specialissue"],
+		"is_empty": ["issue", "meetingAbstractNumber", "specialissue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -465,7 +465,7 @@
 	{
 		"rule": "39",
 		"non_empty": ["titleen", "volume", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -500,7 +500,7 @@
 	{
 		"rule": "40",
 		"non_empty": ["titleen", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -531,7 +531,7 @@
 	{
 		"rule": "41",
 		"non_empty": ["titleen", "volume", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -579,7 +579,7 @@
 	},
 	{
 		"rule": "52",
-		"non_empty": ["title", "ut"],
+		"non_empty": ["title", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -588,10 +588,10 @@
 					}
 				}, {
 					"match": {
-						"ut.normalized": "ut"
+						"utKey.normalized": "utKey"
 					}
 				}],
-				"_name": "1ID:ut+Ti50"
+				"_name": "1ID:utKey+Ti50"
 			}
 		}
 	},
@@ -634,7 +634,7 @@
 	{
 		"rule": "59",
 		"non_empty": ["title", "volume", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -669,7 +669,7 @@
 	{
 		"rule": "60",
 		"non_empty": ["title", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -700,7 +700,7 @@
 	{
 		"rule": "61",
 		"non_empty": ["title", "volume", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -766,7 +766,7 @@
 	},
 	{
 		"rule": "73",
-		"non_empty": ["titlefr", "ut"],
+		"non_empty": ["titlefr", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -775,16 +775,16 @@
 					}
 				}, {
 					"match": {
-						"ut.normalized": "ut"
+						"utKey.normalized": "utKey"
 					}
 				}],
-				"_name": "1ID:ut+Ti50_FRE"
+				"_name": "1ID:utKey+Ti50_FRE"
 			}
 		}
 	},
 	{
 		"rule": "74",
-		"non_empty": ["titleen", "ut"],
+		"non_empty": ["titleen", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -793,10 +793,10 @@
 					}
 				}, {
 					"match": {
-						"ut.normalized": "ut"
+						"utKey.normalized": "utKey"
 					}
 				}],
-				"_name": "1ID:ut+Ti50_ENG"
+				"_name": "1ID:utKey+Ti50_ENG"
 			}
 		}
 	},
@@ -875,7 +875,7 @@
 	{
 		"rule": "79",
 		"non_empty": ["titlefr", "volume", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -910,7 +910,7 @@
 	{
 		"rule": "80",
 		"non_empty": ["titlefr", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -941,7 +941,7 @@
 	{
 		"rule": "81",
 		"non_empty": ["titlefr", "volume", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -972,7 +972,7 @@
 	{
 		"rule": "91",
 		"non_empty": ["titleen", "volume", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1007,7 +1007,7 @@
 	{
 		"rule": "92",
 		"non_empty": ["titleen", "issue", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1038,7 +1038,7 @@
 	{
 		"rule": "93",
 		"non_empty": ["titleen", "volume", "pageRange", "publicationDate", "xissn"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1549,7 +1549,7 @@
 	{
 		"rule": "186",
 		"non_empty": ["titleen", "titreSourceJ", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1580,7 +1580,7 @@
 	{
 		"rule": "187",
 		"non_empty": ["titleen", "titreSourceJ", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1611,7 +1611,7 @@
 	{
 		"rule": "188",
 		"non_empty": ["titlefr", "titreSourceJ", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1642,7 +1642,7 @@
 	{
 		"rule": "189",
 		"non_empty": ["titlefr", "titreSourceJ", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1673,7 +1673,7 @@
 	{
 		"rule": "190",
 		"non_empty": ["title", "titreSourceJ", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1704,7 +1704,7 @@
 	{
 		"rule": "191",
 		"non_empty": ["title", "titreSourceJ", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1735,7 +1735,7 @@
 	{
 		"rule": "192",
 		"non_empty": ["titleen", "titreSourceJ", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1766,7 +1766,7 @@
 	{
 		"rule": "193",
 		"non_empty": ["titleen", "titreSourceJ", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1797,7 +1797,7 @@
 	{
 		"rule": "194",
 		"non_empty": ["titlefr", "titreSourceJ", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1828,7 +1828,7 @@
 	{
 		"rule": "195",
 		"non_empty": ["titlefr", "titreSourceJ", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1859,7 +1859,7 @@
 	{
 		"rule": "196",
 		"non_empty": ["title", "titreSourceJ", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -1890,7 +1890,7 @@
 	{
 		"rule": "197",
 		"non_empty": ["title", "titreSourceJ", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -2503,7 +2503,7 @@
 	{
 		"rule": "234",
 		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -2538,7 +2538,7 @@
 	{
 		"rule": "235",
 		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -2573,7 +2573,7 @@
 	{
 		"rule": "236",
 		"non_empty": ["title", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -2608,7 +2608,7 @@
 	{
 		"rule": "237",
 		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -2643,7 +2643,7 @@
 	{
 		"rule": "238",
 		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -2678,7 +2678,7 @@
 	{
 		"rule": "239",
 		"non_empty": ["title", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3139,7 +3139,7 @@
 	{
 		"rule": "257",
 		"non_empty": ["titleen", "titreSourceM", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3170,7 +3170,7 @@
 	{
 		"rule": "258",
 		"non_empty": ["titleen", "titreSourceM", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3201,7 +3201,7 @@
 	{
 		"rule": "259",
 		"non_empty": ["titlefr", "titreSourceM", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3232,7 +3232,7 @@
 	{
 		"rule": "260",
 		"non_empty": ["titlefr", "titreSourceM", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3263,7 +3263,7 @@
 	{
 		"rule": "261",
 		"non_empty": ["title", "titreSourceM", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3294,7 +3294,7 @@
 	{
 		"rule": "262",
 		"non_empty": ["title", "titreSourceM", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3325,7 +3325,7 @@
 	{
 		"rule": "263",
 		"non_empty": ["titleen", "titreSourceM", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3356,7 +3356,7 @@
 	{
 		"rule": "264",
 		"non_empty": ["titleen", "titreSourceM", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3387,7 +3387,7 @@
 	{
 		"rule": "265",
 		"non_empty": ["titlefr", "titreSourceM", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3418,7 +3418,7 @@
 	{
 		"rule": "266",
 		"non_empty": ["titlefr", "titreSourceM", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3449,7 +3449,7 @@
 	{
 		"rule": "267",
 		"non_empty": ["title", "titreSourceM", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -3480,7 +3480,7 @@
 	{
 		"rule": "268",
 		"non_empty": ["title", "titreSourceM", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4255,7 +4255,7 @@
 	{
 		"rule": "293",
 		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4290,7 +4290,7 @@
 	{
 		"rule": "294",
 		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4325,7 +4325,7 @@
 	{
 		"rule": "295",
 		"non_empty": ["title", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4360,7 +4360,7 @@
 	{
 		"rule": "296",
 		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4395,7 +4395,7 @@
 	{
 		"rule": "297",
 		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4430,7 +4430,7 @@
 	{
 		"rule": "298",
 		"non_empty": ["title", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4675,7 +4675,7 @@
 	{
 		"rule": "305",
 		"non_empty": ["titleen", "meetingTitle", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4706,7 +4706,7 @@
 	{
 		"rule": "306",
 		"non_empty": ["titleen", "meetingTitle", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4737,7 +4737,7 @@
 	{
 		"rule": "307",
 		"non_empty": ["titlefr", "meetingTitle", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4768,7 +4768,7 @@
 	{
 		"rule": "308",
 		"non_empty": ["titlefr", "meetingTitle", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4799,7 +4799,7 @@
 	{
 		"rule": "309",
 		"non_empty": ["title", "meetingTitle", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4830,7 +4830,7 @@
 	{
 		"rule": "310",
 		"non_empty": ["title", "meetingTitle", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4861,7 +4861,7 @@
 	{
 		"rule": "311",
 		"non_empty": ["titleen", "meetingTitle", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4892,7 +4892,7 @@
 	{
 		"rule": "312",
 		"non_empty": ["titleen", "meetingTitle", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4923,7 +4923,7 @@
 	{
 		"rule": "313",
 		"non_empty": ["titlefr", "meetingTitle", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4954,7 +4954,7 @@
 	{
 		"rule": "314",
 		"non_empty": ["titlefr", "meetingTitle", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -4985,7 +4985,7 @@
 	{
 		"rule": "315",
 		"non_empty": ["title", "meetingTitle", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["volume", "meetAbstrNo", "specialIssue"],
+		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -5016,7 +5016,7 @@
 	{
 		"rule": "316",
 		"non_empty": ["title", "meetingTitle", "volume", "pageRange", "publicationDate"],
-		"is_empty": ["issue", "specialIssue", "meetAbstrNo"],
+		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -5419,7 +5419,7 @@
 	{
 		"rule": "329",
 		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -5454,7 +5454,7 @@
 	{
 		"rule": "330",
 		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -5489,7 +5489,7 @@
 	{
 		"rule": "331",
 		"non_empty": ["title", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -5524,7 +5524,7 @@
 	{
 		"rule": "332",
 		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -5559,7 +5559,7 @@
 	{
 		"rule": "333",
 		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -5594,7 +5594,7 @@
 	{
 		"rule": "334",
 		"non_empty": ["title", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
-		"is_empty": ["meetAbstrNo", "specialIssue"],
+		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -5838,7 +5838,7 @@
 	},
 	{
 		"rule": "341",
-		"non_empty": ["titleen", "meetingTitle", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -5856,7 +5856,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -5867,13 +5867,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+MeetingTitle+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+MeetingTitle+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "342",
-		"non_empty": ["titleen", "meetingTitle", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -5891,7 +5891,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -5902,13 +5902,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+MeetingTitle+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+MeetingTitle+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "343",
-		"non_empty": ["titlefr", "meetingTitle", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -5926,7 +5926,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -5937,13 +5937,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+MeetingTitle+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+MeetingTitle+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "344",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -5961,7 +5961,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -5972,13 +5972,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+MeetingTitle+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+MeetingTitle+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "345",
-		"non_empty": ["title", "meetingTitle", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -5996,7 +5996,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6007,13 +6007,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+MeetingTitle+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+MeetingTitle+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "346",
-		"non_empty": ["title", "meetingTitle", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6031,7 +6031,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6042,13 +6042,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+MeetingTitle+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+MeetingTitle+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "347",
-		"non_empty": ["titleen", "meetingTitle", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6066,7 +6066,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6077,13 +6077,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+MeetingTitle+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+MeetingTitle+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "348",
-		"non_empty": ["titleen", "meetingTitle", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6101,7 +6101,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6112,13 +6112,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+MeetingTitle+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+MeetingTitle+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "349",
-		"non_empty": ["titlefr", "meetingTitle", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6136,7 +6136,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6147,13 +6147,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+MeetingTitle+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+MeetingTitle+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "350",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6171,7 +6171,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6182,13 +6182,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+MeetingTitle+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+MeetingTitle+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "351",
-		"non_empty": ["title", "meetingTitle", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6206,7 +6206,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6217,13 +6217,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+MeetingTitle+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+MeetingTitle+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "352",
-		"non_empty": ["title", "meetingTitle", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6241,7 +6241,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6252,13 +6252,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+MeetingTitle+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+MeetingTitle+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "353",
-		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -6280,7 +6280,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6291,13 +6291,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+MeetingTitle+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+MeetingTitle+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "354",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -6319,7 +6319,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6330,13 +6330,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+MeetingTitle+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+MeetingTitle+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "355",
-		"non_empty": ["title", "meetingTitle", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -6358,7 +6358,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6369,13 +6369,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+MeetingTitle+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+MeetingTitle+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "356",
-		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -6397,7 +6397,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6408,13 +6408,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+MeetingTitle+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+MeetingTitle+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "357",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -6436,7 +6436,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6447,13 +6447,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+MeetingTitle+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+MeetingTitle+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "358",
-		"non_empty": ["title", "meetingTitle", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -6475,7 +6475,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6486,13 +6486,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+MeetingTitle+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+MeetingTitle+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "359",
-		"non_empty": ["titleen", "titreSourceJ", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6510,7 +6510,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6521,13 +6521,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+Ti_Source+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+Ti_Source+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "360",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6545,7 +6545,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6556,13 +6556,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+Ti_Source+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+Ti_Source+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "361",
-		"non_empty": ["titlefr", "titreSourceJ", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6580,7 +6580,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6591,13 +6591,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+Ti_Source+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+Ti_Source+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "362",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6615,7 +6615,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6626,13 +6626,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+Ti_Source+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+Ti_Source+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "363",
-		"non_empty": ["title", "titreSourceJ", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6650,7 +6650,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6661,13 +6661,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+Ti_Source+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+Ti_Source+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "364",
-		"non_empty": ["title", "titreSourceJ", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6685,7 +6685,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6696,13 +6696,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+Ti_Source+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+Ti_Source+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "365",
-		"non_empty": ["titleen", "titreSourceJ", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6720,7 +6720,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6731,13 +6731,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+Ti_Source+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+Ti_Source+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "366",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6755,7 +6755,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6766,13 +6766,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+Ti_Source+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+Ti_Source+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "367",
-		"non_empty": ["titlefr", "titreSourceJ", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6790,7 +6790,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6801,13 +6801,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+Ti_Source+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+Ti_Source+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "368",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6825,7 +6825,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6836,13 +6836,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+Ti_Source+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+Ti_Source+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "369",
-		"non_empty": ["title", "titreSourceJ", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6860,7 +6860,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6871,13 +6871,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+Ti_Source+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+Ti_Source+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "370",
-		"non_empty": ["title", "titreSourceJ", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -6895,7 +6895,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6906,13 +6906,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+Ti_Source+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+Ti_Source+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "371",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -6934,7 +6934,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6945,13 +6945,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+Ti_Source+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+Ti_Source+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "372",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -6973,7 +6973,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -6984,13 +6984,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+Ti_Source+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+Ti_Source+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "373",
-		"non_empty": ["title", "titreSourceJ", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7012,7 +7012,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7023,13 +7023,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+Ti_Source+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+Ti_Source+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "374",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7051,7 +7051,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7062,13 +7062,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+Ti_Source+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+Ti_Source+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "375",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7090,7 +7090,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7101,13 +7101,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+Ti_Source+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+Ti_Source+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "376",
-		"non_empty": ["title", "titreSourceJ", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7129,7 +7129,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7140,13 +7140,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+Ti_Source+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+Ti_Source+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "377",
-		"non_empty": ["titleen", "titreSourceM", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume"],
 		"query": {
 			"bool": {
@@ -7164,7 +7164,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7175,13 +7175,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+Ti_SourceM+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+Ti_SourceM+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "378",
-		"non_empty": ["titleen", "titreSourceM", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7199,7 +7199,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7210,13 +7210,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+Ti_SourceM+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+Ti_SourceM+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "379",
-		"non_empty": ["titlefr", "titreSourceM", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7234,7 +7234,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7245,13 +7245,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+Ti_SourceM+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+Ti_SourceM+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "380",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7269,7 +7269,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7280,13 +7280,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+Ti_SourceM+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+Ti_SourceM+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "381",
-		"non_empty": ["title", "titreSourceM", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7304,7 +7304,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7315,13 +7315,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+Ti_SourceM+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+Ti_SourceM+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "382",
-		"non_empty": ["title", "titreSourceM", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7339,7 +7339,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7350,13 +7350,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+Ti_SourceM+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+Ti_SourceM+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "383",
-		"non_empty": ["titleen", "titreSourceM", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7374,7 +7374,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7385,13 +7385,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+Ti_SourceM+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+Ti_SourceM+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "384",
-		"non_empty": ["titleen", "titreSourceM", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7409,7 +7409,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7420,13 +7420,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+Ti_SourceM+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+Ti_SourceM+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "385",
-		"non_empty": ["titlefr", "titreSourceM", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7444,7 +7444,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7455,13 +7455,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+Ti_SourceM+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+Ti_SourceM+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "386",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7479,7 +7479,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7490,13 +7490,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+Ti_SourceM+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+Ti_SourceM+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "387",
-		"non_empty": ["title", "titreSourceM", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7514,7 +7514,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7525,13 +7525,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+Ti_SourceM+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+Ti_SourceM+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "388",
-		"non_empty": ["title", "titreSourceM", "volume", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -7549,7 +7549,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7560,13 +7560,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+Ti_SourceM+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+Ti_SourceM+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "389",
-		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7588,7 +7588,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7599,13 +7599,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+Ti_SourceM+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+Ti_SourceM+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "390",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7627,7 +7627,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7638,13 +7638,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+Ti_SourceM+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+Ti_SourceM+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "391",
-		"non_empty": ["title", "titreSourceM", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7666,7 +7666,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7677,13 +7677,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+Ti_SourceM+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+Ti_SourceM+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "392",
-		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7705,7 +7705,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7716,13 +7716,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+Ti_SourceM+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+Ti_SourceM+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "393",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7744,7 +7744,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7755,13 +7755,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+Ti_SourceM+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+Ti_SourceM+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "394",
-		"non_empty": ["title", "titreSourceM", "volume", "issue", "meetAbstrNo", "publicationDate", "pageRange"],
+		"non_empty": ["title", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -7783,7 +7783,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -7794,7 +7794,7 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+Ti_SourceM+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+Ti_SourceM+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
@@ -8118,7 +8118,7 @@
 	},
 	{
 		"rule": "408",
-		"non_empty": ["arxiv", "ut"],
+		"non_empty": ["arxiv", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
@@ -8127,7 +8127,7 @@
 					}
 				}, {
 					"match": {
-						"ut.normalized": "ut"
+						"utKey.normalized": "utKey"
 					}
 				}],
 				"_name": "1ID:arxiv+ut"
@@ -8262,7 +8262,7 @@
 	},
 	{
 		"rule": "416",
-		"non_empty": ["titleen", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titleen", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8276,7 +8276,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8291,13 +8291,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+xissn+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+xissn+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "417",
-		"non_empty": ["titleen", "volume", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titleen", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8311,7 +8311,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8326,13 +8326,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+xissn+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+xissn+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "418",
-		"non_empty": ["titlefr", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titlefr", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8346,7 +8346,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8361,13 +8361,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+xissn+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+xissn+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "419",
-		"non_empty": ["titlefr", "volume", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titlefr", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8381,7 +8381,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8396,13 +8396,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+xissn+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+xissn+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "420",
-		"non_empty": ["title", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8416,7 +8416,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8431,13 +8431,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+xissn+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+xissn+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "421",
-		"non_empty": ["title", "volume", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8451,7 +8451,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8466,13 +8466,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+xissn+volume+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+xissn+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "422",
-		"non_empty": ["titleen", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titleen", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8486,7 +8486,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8501,13 +8501,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+xissn+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+xissn+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "423",
-		"non_empty": ["titleen", "volume", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titleen", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8521,7 +8521,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8536,13 +8536,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+xissn+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+xissn+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "424",
-		"non_empty": ["titlefr", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titlefr", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8556,7 +8556,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8571,13 +8571,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+xissn+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+xissn+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "425",
-		"non_empty": ["titlefr", "volume", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titlefr", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8591,7 +8591,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8606,13 +8606,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+xissn+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+xissn+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "426",
-		"non_empty": ["title", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8626,7 +8626,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8641,13 +8641,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+xissn+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+xissn+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "427",
-		"non_empty": ["title", "volume", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
@@ -8661,7 +8661,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8676,13 +8676,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+xissn+volume+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+xissn+volume+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "428",
-		"non_empty": ["titleen", "volume", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titleen", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -8700,7 +8700,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8715,13 +8715,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_ENG+xissn+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_ENG+xissn+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "429",
-		"non_empty": ["titlefr", "volume", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titlefr", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -8739,7 +8739,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8754,13 +8754,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50_FRE+xissn+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50_FRE+xissn+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "430",
-		"non_empty": ["title", "volume", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -8778,7 +8778,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8793,13 +8793,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:Ti50+xissn+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:Ti50+xissn+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "431",
-		"non_empty": ["titlefr", "volume", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titlefr", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -8817,7 +8817,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8832,13 +8832,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_FRE+xissn+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_FRE+xissn+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "432",
-		"non_empty": ["title", "volume", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -8856,7 +8856,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8871,13 +8871,13 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC+xissn+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC+xissn+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},
 	{
 		"rule": "433",
-		"non_empty": ["titleen", "volume", "issue", "meetAbstrNo", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["titleen", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
@@ -8895,7 +8895,7 @@
 					}
 				}, {
 					"match": {
-						"meetAbstrNo.normalized": "meetAbstrNo"
+						"meetingAbstractNumber.normalized": "meetingAbstractNumber"
 					}
 				}, {
 					"match": {
@@ -8910,7 +8910,7 @@
 						"pageRange.normalized": "pageRange"
 					}
 				}],
-				"_name": "2Collation:TiC_ENG+xissn+volume+issue+meetAbstrNo+annee"
+				"_name": "2Collation:TiC_ENG+xissn+volume+issue+meetingAbstractNumber+annee"
 			}
 		}
 	},

@@ -58,8 +58,8 @@
           "issue",
           "localRef",
           "localRef.normalized",
-          "meetAbstrNo",
-          "meetAbstrNo.normalized",
+          "meetingAbstractNumber",
+          "meetingAbstractNumber.normalized",
           "meetingTitle",
           "meetingTitle.normalized",
           "nnt",
@@ -107,9 +107,9 @@
           "titreSourceM.normalized",
           "typeConditor",
           "typeConditor.normalized",
-          "typeDocument",
-          "ut",
-          "ut.normalized",
+          "documentType",
+          "utKey",
+          "utKey.normalized",
           "viaf",
           "volume",
           "xissn"
@@ -419,7 +419,7 @@
             }
           }
         },
-        "ut": {
+        "utKey": {
           "type":"text",
           "fields":{
             "normalized":{
@@ -639,7 +639,7 @@
             }
           }
         },
-        "meetAbstrNo":{
+        "meetingAbstractNumber":{
           "type":"text",
           "fields":{
             "normalized":{
@@ -739,7 +739,7 @@
             }
           }
         },
-        "typeDocument": {
+        "documentType": {
           "type":"keyword"
         },
         "typeConditor":{

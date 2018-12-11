@@ -26,7 +26,7 @@
     }
 },
 {   "source":"wos",
-    "nameID":"ut",
+    "nameID":"utKey",
     "mapping":{
      "Article":"Article",
      "Book Review":"Article",

@@ -13,11 +13,11 @@
     },
     {
         "source":"wos",
-        "non_empty":["ut"],
+        "non_empty":["utKey"],
         "query":{
             "bool": {
                     "must":[
-                        {"term": {"ut.normalized": "ut"}}
+                        {"term": {"utKey.normalized": "utKey"}}
                     ],
                     "_name":"provider::wos"
             }
