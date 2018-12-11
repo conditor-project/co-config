@@ -1,11 +1,11 @@
 [{
 		"rule": "0",
-		"non_empty": ["title", "doi"],
+		"non_empty": ["title.default", "doi"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -18,12 +18,12 @@
 	},
 	{
 		"rule": "1",
-		"non_empty": ["title", "utKey"],
+		"non_empty": ["title.default", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -36,12 +36,12 @@
 	},
 	{
 		"rule": "2",
-		"non_empty": ["title", "pmId"],
+		"non_empty": ["title.default", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -54,12 +54,12 @@
 	},
 	{
 		"rule": "3",
-		"non_empty": ["title", "idHal"],
+		"non_empty": ["title.default", "idHal"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -126,13 +126,13 @@
 	},
 	{
 		"rule": "7",
-		"non_empty": ["title", "volume", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "volume", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -161,13 +161,13 @@
 	},
 	{
 		"rule": "8",
-		"non_empty": ["title", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -192,13 +192,13 @@
 	},
 	{
 		"rule": "9",
-		"non_empty": ["title", "volume", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "volume", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -223,12 +223,12 @@
 	},
 	{
 		"rule": "19",
-		"non_empty": ["titlefr", "doi"],
+		"non_empty": ["title.fr", "doi"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -241,12 +241,12 @@
 	},
 	{
 		"rule": "20",
-		"non_empty": ["titleen", "doi"],
+		"non_empty": ["title.en", "doi"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -259,12 +259,12 @@
 	},
 	{
 		"rule": "21",
-		"non_empty": ["titlefr", "utKey"],
+		"non_empty": ["title.fr", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -277,12 +277,12 @@
 	},
 	{
 		"rule": "22",
-		"non_empty": ["titleen", "utKey"],
+		"non_empty": ["title.en", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -295,12 +295,12 @@
 	},
 	{
 		"rule": "23",
-		"non_empty": ["titlefr", "pmId"],
+		"non_empty": ["title.fr", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -313,12 +313,12 @@
 	},
 	{
 		"rule": "24",
-		"non_empty": ["titleen", "pmId"],
+		"non_empty": ["title.en", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -331,12 +331,12 @@
 	},
 	{
 		"rule": "25",
-		"non_empty": ["titlefr", "idHal"],
+		"non_empty": ["title.fr", "idHal"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -349,12 +349,12 @@
 	},
 	{
 		"rule": "26",
-		"non_empty": ["titleen", "idHal"],
+		"non_empty": ["title.en", "idHal"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -367,13 +367,13 @@
 	},
 	{
 		"rule": "27",
-		"non_empty": ["titlefr", "volume", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "volume", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -402,13 +402,13 @@
 	},
 	{
 		"rule": "28",
-		"non_empty": ["titlefr", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -433,13 +433,13 @@
 	},
 	{
 		"rule": "29",
-		"non_empty": ["titlefr", "volume", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "volume", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["issue", "meetingAbstractNumber", "specialissue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -464,13 +464,13 @@
 	},
 	{
 		"rule": "39",
-		"non_empty": ["titleen", "volume", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "volume", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -499,13 +499,13 @@
 	},
 	{
 		"rule": "40",
-		"non_empty": ["titleen", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -530,13 +530,13 @@
 	},
 	{
 		"rule": "41",
-		"non_empty": ["titleen", "volume", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "volume", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -561,12 +561,12 @@
 	},
 	{
 		"rule": "51",
-		"non_empty": ["title", "doi"],
+		"non_empty": ["title.default", "doi"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -579,12 +579,12 @@
 	},
 	{
 		"rule": "52",
-		"non_empty": ["title", "utKey"],
+		"non_empty": ["title.default", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -597,12 +597,12 @@
 	},
 	{
 		"rule": "53",
-		"non_empty": ["title", "pmId"],
+		"non_empty": ["title.default", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -615,12 +615,12 @@
 	},
 	{
 		"rule": "54",
-		"non_empty": ["title", "idHal"],
+		"non_empty": ["title.default", "idHal"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -633,13 +633,13 @@
 	},
 	{
 		"rule": "59",
-		"non_empty": ["title", "volume", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "volume", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -668,13 +668,13 @@
 	},
 	{
 		"rule": "60",
-		"non_empty": ["title", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -699,13 +699,13 @@
 	},
 	{
 		"rule": "61",
-		"non_empty": ["title", "volume", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "volume", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -730,12 +730,12 @@
 	},
 	{
 		"rule": "71",
-		"non_empty": ["titlefr", "doi"],
+		"non_empty": ["title.fr", "doi"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -748,12 +748,12 @@
 	},
 	{
 		"rule": "72",
-		"non_empty": ["titleen", "doi"],
+		"non_empty": ["title.en", "doi"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -766,12 +766,12 @@
 	},
 	{
 		"rule": "73",
-		"non_empty": ["titlefr", "utKey"],
+		"non_empty": ["title.fr", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -784,12 +784,12 @@
 	},
 	{
 		"rule": "74",
-		"non_empty": ["titleen", "utKey"],
+		"non_empty": ["title.en", "utKey"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -802,12 +802,12 @@
 	},
 	{
 		"rule": "75",
-		"non_empty": ["titlefr", "pmId"],
+		"non_empty": ["title.fr", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -820,12 +820,12 @@
 	},
 	{
 		"rule": "76",
-		"non_empty": ["titleen", "pmId"],
+		"non_empty": ["title.en", "pmId"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -838,12 +838,12 @@
 	},
 	{
 		"rule": "77",
-		"non_empty": ["titlefr", "idHal"],
+		"non_empty": ["title.fr", "idHal"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -856,12 +856,12 @@
 	},
 	{
 		"rule": "78",
-		"non_empty": ["titleen", "idHal"],
+		"non_empty": ["title.en", "idHal"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -874,13 +874,13 @@
 	},
 	{
 		"rule": "79",
-		"non_empty": ["titlefr", "volume", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "volume", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -909,13 +909,13 @@
 	},
 	{
 		"rule": "80",
-		"non_empty": ["titlefr", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -940,13 +940,13 @@
 	},
 	{
 		"rule": "81",
-		"non_empty": ["titlefr", "volume", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "volume", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -971,13 +971,13 @@
 	},
 	{
 		"rule": "91",
-		"non_empty": ["titleen", "volume", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "volume", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -1006,13 +1006,13 @@
 	},
 	{
 		"rule": "92",
-		"non_empty": ["titleen", "issue", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "issue", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -1037,13 +1037,13 @@
 	},
 	{
 		"rule": "93",
-		"non_empty": ["titleen", "volume", "pageRange", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "volume", "pageRange", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -1068,12 +1068,12 @@
 	},
 	{
 		"rule": "147",
-		"non_empty": ["title", "nnt"],
+		"non_empty": ["title.default", "nnt"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -1086,12 +1086,12 @@
 	},
 	{
 		"rule": "148",
-		"non_empty": ["title", "nnt"],
+		"non_empty": ["title.default", "nnt"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -1104,12 +1104,12 @@
 	},
 	{
 		"rule": "150",
-		"non_empty": ["titlefr", "nnt"],
+		"non_empty": ["title.fr", "nnt"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -1122,12 +1122,12 @@
 	},
 	{
 		"rule": "151",
-		"non_empty": ["titlefr", "nnt"],
+		"non_empty": ["title.fr", "nnt"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -1140,12 +1140,12 @@
 	},
 	{
 		"rule": "153",
-		"non_empty": ["titleen", "nnt"],
+		"non_empty": ["title.en", "nnt"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -1158,12 +1158,12 @@
 	},
 	{
 		"rule": "154",
-		"non_empty": ["titleen", "nnt"],
+		"non_empty": ["title.en", "nnt"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -1176,12 +1176,12 @@
 	},
 	{
 		"rule": "156",
-		"non_empty": ["title", "isbn"],
+		"non_empty": ["title.default", "isbn"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -1194,12 +1194,12 @@
 	},
 	{
 		"rule": "157",
-		"non_empty": ["title", "isbn"],
+		"non_empty": ["title.default", "isbn"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -1212,12 +1212,12 @@
 	},
 	{
 		"rule": "159",
-		"non_empty": ["titlefr", "isbn"],
+		"non_empty": ["title.fr", "isbn"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -1230,12 +1230,12 @@
 	},
 	{
 		"rule": "160",
-		"non_empty": ["titlefr", "isbn"],
+		"non_empty": ["title.fr", "isbn"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -1248,12 +1248,12 @@
 	},
 	{
 		"rule": "162",
-		"non_empty": ["titleen", "isbn"],
+		"non_empty": ["title.en", "isbn"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -1266,12 +1266,12 @@
 	},
 	{
 		"rule": "163",
-		"non_empty": ["titleen", "isbn"],
+		"non_empty": ["title.en", "isbn"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -1284,12 +1284,12 @@
 	},
 	{
 		"rule": "168",
-		"non_empty": ["first3AuthorNames", "title", "publicationDate"],
+		"non_empty": ["first3AuthorNames", "title.default", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -1306,12 +1306,12 @@
 	},
 	{
 		"rule": "170",
-		"non_empty": ["first3AuthorNames", "title", "publicationDate"],
+		"non_empty": ["first3AuthorNames", "title.default", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -1328,12 +1328,12 @@
 	},
 	{
 		"rule": "171",
-		"non_empty": ["first3AuthorNames", "titlefr", "publicationDate"],
+		"non_empty": ["first3AuthorNames", "title.fr", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -1350,12 +1350,12 @@
 	},
 	{
 		"rule": "173",
-		"non_empty": ["first3AuthorNames", "titlefr", "publicationDate"],
+		"non_empty": ["first3AuthorNames", "title.fr", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -1372,12 +1372,12 @@
 	},
 	{
 		"rule": "174",
-		"non_empty": ["first3AuthorNames", "titleen", "publicationDate"],
+		"non_empty": ["first3AuthorNames", "title.en", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -1394,12 +1394,12 @@
 	},
 	{
 		"rule": "176",
-		"non_empty": ["first3AuthorNames", "titleen", "publicationDate"],
+		"non_empty": ["first3AuthorNames", "title.en", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -1416,12 +1416,12 @@
 	},
 	{
 		"rule": "177",
-		"non_empty": ["first3AuthorNamesWithInitials", "title", "publicationDate"],
+		"non_empty": ["first3AuthorNamesWithInitials", "title.default", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -1438,12 +1438,12 @@
 	},
 	{
 		"rule": "179",
-		"non_empty": ["first3AuthorNamesWithInitials", "title", "publicationDate"],
+		"non_empty": ["first3AuthorNamesWithInitials", "title.default", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -1460,12 +1460,12 @@
 	},
 	{
 		"rule": "180",
-		"non_empty": ["first3AuthorNamesWithInitials", "titlefr", "publicationDate"],
+		"non_empty": ["first3AuthorNamesWithInitials", "title.fr", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -1482,12 +1482,12 @@
 	},
 	{
 		"rule": "182",
-		"non_empty": ["first3AuthorNamesWithInitials", "titlefr", "publicationDate"],
+		"non_empty": ["first3AuthorNamesWithInitials", "title.fr", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -1504,12 +1504,12 @@
 	},
 	{
 		"rule": "183",
-		"non_empty": ["first3AuthorNamesWithInitials", "titleen", "publicationDate"],
+		"non_empty": ["first3AuthorNamesWithInitials", "title.en", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -1526,12 +1526,12 @@
 	},
 	{
 		"rule": "185",
-		"non_empty": ["first3AuthorNamesWithInitials", "titleen", "publicationDate"],
+		"non_empty": ["first3AuthorNamesWithInitials", "title.en", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -1548,17 +1548,17 @@
 	},
 	{
 		"rule": "186",
-		"non_empty": ["titleen", "titreSourceJ", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1579,17 +1579,17 @@
 	},
 	{
 		"rule": "187",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1610,17 +1610,17 @@
 	},
 	{
 		"rule": "188",
-		"non_empty": ["titlefr", "titreSourceJ", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1641,17 +1641,17 @@
 	},
 	{
 		"rule": "189",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1672,17 +1672,17 @@
 	},
 	{
 		"rule": "190",
-		"non_empty": ["title", "titreSourceJ", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1703,17 +1703,17 @@
 	},
 	{
 		"rule": "191",
-		"non_empty": ["title", "titreSourceJ", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1734,17 +1734,17 @@
 	},
 	{
 		"rule": "192",
-		"non_empty": ["titleen", "titreSourceJ", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1765,17 +1765,17 @@
 	},
 	{
 		"rule": "193",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1796,17 +1796,17 @@
 	},
 	{
 		"rule": "194",
-		"non_empty": ["titlefr", "titreSourceJ", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1827,17 +1827,17 @@
 	},
 	{
 		"rule": "195",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1858,17 +1858,17 @@
 	},
 	{
 		"rule": "196",
-		"non_empty": ["title", "titreSourceJ", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1889,17 +1889,17 @@
 	},
 	{
 		"rule": "197",
-		"non_empty": ["title", "titreSourceJ", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -1920,13 +1920,13 @@
 	},
 	{
 		"rule": "200",
-		"non_empty": ["titleen", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -1951,13 +1951,13 @@
 	},
 	{
 		"rule": "201",
-		"non_empty": ["titleen", "volume", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "volume", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -1982,13 +1982,13 @@
 	},
 	{
 		"rule": "204",
-		"non_empty": ["titlefr", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -2013,13 +2013,13 @@
 	},
 	{
 		"rule": "205",
-		"non_empty": ["titlefr", "volume", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "volume", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -2044,13 +2044,13 @@
 	},
 	{
 		"rule": "208",
-		"non_empty": ["title", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -2075,13 +2075,13 @@
 	},
 	{
 		"rule": "209",
-		"non_empty": ["title", "volume", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "volume", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -2106,13 +2106,13 @@
 	},
 	{
 		"rule": "212",
-		"non_empty": ["titleen", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -2137,13 +2137,13 @@
 	},
 	{
 		"rule": "213",
-		"non_empty": ["titleen", "volume", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "volume", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -2168,13 +2168,13 @@
 	},
 	{
 		"rule": "216",
-		"non_empty": ["titlefr", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -2199,13 +2199,13 @@
 	},
 	{
 		"rule": "217",
-		"non_empty": ["titlefr", "volume", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "volume", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -2230,13 +2230,13 @@
 	},
 	{
 		"rule": "220",
-		"non_empty": ["title", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -2261,13 +2261,13 @@
 	},
 	{
 		"rule": "221",
-		"non_empty": ["title", "volume", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "volume", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -2292,13 +2292,13 @@
 	},
 	{
 		"rule": "223",
-		"non_empty": ["titleen", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -2327,13 +2327,13 @@
 	},
 	{
 		"rule": "225",
-		"non_empty": ["titlefr", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -2362,13 +2362,13 @@
 	},
 	{
 		"rule": "227",
-		"non_empty": ["title", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -2397,13 +2397,13 @@
 	},
 	{
 		"rule": "229",
-		"non_empty": ["titlefr", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.fr", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -2432,13 +2432,13 @@
 	},
 	{
 		"rule": "231",
-		"non_empty": ["title", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.default", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -2467,13 +2467,13 @@
 	},
 	{
 		"rule": "232",
-		"non_empty": ["titleen", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
+		"non_empty": ["title.en", "volume", "issue", "articleNumber", "publicationDate", "xissn"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -2502,17 +2502,17 @@
 	},
 	{
 		"rule": "234",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2537,17 +2537,17 @@
 	},
 	{
 		"rule": "235",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2572,17 +2572,17 @@
 	},
 	{
 		"rule": "236",
-		"non_empty": ["title", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2607,17 +2607,17 @@
 	},
 	{
 		"rule": "237",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2642,17 +2642,17 @@
 	},
 	{
 		"rule": "238",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2677,17 +2677,17 @@
 	},
 	{
 		"rule": "239",
-		"non_empty": ["title", "titreSourceJ", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2712,17 +2712,17 @@
 	},
 	{
 		"rule": "240",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2747,17 +2747,17 @@
 	},
 	{
 		"rule": "241",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2782,17 +2782,17 @@
 	},
 	{
 		"rule": "242",
-		"non_empty": ["title", "titreSourceJ", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2817,17 +2817,17 @@
 	},
 	{
 		"rule": "243",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2852,17 +2852,17 @@
 	},
 	{
 		"rule": "244",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2887,17 +2887,17 @@
 	},
 	{
 		"rule": "245",
-		"non_empty": ["title", "titreSourceJ", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -2922,12 +2922,12 @@
 	},
 	{
 		"rule": "247",
-		"non_empty": ["title", "isbn", "pageRange"],
+		"non_empty": ["title.default", "isbn", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -2944,12 +2944,12 @@
 	},
 	{
 		"rule": "248",
-		"non_empty": ["titlefr", "isbn", "pageRange"],
+		"non_empty": ["title.fr", "isbn", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -2966,12 +2966,12 @@
 	},
 	{
 		"rule": "249",
-		"non_empty": ["titleen", "isbn", "pageRange"],
+		"non_empty": ["title.en", "isbn", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -2988,16 +2988,16 @@
 	},
 	{
 		"rule": "250",
-		"non_empty": ["title", "titreSourceM", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3014,16 +3014,16 @@
 	},
 	{
 		"rule": "251",
-		"non_empty": ["titlefr", "titreSourceM", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3040,16 +3040,16 @@
 	},
 	{
 		"rule": "252",
-		"non_empty": ["titleen", "titreSourceM", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3102,12 +3102,12 @@
 	},
 	{
 		"rule": "255",
-		"non_empty": ["first3AuthorNames", "titreSourceM", "pageRange"],
+		"non_empty": ["first3AuthorNames", "title.monography", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3120,12 +3120,12 @@
 	},
 	{
 		"rule": "256",
-		"non_empty": ["first3AuthorNamesWithInitials", "titreSourceM", "pageRange"],
+		"non_empty": ["first3AuthorNamesWithInitials", "title.monography", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3138,17 +3138,17 @@
 	},
 	{
 		"rule": "257",
-		"non_empty": ["titleen", "titreSourceM", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3169,17 +3169,17 @@
 	},
 	{
 		"rule": "258",
-		"non_empty": ["titleen", "titreSourceM", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3200,17 +3200,17 @@
 	},
 	{
 		"rule": "259",
-		"non_empty": ["titlefr", "titreSourceM", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3231,17 +3231,17 @@
 	},
 	{
 		"rule": "260",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3262,17 +3262,17 @@
 	},
 	{
 		"rule": "261",
-		"non_empty": ["title", "titreSourceM", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3293,17 +3293,17 @@
 	},
 	{
 		"rule": "262",
-		"non_empty": ["title", "titreSourceM", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3324,17 +3324,17 @@
 	},
 	{
 		"rule": "263",
-		"non_empty": ["titleen", "titreSourceM", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3355,17 +3355,17 @@
 	},
 	{
 		"rule": "264",
-		"non_empty": ["titleen", "titreSourceM", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3386,17 +3386,17 @@
 	},
 	{
 		"rule": "265",
-		"non_empty": ["titlefr", "titreSourceM", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3417,17 +3417,17 @@
 	},
 	{
 		"rule": "266",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3448,17 +3448,17 @@
 	},
 	{
 		"rule": "267",
-		"non_empty": ["title", "titreSourceM", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3479,17 +3479,17 @@
 	},
 	{
 		"rule": "268",
-		"non_empty": ["title", "titreSourceM", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3510,17 +3510,17 @@
 	},
 	{
 		"rule": "269",
-		"non_empty": ["titleen", "titreSourceJ", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3541,17 +3541,17 @@
 	},
 	{
 		"rule": "270",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3572,17 +3572,17 @@
 	},
 	{
 		"rule": "271",
-		"non_empty": ["titlefr", "titreSourceJ", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3603,17 +3603,17 @@
 	},
 	{
 		"rule": "272",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3634,17 +3634,17 @@
 	},
 	{
 		"rule": "273",
-		"non_empty": ["title", "titreSourceJ", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3665,17 +3665,17 @@
 	},
 	{
 		"rule": "274",
-		"non_empty": ["title", "titreSourceJ", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3696,17 +3696,17 @@
 	},
 	{
 		"rule": "275",
-		"non_empty": ["titleen", "titreSourceJ", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3727,17 +3727,17 @@
 	},
 	{
 		"rule": "276",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.journal", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3758,17 +3758,17 @@
 	},
 	{
 		"rule": "277",
-		"non_empty": ["titlefr", "titreSourceJ", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3789,17 +3789,17 @@
 	},
 	{
 		"rule": "278",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.journal", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3820,17 +3820,17 @@
 	},
 	{
 		"rule": "279",
-		"non_empty": ["title", "titreSourceJ", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3851,17 +3851,17 @@
 	},
 	{
 		"rule": "280",
-		"non_empty": ["title", "titreSourceJ", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.journal", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -3882,17 +3882,17 @@
 	},
 	{
 		"rule": "281",
-		"non_empty": ["titleen", "titreSourceM", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3913,17 +3913,17 @@
 	},
 	{
 		"rule": "282",
-		"non_empty": ["titleen", "titreSourceM", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3944,17 +3944,17 @@
 	},
 	{
 		"rule": "283",
-		"non_empty": ["titlefr", "titreSourceM", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -3975,17 +3975,17 @@
 	},
 	{
 		"rule": "284",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4006,17 +4006,17 @@
 	},
 	{
 		"rule": "285",
-		"non_empty": ["title", "titreSourceM", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4037,17 +4037,17 @@
 	},
 	{
 		"rule": "286",
-		"non_empty": ["title", "titreSourceM", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4068,17 +4068,17 @@
 	},
 	{
 		"rule": "287",
-		"non_empty": ["titleen", "titreSourceM", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4099,17 +4099,17 @@
 	},
 	{
 		"rule": "288",
-		"non_empty": ["titleen", "titreSourceM", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4130,17 +4130,17 @@
 	},
 	{
 		"rule": "289",
-		"non_empty": ["titlefr", "titreSourceM", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4161,17 +4161,17 @@
 	},
 	{
 		"rule": "290",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4192,17 +4192,17 @@
 	},
 	{
 		"rule": "291",
-		"non_empty": ["title", "titreSourceM", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4223,17 +4223,17 @@
 	},
 	{
 		"rule": "292",
-		"non_empty": ["title", "titreSourceM", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4254,17 +4254,17 @@
 	},
 	{
 		"rule": "293",
-		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4289,17 +4289,17 @@
 	},
 	{
 		"rule": "294",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4324,17 +4324,17 @@
 	},
 	{
 		"rule": "295",
-		"non_empty": ["title", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4359,17 +4359,17 @@
 	},
 	{
 		"rule": "296",
-		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4394,17 +4394,17 @@
 	},
 	{
 		"rule": "297",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4429,17 +4429,17 @@
 	},
 	{
 		"rule": "298",
-		"non_empty": ["title", "titreSourceM", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4464,17 +4464,17 @@
 	},
 	{
 		"rule": "299",
-		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4499,17 +4499,17 @@
 	},
 	{
 		"rule": "300",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4534,17 +4534,17 @@
 	},
 	{
 		"rule": "301",
-		"non_empty": ["title", "titreSourceM", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4569,17 +4569,17 @@
 	},
 	{
 		"rule": "302",
-		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4604,17 +4604,17 @@
 	},
 	{
 		"rule": "303",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4639,17 +4639,17 @@
 	},
 	{
 		"rule": "304",
-		"non_empty": ["title", "titreSourceM", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -4674,17 +4674,17 @@
 	},
 	{
 		"rule": "305",
-		"non_empty": ["titleen", "meetingTitle", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4705,17 +4705,17 @@
 	},
 	{
 		"rule": "306",
-		"non_empty": ["titleen", "meetingTitle", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4736,17 +4736,17 @@
 	},
 	{
 		"rule": "307",
-		"non_empty": ["titlefr", "meetingTitle", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4767,17 +4767,17 @@
 	},
 	{
 		"rule": "308",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4798,17 +4798,17 @@
 	},
 	{
 		"rule": "309",
-		"non_empty": ["title", "meetingTitle", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4829,17 +4829,17 @@
 	},
 	{
 		"rule": "310",
-		"non_empty": ["title", "meetingTitle", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4860,17 +4860,17 @@
 	},
 	{
 		"rule": "311",
-		"non_empty": ["titleen", "meetingTitle", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4891,17 +4891,17 @@
 	},
 	{
 		"rule": "312",
-		"non_empty": ["titleen", "meetingTitle", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4922,17 +4922,17 @@
 	},
 	{
 		"rule": "313",
-		"non_empty": ["titlefr", "meetingTitle", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4953,17 +4953,17 @@
 	},
 	{
 		"rule": "314",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -4984,17 +4984,17 @@
 	},
 	{
 		"rule": "315",
-		"non_empty": ["title", "meetingTitle", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["volume", "meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5015,17 +5015,17 @@
 	},
 	{
 		"rule": "316",
-		"non_empty": ["title", "meetingTitle", "volume", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "volume", "pageRange", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "meetingAbstractNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5046,17 +5046,17 @@
 	},
 	{
 		"rule": "317",
-		"non_empty": ["titleen", "meetingTitle", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5077,17 +5077,17 @@
 	},
 	{
 		"rule": "318",
-		"non_empty": ["titleen", "meetingTitle", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5108,17 +5108,17 @@
 	},
 	{
 		"rule": "319",
-		"non_empty": ["titlefr", "meetingTitle", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5139,17 +5139,17 @@
 	},
 	{
 		"rule": "320",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5170,17 +5170,17 @@
 	},
 	{
 		"rule": "321",
-		"non_empty": ["title", "meetingTitle", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5201,17 +5201,17 @@
 	},
 	{
 		"rule": "322",
-		"non_empty": ["title", "meetingTitle", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5232,17 +5232,17 @@
 	},
 	{
 		"rule": "323",
-		"non_empty": ["titleen", "meetingTitle", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5263,17 +5263,17 @@
 	},
 	{
 		"rule": "324",
-		"non_empty": ["titleen", "meetingTitle", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5294,17 +5294,17 @@
 	},
 	{
 		"rule": "325",
-		"non_empty": ["titlefr", "meetingTitle", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5325,17 +5325,17 @@
 	},
 	{
 		"rule": "326",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5356,17 +5356,17 @@
 	},
 	{
 		"rule": "327",
-		"non_empty": ["title", "meetingTitle", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["volume", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5387,17 +5387,17 @@
 	},
 	{
 		"rule": "328",
-		"non_empty": ["title", "meetingTitle", "volume", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "volume", "articleNumber", "publicationDate"],
 		"is_empty": ["issue", "specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5418,17 +5418,17 @@
 	},
 	{
 		"rule": "329",
-		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5453,17 +5453,17 @@
 	},
 	{
 		"rule": "330",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5488,17 +5488,17 @@
 	},
 	{
 		"rule": "331",
-		"non_empty": ["title", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5523,17 +5523,17 @@
 	},
 	{
 		"rule": "332",
-		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5558,17 +5558,17 @@
 	},
 	{
 		"rule": "333",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5593,17 +5593,17 @@
 	},
 	{
 		"rule": "334",
-		"non_empty": ["title", "meetingTitle", "volume", "issue", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "volume", "issue", "pageRange", "publicationDate"],
 		"is_empty": ["meetingAbstractNumber", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5628,17 +5628,17 @@
 	},
 	{
 		"rule": "335",
-		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5663,17 +5663,17 @@
 	},
 	{
 		"rule": "336",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5698,17 +5698,17 @@
 	},
 	{
 		"rule": "337",
-		"non_empty": ["title", "meetingTitle", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5733,17 +5733,17 @@
 	},
 	{
 		"rule": "338",
-		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5768,17 +5768,17 @@
 	},
 	{
 		"rule": "339",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5803,17 +5803,17 @@
 	},
 	{
 		"rule": "340",
-		"non_empty": ["title", "meetingTitle", "volume", "issue", "articleNumber", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "volume", "issue", "articleNumber", "publicationDate"],
 		"is_empty": ["specialIssue", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5838,17 +5838,17 @@
 	},
 	{
 		"rule": "341",
-		"non_empty": ["titleen", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.meeting", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5873,17 +5873,17 @@
 	},
 	{
 		"rule": "342",
-		"non_empty": ["titleen", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.meeting", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5908,17 +5908,17 @@
 	},
 	{
 		"rule": "343",
-		"non_empty": ["titlefr", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.meeting", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5943,17 +5943,17 @@
 	},
 	{
 		"rule": "344",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -5978,17 +5978,17 @@
 	},
 	{
 		"rule": "345",
-		"non_empty": ["title", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.meeting", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6013,17 +6013,17 @@
 	},
 	{
 		"rule": "346",
-		"non_empty": ["title", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.meeting", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6048,17 +6048,17 @@
 	},
 	{
 		"rule": "347",
-		"non_empty": ["titleen", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.meeting", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6083,17 +6083,17 @@
 	},
 	{
 		"rule": "348",
-		"non_empty": ["titleen", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.meeting", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6118,17 +6118,17 @@
 	},
 	{
 		"rule": "349",
-		"non_empty": ["titlefr", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.meeting", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6153,17 +6153,17 @@
 	},
 	{
 		"rule": "350",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6188,17 +6188,17 @@
 	},
 	{
 		"rule": "351",
-		"non_empty": ["title", "meetingTitle", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.meeting", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6223,17 +6223,17 @@
 	},
 	{
 		"rule": "352",
-		"non_empty": ["title", "meetingTitle", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.meeting", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6258,17 +6258,17 @@
 	},
 	{
 		"rule": "353",
-		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.meeting", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6297,17 +6297,17 @@
 	},
 	{
 		"rule": "354",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6336,17 +6336,17 @@
 	},
 	{
 		"rule": "355",
-		"non_empty": ["title", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.meeting", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6375,17 +6375,17 @@
 	},
 	{
 		"rule": "356",
-		"non_empty": ["titleen", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.meeting", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6414,17 +6414,17 @@
 	},
 	{
 		"rule": "357",
-		"non_empty": ["titlefr", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.meeting", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6453,17 +6453,17 @@
 	},
 	{
 		"rule": "358",
-		"non_empty": ["title", "meetingTitle", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.meeting", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -6492,17 +6492,17 @@
 	},
 	{
 		"rule": "359",
-		"non_empty": ["titleen", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.journal", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6527,17 +6527,17 @@
 	},
 	{
 		"rule": "360",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.journal", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6562,17 +6562,17 @@
 	},
 	{
 		"rule": "361",
-		"non_empty": ["titlefr", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.journal", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6597,17 +6597,17 @@
 	},
 	{
 		"rule": "362",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.journal", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6632,17 +6632,17 @@
 	},
 	{
 		"rule": "363",
-		"non_empty": ["title", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.journal", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6667,17 +6667,17 @@
 	},
 	{
 		"rule": "364",
-		"non_empty": ["title", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.journal", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6702,17 +6702,17 @@
 	},
 	{
 		"rule": "365",
-		"non_empty": ["titleen", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.journal", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6737,17 +6737,17 @@
 	},
 	{
 		"rule": "366",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.journal", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6772,17 +6772,17 @@
 	},
 	{
 		"rule": "367",
-		"non_empty": ["titlefr", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.journal", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6807,17 +6807,17 @@
 	},
 	{
 		"rule": "368",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.journal", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6842,17 +6842,17 @@
 	},
 	{
 		"rule": "369",
-		"non_empty": ["title", "titreSourceJ", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.journal", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6877,17 +6877,17 @@
 	},
 	{
 		"rule": "370",
-		"non_empty": ["title", "titreSourceJ", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.journal", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6912,17 +6912,17 @@
 	},
 	{
 		"rule": "371",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.journal", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6951,17 +6951,17 @@
 	},
 	{
 		"rule": "372",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.journal", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -6990,17 +6990,17 @@
 	},
 	{
 		"rule": "373",
-		"non_empty": ["title", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.journal", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -7029,17 +7029,17 @@
 	},
 	{
 		"rule": "374",
-		"non_empty": ["titleen", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.journal", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -7068,17 +7068,17 @@
 	},
 	{
 		"rule": "375",
-		"non_empty": ["titlefr", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.journal", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -7107,17 +7107,17 @@
 	},
 	{
 		"rule": "376",
-		"non_empty": ["title", "titreSourceJ", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.journal", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceJ.normalized": "titreSourceJ"
+						"title.journal.normalized": "title.journal"
 					}
 				}, {
 					"match": {
@@ -7146,17 +7146,17 @@
 	},
 	{
 		"rule": "377",
-		"non_empty": ["titleen", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.monography", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7181,17 +7181,17 @@
 	},
 	{
 		"rule": "378",
-		"non_empty": ["titleen", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.monography", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7216,17 +7216,17 @@
 	},
 	{
 		"rule": "379",
-		"non_empty": ["titlefr", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.monography", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7251,17 +7251,17 @@
 	},
 	{
 		"rule": "380",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.monography", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7286,17 +7286,17 @@
 	},
 	{
 		"rule": "381",
-		"non_empty": ["title", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.monography", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7321,17 +7321,17 @@
 	},
 	{
 		"rule": "382",
-		"non_empty": ["title", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.monography", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7356,17 +7356,17 @@
 	},
 	{
 		"rule": "383",
-		"non_empty": ["titleen", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.monography", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7391,17 +7391,17 @@
 	},
 	{
 		"rule": "384",
-		"non_empty": ["titleen", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.monography", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7426,17 +7426,17 @@
 	},
 	{
 		"rule": "385",
-		"non_empty": ["titlefr", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.monography", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7461,17 +7461,17 @@
 	},
 	{
 		"rule": "386",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.monography", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7496,17 +7496,17 @@
 	},
 	{
 		"rule": "387",
-		"non_empty": ["title", "titreSourceM", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.monography", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7531,17 +7531,17 @@
 	},
 	{
 		"rule": "388",
-		"non_empty": ["title", "titreSourceM", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.monography", "volume", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7566,17 +7566,17 @@
 	},
 	{
 		"rule": "389",
-		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.monography", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7605,17 +7605,17 @@
 	},
 	{
 		"rule": "390",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.monography", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7644,17 +7644,17 @@
 	},
 	{
 		"rule": "391",
-		"non_empty": ["title", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.monography", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7683,17 +7683,17 @@
 	},
 	{
 		"rule": "392",
-		"non_empty": ["titleen", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.en", "title.monography", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7722,17 +7722,17 @@
 	},
 	{
 		"rule": "393",
-		"non_empty": ["titlefr", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.fr", "title.monography", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7761,17 +7761,17 @@
 	},
 	{
 		"rule": "394",
-		"non_empty": ["title", "titreSourceM", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
+		"non_empty": ["title.default", "title.monography", "volume", "issue", "meetingAbstractNumber", "publicationDate", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7800,16 +7800,16 @@
 	},
 	{
 		"rule": "395",
-		"non_empty": ["titlefr", "titreSourceM", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.monography", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7826,16 +7826,16 @@
 	},
 	{
 		"rule": "396",
-		"non_empty": ["titleen", "titreSourceM", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.monography", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7852,16 +7852,16 @@
 	},
 	{
 		"rule": "397",
-		"non_empty": ["title", "titreSourceM", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.monography", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "titlefr"
+						"title.default.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"titreSourceM.normalized": "titreSourceM"
+						"title.monography.normalized": "title.monography"
 					}
 				}, {
 					"match": {
@@ -7878,12 +7878,12 @@
 	},
 	{
 		"rule": "398",
-		"non_empty": ["title", "isbn", "pageRange"],
+		"non_empty": ["title.default", "isbn", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -7900,12 +7900,12 @@
 	},
 	{
 		"rule": "399",
-		"non_empty": ["titlefr", "isbn", "pageRange"],
+		"non_empty": ["title.fr", "isbn", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -7922,12 +7922,12 @@
 	},
 	{
 		"rule": "400",
-		"non_empty": ["titleen", "isbn", "pageRange"],
+		"non_empty": ["title.en", "isbn", "pageRange"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -7944,16 +7944,16 @@
 	},
 	{
 		"rule": "401",
-		"non_empty": ["title", "meetingTitle", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -7970,16 +7970,16 @@
 	},
 	{
 		"rule": "402",
-		"non_empty": ["titlefr", "meetingTitle", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -7996,16 +7996,16 @@
 	},
 	{
 		"rule": "403",
-		"non_empty": ["titleen", "meetingTitle", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -8022,16 +8022,16 @@
 	},
 	{
 		"rule": "404",
-		"non_empty": ["title", "meetingTitle", "pageRange", "publicationDate"],
+		"non_empty": ["title.default", "title.meeting", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -8048,16 +8048,16 @@
 	},
 	{
 		"rule": "405",
-		"non_empty": ["titlefr", "meetingTitle", "pageRange", "publicationDate"],
+		"non_empty": ["title.fr", "title.meeting", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -8074,16 +8074,16 @@
 	},
 	{
 		"rule": "406",
-		"non_empty": ["titleen", "meetingTitle", "pageRange", "publicationDate"],
+		"non_empty": ["title.en", "title.meeting", "pageRange", "publicationDate"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
-						"meetingTitle.normalized": "meetingTitle"
+						"title.meeting.normalized": "title.meeting"
 					}
 				}, {
 					"match": {
@@ -8100,12 +8100,12 @@
 	},
 	{
 		"rule": "407",
-		"non_empty": ["title", "arxiv"],
+		"non_empty": ["title.default", "arxiv"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -8154,12 +8154,12 @@
 	},
 	{
 		"rule": "410",
-		"non_empty": ["titlefr", "arxiv"],
+		"non_empty": ["title.fr", "arxiv"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8172,12 +8172,12 @@
 	},
 	{
 		"rule": "411",
-		"non_empty": ["titleen", "arxiv"],
+		"non_empty": ["title.en", "arxiv"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -8190,12 +8190,12 @@
 	},
 	{
 		"rule": "412",
-		"non_empty": ["title", "arxiv"],
+		"non_empty": ["title.default", "arxiv"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -8208,12 +8208,12 @@
 	},
 	{
 		"rule": "413",
-		"non_empty": ["titlefr", "arxiv"],
+		"non_empty": ["title.fr", "arxiv"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8226,12 +8226,12 @@
 	},
 	{
 		"rule": "414",
-		"non_empty": ["titleen", "arxiv"],
+		"non_empty": ["title.en", "arxiv"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -8262,13 +8262,13 @@
 	},
 	{
 		"rule": "416",
-		"non_empty": ["titleen", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.en", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -8297,13 +8297,13 @@
 	},
 	{
 		"rule": "417",
-		"non_empty": ["titleen", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.en", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -8332,13 +8332,13 @@
 	},
 	{
 		"rule": "418",
-		"non_empty": ["titlefr", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.fr", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8367,13 +8367,13 @@
 	},
 	{
 		"rule": "419",
-		"non_empty": ["titlefr", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.fr", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8402,13 +8402,13 @@
 	},
 	{
 		"rule": "420",
-		"non_empty": ["title", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.default", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -8437,13 +8437,13 @@
 	},
 	{
 		"rule": "421",
-		"non_empty": ["title", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.default", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -8472,13 +8472,13 @@
 	},
 	{
 		"rule": "422",
-		"non_empty": ["titleen", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.en", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -8507,13 +8507,13 @@
 	},
 	{
 		"rule": "423",
-		"non_empty": ["titleen", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.en", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -8542,13 +8542,13 @@
 	},
 	{
 		"rule": "424",
-		"non_empty": ["titlefr", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.fr", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8577,13 +8577,13 @@
 	},
 	{
 		"rule": "425",
-		"non_empty": ["titlefr", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.fr", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8612,13 +8612,13 @@
 	},
 	{
 		"rule": "426",
-		"non_empty": ["title", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.default", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["volume", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -8647,13 +8647,13 @@
 	},
 	{
 		"rule": "427",
-		"non_empty": ["title", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.default", "volume", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["issue", "specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -8682,13 +8682,13 @@
 	},
 	{
 		"rule": "428",
-		"non_empty": ["titleen", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.en", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -8721,13 +8721,13 @@
 	},
 	{
 		"rule": "429",
-		"non_empty": ["titlefr", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.fr", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8760,13 +8760,13 @@
 	},
 	{
 		"rule": "430",
-		"non_empty": ["title", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.default", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -8799,13 +8799,13 @@
 	},
 	{
 		"rule": "431",
-		"non_empty": ["titlefr", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.fr", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8838,13 +8838,13 @@
 	},
 	{
 		"rule": "432",
-		"non_empty": ["title", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.default", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -8877,13 +8877,13 @@
 	},
 	{
 		"rule": "433",
-		"non_empty": ["titleen", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
+		"non_empty": ["title.en", "volume", "issue", "meetingAbstractNumber", "publicationDate", "xissn", "pageRange"],
 		"is_empty": ["specialIssue"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -8916,12 +8916,12 @@
 	},
 	{
 		"rule": "434",
-		"non_empty": ["title", "reportNumber"],
+		"non_empty": ["title.default", "reportNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -8934,12 +8934,12 @@
 	},
 	{
 		"rule": "435",
-		"non_empty": ["title", "reportNumber"],
+		"non_empty": ["title.default", "reportNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -8952,12 +8952,12 @@
 	},
 	{
 		"rule": "436",
-		"non_empty": ["titlefr", "reportNumber"],
+		"non_empty": ["title.fr", "reportNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8970,12 +8970,12 @@
 	},
 	{
 		"rule": "437",
-		"non_empty": ["titlefr", "reportNumber"],
+		"non_empty": ["title.fr", "reportNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -8988,12 +8988,12 @@
 	},
 	{
 		"rule": "438",
-		"non_empty": ["titleen", "reportNumber"],
+		"non_empty": ["title.en", "reportNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -9006,12 +9006,12 @@
 	},
 	{
 		"rule": "439",
-		"non_empty": ["titleen", "reportNumber"],
+		"non_empty": ["title.en", "reportNumber"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {
@@ -9024,12 +9024,12 @@
 	},
 	{
 		"rule": "440",
-		"non_empty": ["title", "bibCode"],
+		"non_empty": ["title.default", "bibCode"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized": "title"
+						"title.default.normalized": "title.default"
 					}
 				}, {
 					"match": {
@@ -9042,12 +9042,12 @@
 	},
 	{
 		"rule": "441",
-		"non_empty": ["title", "bibCode"],
+		"non_empty": ["title.default", "bibCode"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"title.normalized50": "title"
+						"title.normalized50": "title.default"
 					}
 				}, {
 					"match": {
@@ -9060,12 +9060,12 @@
 	},
 	{
 		"rule": "442",
-		"non_empty": ["titlefr", "bibCode"],
+		"non_empty": ["title.fr", "bibCode"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized": "titlefr"
+						"title.fr.normalized": "title.fr"
 					}
 				}, {
 					"match": {
@@ -9078,12 +9078,12 @@
 	},
 	{
 		"rule": "443",
-		"non_empty": ["titlefr", "bibCode"],
+		"non_empty": ["title.fr", "bibCode"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titlefr.normalized50": "titlefr"
+						"title.fr.normalized50": "title.fr"
 					}
 				}, {
 					"match": {
@@ -9096,12 +9096,12 @@
 	},
 	{
 		"rule": "444",
-		"non_empty": ["titleen", "bibCode"],
+		"non_empty": ["title.en", "bibCode"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized": "titleen"
+						"title.en.normalized": "title.en"
 					}
 				}, {
 					"match": {
@@ -9114,12 +9114,12 @@
 	},
 	{
 		"rule": "445",
-		"non_empty": ["titleen", "bibCode"],
+		"non_empty": ["title.en", "bibCode"],
 		"query": {
 			"bool": {
 				"must": [{
 					"match": {
-						"titleen.normalized50": "titleen"
+						"title.en.normalized50": "title.en"
 					}
 				}, {
 					"match": {

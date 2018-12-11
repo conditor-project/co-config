@@ -1,16 +1,42 @@
 [
-  { "name" :"title",
-    "type" :"simpleString",
-    "path":"normalize-space(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title)"},
-  { "name":"titlefr",
-    "type":"simpleString",
-    "path":"normalize-space(//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title[@xml:lang='fr'])"},
-  { "name":"titleen",
-    "type":"simpleString",
-    "path":"normalize-space(//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title[@xml:lang='en'])"},
-  { "name":"meetingTitle",
-    "type":"simpleString",
-    "path":"normalize-space(//TEI:body//TEI:meeting//TEI:title)"},
+  { "name":"title",
+    "type":"bloc",
+    "fields":[{
+      "name":"surname",
+      "type":"simpleString",
+      "path":"string(//TEI:surname)"},
+      {
+        "name":"default",
+        "type" :"simpleString",
+        "path":"normalize-space(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title)"
+      },
+      {
+        "name":"fr",
+        "type" :"simpleString",
+        "path":"normalize-space(//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title[@xml:lang='fr'])"
+      },
+      {
+        "name":"en",
+        "type" :"simpleString",
+        "path":"normalize-space(//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title[@xml:lang='en'])"
+      },
+      {
+        "name":"monography",
+        "type" :"simpleString",
+        "path":"normalize-space(//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:monogr//TEI:title[@level='m']/text())"
+      },
+      {
+        "name":"journal",
+        "type" :"simpleString",
+        "path":"normalize-space(//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:monogr//TEI:title[@level='j']/text())"
+      },
+      {
+        "name":"meeting",
+        "type" :"simpleString",
+        "path":"normalize-space(//TEI:body//TEI:meeting//TEI:title)"
+      }
+    ]
+  },
   { "name":"first3AuthorNames",
     "type":"bloc",
     "path":"//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']//TEI:persName",
@@ -292,12 +318,6 @@
   { "name":"publicationDate",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date/text()"},
-  { "name":"titreSourceM",
-    "type":"simpleString",
-    "path":"//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:monogr//TEI:title[@level='m']/text()"},
-  { "name":"titreSourceJ",
-    "type":"simpleString",
-    "path":"//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:monogr//TEI:title[@level='j']/text()"},
   { "name":"abstract",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract/text()"},

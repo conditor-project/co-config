@@ -60,8 +60,8 @@
           "localRef.normalized",
           "meetingAbstractNumber",
           "meetingAbstractNumber.normalized",
-          "meetingTitle",
-          "meetingTitle.normalized",
+          "title.meeting",
+          "title.meeting.normalized",
           "nnt",
           "nnt.normalized",
           "oatao",
@@ -92,19 +92,16 @@
           "sciencespo.normalized",
           "source",
           "specialIssue",
-          "title",
-          "title.normalized",
-          "title.normalized50",
-          "titleen",
-          "titleen.normalized",
-          "titleen.normalized50",
-          "titlefr",
-          "titlefr.normalized",
-          "titlefr.normalized50",
-          "titreSourceJ",
-          "titreSourceJ.normalized",
-          "titreSourceM",
-          "titreSourceM.normalized",
+          "title.default",
+          "title.default.normalized",
+          "title.en",
+          "title.en.normalized",
+          "title.fr",
+          "title.fr.normalized",
+          "title.journal",
+          "title.journal.normalized",
+          "title.monography",
+          "title.monography.normalized",
           "typeConditor",
           "typeConditor.normalized",
           "documentType",
@@ -164,30 +161,12 @@
           "type":"pattern_replace",
           "pattern":"[_]",
           "replacement":""
-        },
-        "trunc_50":{
-          "type":"pattern_replace",
-          "pattern":"([0-9a-zA-Z]{50}).*",
-          "replacement":"$1"
-        },
-        "trunc_75":{
-          "type":"pattern_replace",
-          "pattern":"([0-9a-zA-Z]{75}).*",
-          "replacement":"$1"
         }
       },
       "filter":{
         "my_asciifolding":{
           "type":"asciifolding",
           "preserve_original" : false
-        },
-        "truncate50":{
-          "type":"truncate",
-          "length":50
-        },
-        "truncate75":{
-          "type":"truncate",
-          "length":75
         },
         "filter_shingles":{
           "type":"shingle",
@@ -201,12 +180,6 @@
         }
       },
       "analyzer":{
-        "analyzer:trunc50":{
-          "type":"custom",
-          "tokenizer":"keyword",
-          "char_filter":["whitespace_remove","punctuation_remove"],
-          "filter":["lowercase","my_asciifolding","icu_normalizer","truncate50"]
-        },
         "analyzer:shingles":{
           "type":"custom",
           "tokenizer":"standard",
@@ -217,11 +190,6 @@
         "title:normalizer":{
           "type": "custom",
           "char_filter":["whitespace_remove","punctuation_remove"],
-          "filter":["lowercase","my_asciifolding","icu_normalizer"]
-        },
-        "titre50:normalizer":{
-          "type":"custom",
-          "char_filter":["whitespace_remove","punctuation_remove","trunc_50"],
           "filter":["lowercase","my_asciifolding","icu_normalizer"]
         },
         "author:normalizer":{
@@ -661,56 +629,69 @@
           "type": "keyword"
         },
         "title": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"title:normalizer"
-            },
-            "normalized50":{
+          "dynamic": "false",
+          "properties": {
+            "default": {
               "type":"text",
-              "analyzer":"analyzer:trunc50"
-            }
-          },
-          "copy_to":"fingerprint"
-        },
-        "titlefr": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"title:normalizer"
+              "fields":{
+                "normalized":{
+                  "type":"keyword",
+                  "normalizer":"title:normalizer"
+                }
+              },
+              "copy_to":"fingerprint"
             },
-            "normalized50":{
+            "fr": {
               "type":"text",
-              "analyzer":"analyzer:trunc50"
-            }
-          },
-          "copy_to":"fingerprint"
-        },
-        "titleen": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"title:normalizer"
+              "fields":{
+                "normalized":{
+                  "type":"keyword",
+                  "normalizer":"title:normalizer"
+                }
+              },
+              "copy_to":"fingerprint"
             },
-            "normalized50":{
+            "en": {
               "type":"text",
-              "analyzer":"analyzer:trunc50"
+              "fields":{
+                "normalized":{
+                  "type":"keyword",
+                  "normalizer":"title:normalizer"
+                }
+              },
+              "copy_to":"fingerprint"
+            },
+            "meeting": {
+              "type":"text",
+              "fields": {
+                "normalized":{
+                  "type":"keyword",
+                  "normalizer":"title:normalizer" 
+               }
+              },
+              "copy_to":"fingerprint"
+            },
+            "monography": {
+              "type":"text",
+              "fields":{
+                "normalized":{
+                  "type":"keyword",
+                  "normalizer":"title:normalizer"
+                }
+              },
+              "copy_to":"fingerprint"
+            },
+            "journal": {
+              "type":"text",
+              "fields":{
+                "normalized":{
+                  "type":"keyword",
+                  "normalizer":"title:normalizer"
+                }
+              },
+              "copy_to":"fingerprint"
             }
-          },
-          "copy_to":"fingerprint"
-        },
-        "meetingTitle":{
-          "type":"text",
-          "fields": {
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"title:normalizer" 
-           }
-          },
-          "copy_to":"fingerprint"
+          }
         },
         "volume": {
           "type":"text",
@@ -785,26 +766,6 @@
         },
         "idChain":{
           "type":"keyword"
-        },
-        "titreSourceM": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"title:normalizer"
-            }
-          },
-          "copy_to":"fingerprint"
-        },
-        "titreSourceJ": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"title:normalizer"
-            }
-          },
-          "copy_to":"fingerprint"
         },
         "abstract":{
           "type":"text",
