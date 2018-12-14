@@ -1,11 +1,7 @@
 [
   { "name":"title",
-    "type":"bloc",
+    "type":"object",
     "fields":[{
-      "name":"surname",
-      "type":"simpleString",
-      "path":"string(//TEI:surname)"},
-      {
         "name":"default",
         "type" :"simpleString",
         "path":"normalize-space(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title)"
