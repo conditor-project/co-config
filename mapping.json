@@ -21,10 +21,10 @@
           "cern.normalized",
           "doi",
           "doi.normalized",
-          "duplicate.idConditor",
-          "duplicate.sessionName",
-          "duplicate.rules",
-          "duplicate.source",
+          "duplicates.idConditor",
+          "duplicates.sessionName",
+          "duplicates.rules",
+          "duplicates.source",
           "duplicateRules",
           "eisbn",
           "eisbn.normalized",
@@ -741,7 +741,7 @@
         "hasTransDuplicate":{
           "type":"boolean"
         },
-        "duplicate":{
+        "duplicates":{
           "type":"nested",
           "properties":{
             "idConditor":{
@@ -785,7 +785,7 @@
             }
           }
         },
-        "nearDuplicate":{
+        "nearDuplicates":{
           "type":"nested",
           "properties":{
             "idConditor":{
