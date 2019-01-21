@@ -264,13 +264,24 @@
           "type":"text"
         },
         "authors":{
+          "dynamic": "false",
           "type":"nested",
           "properties": {
             "surname":{
-              "type":"keyword"
+              "type":"text",
+              "fields":{
+                "normalized":{
+                  "type":"keyword"
+                }
+              }
             },
             "forename":{
-              "type":"keyword"
+              "type":"text",
+              "fields":{
+                "normalized":{
+                  "type":"keyword"
+                }
+              }
             },
             "halAuthorId":{
               "type":"keyword"
@@ -285,7 +296,7 @@
                   "type":"keyword"
                 },
                 "address":{
-                  "type": "keyword"
+                  "type": "text"
                 }
               }
             },
@@ -794,7 +805,7 @@
             "duplicateBySymmetry":{
               "type":"boolean"
             },
-            "score":{
+            "similarityRate":{
               "type":"float"
             },
             "source":{
