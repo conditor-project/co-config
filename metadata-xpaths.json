@@ -259,7 +259,7 @@
     "path":"//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='supplement']/text()"},
   { "name":"meetingAbstractNumber",
     "type":"simpleString",
-    "path":"//TEI:body//TEI:imprint//TEI:biblScope[@unit='meetingAbstractNumber']/text()"},
+    "path":"//TEI:body//TEI:imprint//TEI:biblScope[@unit='meetAbstrNo']/text()"},
   { "name":"pageRange",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblScope[@unit='pp']/text()"},
