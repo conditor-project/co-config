@@ -311,7 +311,7 @@
             "isni": {
               "type":"keyword"
             },
-            "orcid": {
+            "orcId": {
               "type":"keyword"
             },
             "viaf":{

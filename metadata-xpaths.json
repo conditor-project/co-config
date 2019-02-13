@@ -163,7 +163,7 @@
           }
         },
         {"type":"bloc",
-          "name":"orcid",
+          "name":"orcId",
           "path":"//TEI:idno[lower-case(@type)='orcid']",
           "fields":{
             "type":"simpleString",
