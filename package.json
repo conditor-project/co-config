@@ -1,6 +1,6 @@
 {
   "name": "co-config",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Module de configuration de l'ensemble des modules Conditor",
   "repository": {
     "type": "git",
