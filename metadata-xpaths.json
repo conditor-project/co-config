@@ -120,6 +120,11 @@
         "path":"string(//TEI:idno[lower-case(@type)='halauthorid'])"
         },
         {
+        "name":"idHal",
+        "type":"simpleString",
+        "path":"string(//TEI:idno[lower-case(@type)='idhal' and @notation='numeric'])"
+        },
+        {
         "name":"researcherId",
         "type":"simpleString",
         "path":"string(//TEI:idno[lower-case(@type)='researcherid'])"
@@ -266,9 +271,12 @@
   { "name":"volume",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblScope[@unit='volume']/text()"},
-  { "name":"idHal",
+  { "name":"halId",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct/TEI:idno[@type='halId']/text()"},
+  { "name":"idHal",
+    "type":"simpleString",
+    "path":"//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct/TEI:idno[@type='idhal' and @notation='numeric']/text()"},
   { "name":"idProdinra",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct/TEI:idno[@type='idprodinra']/text()"},

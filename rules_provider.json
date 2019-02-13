@@ -1,13 +1,13 @@
 [
     {
         "source":"hal",
-        "non_empty":["idHal"],
+        "non_empty":["halId"],
         "query":{
             "bool": {
                     "must":[
-                        {"term": {"idHal.normalized": "idHal"}}
+                        {"term": {"halId.normalized": "halId"}}
                     ],
-                    "_name":"provider::idHal"
+                    "_name":"provider::hal"
             }
          }    
     },

@@ -35,6 +35,8 @@
           "halAuthorId",
           "idChain",
           "idConditor",
+          "halId",
+          "halId.normalized",
           "idHal",
           "idHal.normalized",
           "idProdinra",
@@ -286,6 +288,9 @@
             "halAuthorId":{
               "type":"keyword"
             },
+            "idHal":{
+              "type":"keyword"
+            },
             "researcherId":{
               "type":"keyword"
             },
@@ -327,6 +332,15 @@
           "type": "boolean"
         },
         "idHal": {
+          "type":"text",
+          "fields":{
+            "normalized":{
+              "type":"keyword",
+              "normalizer":"id:normalizer"
+            }
+          }
+        },
+        "halId": {
           "type":"text",
           "fields":{
             "normalized":{
