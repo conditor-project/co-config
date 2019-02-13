@@ -75,7 +75,7 @@
     "rule": "3",
     "non_empty": [
       "title.default",
-      "idHal"
+      "halId"
     ],
     "query": {
       "bool": {
@@ -87,11 +87,11 @@
           },
           {
             "match": {
-              "idHal.normalized": "idHal"
+              "halId.normalized": "halId"
             }
           }
         ],
-        "_name": "1ID:idhal+TiC"
+        "_name": "1ID:halId+TiC"
       }
     }
   },
@@ -461,7 +461,7 @@
     "rule": "25",
     "non_empty": [
       "title.fr",
-      "idHal"
+      "halId"
     ],
     "query": {
       "bool": {
@@ -473,11 +473,11 @@
           },
           {
             "match": {
-              "idHal.normalized": "idHal"
+              "halId.normalized": "halId"
             }
           }
         ],
-        "_name": "1ID:idhal+TiC_FRE"
+        "_name": "1ID:halId+TiC_FRE"
       }
     }
   },
@@ -485,7 +485,7 @@
     "rule": "26",
     "non_empty": [
       "title.en",
-      "idHal"
+      "halId"
     ],
     "query": {
       "bool": {
@@ -497,11 +497,11 @@
           },
           {
             "match": {
-              "idHal.normalized": "idHal"
+              "halId.normalized": "halId"
             }
           }
         ],
-        "_name": "1ID:idhal+TiC_ENG"
+        "_name": "1ID:halId+TiC_ENG"
       }
     }
   },
