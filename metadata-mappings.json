@@ -1,5 +1,5 @@
 [{ "source":"hal",
-    "nameID":"idHal",
+    "nameID":"halId",
     "mapping":{
         "ART":"Article",
         "COMM":"Conférence",
