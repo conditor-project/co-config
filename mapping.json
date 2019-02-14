@@ -93,6 +93,8 @@
           "sciencespo",
           "sciencespo.normalized",
           "source",
+          "sourceId",
+          "sourceUid",
           "specialIssue",
           "title.default",
           "title.default.normalized",
@@ -228,6 +230,12 @@
           "analyzer":"analyzer:shingles"
         },
         "idConditor":{
+          "type":"keyword"
+        },
+        "sourceId":{
+          "type":"keyword"
+        },
+        "sourceUid":{
           "type":"keyword"
         },
         "sessionName":{
