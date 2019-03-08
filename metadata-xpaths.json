@@ -145,76 +145,97 @@
           "path": "string(//TEI:idno[lower-case(@type)='researcherid'])"
         },
         {
-          "type": "bloc",
           "name": "affiliations",
+          "type": "bloc",
           "path": "//TEI:affiliation",
           "fields": {
             "type": "struct",
             "fields": [
               {
-                "type": "simpleString",
                 "name": "ref",
+                "type": "simpleString",
                 "path": "normalize-space(//@n)"
               },
               {
-                "type": "simpleString",
                 "name": "address",
+                "type": "simpleString",
                 "path": "normalize-space(.)"
               },
               {
-                "type": "bloc",
-                "name": "organizations",
-                "path": "//TEI:orgName",
-                "fields": {
-                  "type": "struct",
-                  "fields": [
-                    {
-                      "type": "simpleString",
-                      "name": "name",
-                      "path": "//TEI:name"
-                    },
-                    {
-                      "type": "simpleString",
-                      "name": "type",
-                      "path": "//@type"
-                    },
-                    {
-                      "type": "simpleString",
-                      "name": "acronym",
-                      "path": "//TEI:name[@type='acronym']"
-                    },
-                    {
-                      "type": "simpleString",
-                      "name": "code",
-                      "path": "//TEI:name[@type='code']"
-                    },
-                    {
-                      "type": "simpleString",
-                      "name": "idRef",
-                      "path": "//TEI:idno[@type='idRef']"
-                    },
-                    {
-                      "type": "simpleString",
-                      "name": "halStructureId",
-                      "path": "//TEI:idno[@type='halStructureId']"
-                    },
-                    {
-                      "type": "simpleString",
-                      "name": "rnsr",
-                      "path": "//TEI:idno[@type='rnsr']"
-                    },
-                    {
-                      "type": "simpleString",
-                      "name": "isni",
-                      "path": "//TEI:idno[@type='isni']"
-                    },
-                    {
-                      "type": "simpleString",
-                      "name": "address",
-                      "path": "//TEI:address/TEI:addrLine"
+                "name": "structure",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "name",
+                    "type": "simpleString",
+                    "path": "//TEI:org//TEI:orgName"
+                  },
+                  {
+                    "name": "type",
+                    "type": "simpleString",
+                    "path": "//TEI:org//@type"
+                  },
+                  {
+                    "name": "acronym",
+                    "type": "simpleString",
+                    "path": "//TEI:org//TEI:orgName[@type='acronym']"
+                  },
+                  {
+                    "name": "address",
+                    "type": "simpleString",
+                    "path": "//TEI:org//TEI:desc//TEI:address//TEI:addrLine"
+                  },
+                  {
+                    "name": "country",
+                    "type": "simpleString",
+                    "path": "//TEI:org//TEI:desc//TEI:address//TEI:country//@key"
+                  },
+                  {
+                    "name": "structure",
+                    "type": "bloc",
+                    "path": "//TEI:org//TEI:org",
+                    "fields": {
+                      "type": "struct",
+                      "fields": [
+                        {
+                          "name": "name",
+                          "type": "simpleString",
+                          "path": "//TEI:orgName"
+                        },
+                        {
+                          "name": "type",
+                          "type": "simpleString",
+                          "path": "//@type"
+                        },
+                        {
+                          "name": "acronym",
+                          "type": "simpleString",
+                          "path": "//TEI:orgName[@type='acronym']"
+                        },
+                        {
+                          "name": "rnsr",
+                          "type": "simpleString",
+                          "path": "//TEI:idno[@type='rnsr']"
+                        },
+                        {
+                          "name": "halStructureId",
+                          "type": "simpleString",
+                          "path": "//TEI:idno[@type='halStructureId']"
+                        },
+                        {
+                          "name": "isni",
+                          "type": "simpleString",
+                          "path": "//TEI:idno[@type='isni']"
+                        },
+                        {
+                          "name": "idRef",
+                          "type": "simpleString",
+                          "path": "//TEI:idno[@type='idRef']"
+                        }
+                      ]
                     }
-                  ]
-                }
+                  }
+                ]
               }
             ]
           }
