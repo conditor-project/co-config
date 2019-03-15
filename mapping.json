@@ -118,10 +118,9 @@
       }
     },
     "similarity":{
-      "bm25_similarity":{
-        "type" : "BM25",
-        "b" : 0.75,
-        "k1":1.2
+      "dfi_similarity": {
+        "type": "DFI",
+        "independence_measure": "standardized"
       }
     },
     "analysis":{
@@ -227,7 +226,8 @@
       "properties": {
         "fingerprint":{
           "type":"text",
-          "analyzer":"analyzer:shingles"
+          "analyzer":"analyzer:shingles",
+          "similarity": "dfi_similarity"
         },
         "idConditor":{
           "type":"keyword"
