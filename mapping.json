@@ -175,7 +175,7 @@
           "type":"shingle",
           "max_shingle_size":4,
           "min_shingle_size":2,
-          "output_unigrams":"true"
+          "output_unigrams":"false"
         },
         "filter_french_word":{
           "type":"stop",
