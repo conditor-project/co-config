@@ -838,6 +838,26 @@
             }
           }
         },
+        "nearDuplicatesDetectedBySimilarity": {
+          "type":"nested",
+          "properties": {
+            "idConditor": {
+              "type":"keyword"
+            },
+            "duplicateBySymmetry": {
+              "type":"boolean"
+            },
+            "similarityRate": {
+              "type":"float"
+            },
+            "source": {
+              "type":"keyword"
+            },
+            "type": {
+              "type":"text"
+            }
+          }
+        },
         "isNearDuplicate":{
           "type":"boolean"
         },
