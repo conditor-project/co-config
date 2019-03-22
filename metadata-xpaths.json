@@ -137,11 +137,11 @@
            "fields":[
             {"type":"simpleString",
             "name":"ref",
-            "path":"normalize-space(//@ref)" 
+            "path":"first-of-split(concat(normalize-space(//@ref),';',normalize-space(//@n)),';')"
             },
             {"type":"simpleString",
             "name":"address",
-            "path":"normalize-space(.)" 
+            "path":"normalize-space(//text())" 
             }  
            ]
           }
