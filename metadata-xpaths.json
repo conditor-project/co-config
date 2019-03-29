@@ -142,40 +142,67 @@
             {"type":"simpleString",
             "name":"address",
             "path":"normalize-space(//text())" 
-            }  
+            },
+            {"type":"bloc",
+            "name":"isni",
+            "path":"//TEI:org",
+            "fields": {
+                "type":"simpleString",
+                "path":"normalize-space(child::*/TEI:idno[@type='isni'])",
+                "allowEmpty":false
+              }
+            },
+            {"type":"bloc",
+              "name":"idRef",
+              "path":"//TEI:org",
+              "fields": {
+                "type":"simpleString",
+                "path":"normalize-space(child::*/TEI:idno[@type='idRef'])",
+                "allowEmpty":false
+              }
+            },
+            {"type":"bloc",
+              "name":"rnsr",
+              "path":"//TEI:org",
+              "fields": {
+                "type":"simpleString",
+                "path":"normalize-space(child::*/TEI:idno[@type='rnsr'])",
+                "allowEmpty":false
+                }
+              }
            ]
           }
         },
         {"type":"bloc",
           "name":"idRef",
-          "path":"//TEI:idno[lower-case(@type)='idref']",
+          "path":"child::*/TEI:idno[lower-case(@type)='idref']",
           "fields":{
             "type":"simpleString",
-            "path":"normalize-space(//TEI:idno)" 
+            "path":"normalize-space(.)" 
           }
         },
         {"type":"bloc",
           "name":"isni",
-          "path":"//TEI:idno[lower-case(@type)='isni']",
+          "path":"child::*/TEI:idno[lower-case(@type)='isni']",
           "fields":{
             "type":"simpleString",
-            "path":"normalize-space(//TEI:idno)" 
+            "path":"normalize-space(.)" 
           }
         },
         {"type":"bloc",
           "name":"orcId",
-          "path":"//TEI:idno[lower-case(@type)='orcid']",
+          "path":"child::*/TEI:idno[lower-case(@type)='orcid']",
           "fields":{
             "type":"simpleString",
-            "path":"normalize-space(//TEI:idno)" 
+            "path":"normalize-space(.)" 
           }
         },
         {"type":"bloc",
           "name":"viaf",
-          "path":"//TEI:idno[lower-case(@type)='viaf']",
+          "path":"child::*/TEI:idno[lower-case(@type)='viaf']",
           "fields":{
             "type":"simpleString",
-            "path":"normalize-space(//TEI:idno)" 
+            "path":"normalize-space(.)" 
           }
         }
       ]
@@ -292,7 +319,7 @@
   },
   { "name":"orcId",
     "type":"bloc",
-    "path":"//TEI:body//TEI:biblFull//TEI:idno[lower-case(@type)='orcid']",
+    "path":"//TEI:body//TEI:biblFull//TEI:author/TEI:idno[lower-case(@type)='orcid']",
     "fields":
     {
       "type":"simpleString",
@@ -311,7 +338,7 @@
   },
   { "name":"viaf",
     "type":"bloc",
-    "path":"//TEI:body//TEI:biblFull//TEI:idno[lower-case(@type)='viaf']",
+    "path":"//TEI:body//TEI:biblFull//TEI:author/TEI:idno[lower-case(@type)='viaf']",
     "fields":
     {
       "type":"simpleString",
@@ -337,7 +364,7 @@
   },
   { "name":"isni",
     "type":"bloc",
-    "path":"//TEI:body//TEI:biblFull//TEI:idno[@type='isni']",
+    "path":"//TEI:body//TEI:biblFull//TEI:author/TEI:idno[@type='isni']",
     "fields":
     {
       "type":"simpleString",
