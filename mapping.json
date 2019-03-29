@@ -310,6 +310,15 @@
                 },
                 "address":{
                   "type": "text"
+                },
+                "isni":{
+                  "type":"keyword"
+                },
+                "idRef":{
+                  "type":"keyword"
+                },
+                "rnsr":{
+                  "type":"keyword"
                 }
               }
             },
