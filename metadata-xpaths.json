@@ -371,6 +371,15 @@
       "path":"//TEI:idno"
     }
   },
+  { "name":"rnsr",
+    "type":"bloc",
+    "path":"deduplicate-by-text(//TEI:body//TEI:biblFull//TEI:author/TEI:affiliation//TEI:org/TEI:idno[@type='rnsr'])",
+    "fields":
+    {
+      "type":"simpleString",
+      "path":"normalize-space(.)"
+    }
+  },
   { "name":"articleNumber",
     "type":"simpleString",
     "path":"//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='articleNo']/text()"},

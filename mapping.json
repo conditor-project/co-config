@@ -55,6 +55,8 @@
           "isbn.normalized",
           "isni",
           "isni.normalized",
+          "rnsr",
+          "rnsr.normalized",
           "issn",
           "issn.normalized",
           "issue",
@@ -470,6 +472,15 @@
           }
         },
         "isni": {
+          "type":"text",
+          "fields":{
+            "normalized":{
+              "type":"keyword",
+              "normalizer":"id:normalizer"
+            }
+          }
+        },
+        "rnsr": {
           "type":"text",
           "fields":{
             "normalized":{
