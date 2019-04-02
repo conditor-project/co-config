@@ -169,5 +169,12 @@
         "Video-Audio Media":"Article",
         "Webcasts":"Article"
     }
+},
+{
+    "source":"crossref",
+    "nameID":"doi",
+    "mapping":{
+        "Journal article": "Article"
+    }
 }
 ]

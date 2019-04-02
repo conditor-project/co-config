@@ -46,5 +46,17 @@
                 "_name":"provider::pubmed"
             }
         }
+    },
+    {
+        "source":"crossref",
+        "non_empty":["doi"],
+        "query":{
+            "bool":{
+                "must":[
+                    {"term":{"doi.normalized":"doi"}}  
+                ] ,
+                "_name":"provider::crossref"
+            }
+        }
     }
 ]
