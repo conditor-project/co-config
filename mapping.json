@@ -43,7 +43,6 @@
           "idProdinra.normalized",
           "ineris",
           "ineris.normalized",
-          "ingestBaseName",
           "sessionName",
           "inspire",
           "inspire.normalized",
@@ -241,9 +240,6 @@
           "type":"keyword"
         },
         "sessionName":{
-          "type":"keyword"
-        },
-        "ingestBaseName":{
           "type":"keyword"
         },
         "path":{
