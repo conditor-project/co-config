@@ -115,6 +115,7 @@
         "Autobiography":"Article",
         "Bibliography":"Article",
         "Biography":"Article",
+        "Book chapter":"Chapitre",
         "Case Reports":"Article",
         "Classical Article":"Article",
         "Clinical Conference":"Article",
