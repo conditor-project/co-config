@@ -80,6 +80,8 @@
           "supplement",
           "patentNumber",
           "patentNumber.normalized",
+          "pii",
+          "pii.normalized",
           "pmId",
           "pmId.normalized",
           "ppn",
@@ -343,6 +345,15 @@
             }
           }
         },
+         "pii": {
+          "type":"text",
+          "fields":{
+            "normalized":{
+              "type":"keyword",
+              "normalizer":"id:normalizer"
+            }
+          }
+       },
         "hasDoi": {
           "type": "boolean"
         },
