@@ -25,6 +25,7 @@
           "duplicates.sessionName",
           "duplicates.rules",
           "duplicates.source",
+	  "duplicates.isValidatedByUser",
           "duplicateRules",
           "eisbn",
           "eisbn.normalized",
@@ -815,7 +816,10 @@
             },
             "source":{
               "type":"keyword"
-            }
+            },
+            "isValidatedByUser":{
+              "type":"boolean"
+	    }
           }
         },
         "duplicateRules":{
