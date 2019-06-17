@@ -413,7 +413,12 @@
   {
     "name": "publicationDate",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='datePub']/text()"
+  },
+  {
+    "name": "electronicPublicationDate",
+    "type": "simpleString",
+    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='dateEpub']/text()"
   },
   {
     "name": "abstract",
