@@ -89,6 +89,8 @@
           "ppn.normalized",
           "publicationDate",
           "publicationDate.normalized",
+          "electronicPublicationDate",
+          "electronicPublicationDate.normalized",
           "pmc",
           "pmc.normalized",
           "reportNumber",
@@ -836,6 +838,20 @@
           "copy_to":"fingerprint"
         },
         "publicationDate": {
+          "type":"text",
+          "fields":{
+            "date":{
+              "type":"date",
+              "format": "yyy-MM-dd HH:mm:ss||yyy-MM-dd||yyy-MM||yyyy",
+              "ignore_malformed": true
+            },
+            "normalized":{
+              "type":"keyword",
+              "normalizer":"publicationDate:normalizer"
+            }
+          }
+        },
+        "electronicPublicationDate": {
           "type":"text",
           "fields":{
             "date":{
