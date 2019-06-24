@@ -119,7 +119,8 @@
           "utKey.normalized",
           "viaf",
           "volume",
-          "xissn"
+          "xissn",
+          "xPublicationDate"
         ]
       }
     },
@@ -864,6 +865,10 @@
               "normalizer":"publicationDate:normalizer"
             }
           }
+        },
+        "xPublicationDate": {
+          "type":"keyword",
+          "normalizer":"publicationDate:normalizer"
         },
         "nearDuplicates":{
           "type":"nested",

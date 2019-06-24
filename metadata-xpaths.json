@@ -421,6 +421,15 @@
     "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='dateEpub']/text()"
   },
   {
+    "name": "xPublicationDate",
+    "type": "bloc",
+    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='datePub' or @type='dateEpub']",
+    "fields": {
+      "type": "simpleString",
+      "path": "//TEI:date"
+    }
+  },
+  {
     "name": "abstract",
     "type": "simpleString",
     "path": "//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract/text()"
