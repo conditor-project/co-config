@@ -413,7 +413,7 @@
   {
     "name": "publicationDate",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='datePub']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type!='dateEpub']/text()"
   },
   {
     "name": "electronicPublicationDate",
@@ -423,7 +423,7 @@
   {
     "name": "xPublicationDate",
     "type": "bloc",
-    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='datePub' or @type='dateEpub']",
+    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date",
     "fields": {
       "type": "simpleString",
       "path": "//TEI:date"
