@@ -6,7 +6,7 @@
       {
         "name": "default",
         "type": "simpleString",
-        "path": "normalize-space(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title)"
+        "path": "process-title(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title)"
       },
       {
         "name": "fr",
