@@ -1,62 +1,92 @@
 [
-    {
-        "source":"hal",
-        "non_empty":["halId"],
-        "query":{
-            "bool": {
-                    "must":[
-                        {"term": {"halId.normalized": "halId"}}
-                    ],
-                    "_name":"provider::hal"
+  {
+    "source": "hal",
+    "non_empty": [
+      "halId"
+    ],
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "term": {
+              "halId.normalized": "halId"
             }
-         }    
-    },
-    {
-        "source":"wos",
-        "non_empty":["utKey"],
-        "query":{
-            "bool": {
-                    "must":[
-                        {"term": {"utKey.normalized": "utKey"}}
-                    ],
-                    "_name":"provider::wos"
-            }
-         }  
-    },
-    {
-        "source":"prodinra",
-        "non_empty":["idProdinra"],
-        "query":{
-            "bool":{
-                "must":[
-                    {"term":{"idProdinra.normalized":"idProdinra"}}  
-                ] ,
-                "_name":"provider::prodinra"
-            }
-        }
-    },
-    {
-        "source":"pubmed",
-        "non_empty":["pmId"],
-        "query":{
-            "bool":{
-                "must":[
-                    {"term":{"pmId.normalized":"pmId"}}  
-                ] ,
-                "_name":"provider::pubmed"
-            }
-        }
-    },
-    {
-        "source":"crossref",
-        "non_empty":["doi"],
-        "query":{
-            "bool":{
-                "must":[
-                    {"term":{"doi.normalized":"doi"}}  
-                ] ,
-                "_name":"provider::crossref"
-            }
-        }
+          }
+        ],
+        "_name": "provider::hal"
+      }
     }
+  },
+  {
+    "source": "wos",
+    "non_empty": [
+      "utKey"
+    ],
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "term": {
+              "utKey.normalized": "utKey"
+            }
+          }
+        ],
+        "_name": "provider::wos"
+      }
+    }
+  },
+  {
+    "source": "prodinra",
+    "non_empty": [
+      "idProdinra"
+    ],
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "term": {
+              "idProdinra.normalized": "idProdinra"
+            }
+          }
+        ],
+        "_name": "provider::prodinra"
+      }
+    }
+  },
+  {
+    "source": "pubmed",
+    "non_empty": [
+      "pmId"
+    ],
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "term": {
+              "pmId.normalized": "pmId"
+            }
+          }
+        ],
+        "_name": "provider::pubmed"
+      }
+    }
+  },
+  {
+    "source": "crossref",
+    "non_empty": [
+      "doi"
+    ],
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "term": {
+              "doi.normalized": "doi"
+            }
+          }
+        ],
+        "_name": "provider::crossref"
+      }
+    }
+  }
 ]
