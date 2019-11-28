@@ -1,9 +1,9 @@
 {
-  "settings":{
+  "settings": {
     "index": {
       "number_of_replicas": 0,
       "query": {
-        "default_field":[
+        "default_field": [
           "_id",
           "abstract",
           "articleNumber",
@@ -25,7 +25,7 @@
           "duplicates.sessionName",
           "duplicates.rules",
           "duplicates.source",
-	        "duplicates.isValidatedByUser",
+          "duplicates.isValidatedByUser",
           "duplicateRules",
           "eisbn",
           "eisbn.normalized",
@@ -124,14 +124,14 @@
         ]
       }
     },
-    "similarity":{
+    "similarity": {
       "dfi_similarity": {
         "type": "DFI",
         "independence_measure": "standardized"
       }
     },
-    "analysis":{
-      "char_filter":{
+    "analysis": {
+      "char_filter": {
         "whitespace_remove": {
           "type": "pattern_replace",
           "pattern": "\\s+",
@@ -142,550 +142,582 @@
           "pattern": "\\p{P}",
           "replacement": ""
         },
-        "spacenum":{
+        "spacenum": {
           "type": "pattern_replace",
           "pattern": "[^0-9]",
-          "replacement":"_"
+          "replacement": "_"
         },
-        "num":{
+        "num": {
           "type": "pattern_replace",
           "pattern": "[^0-9]",
-          "replacement":""
+          "replacement": ""
         },
-        "annee":{
+        "annee": {
           "type": "pattern_replace",
           "pattern": ".*([0-9]{4}).*",
-          "replacement":"$1"
+          "replacement": "$1"
         },
-        "alphanum":{
+        "alphanum": {
           "type": "pattern_replace",
           "pattern": "[^0-9a-zA-Z]",
-          "replacement":""
+          "replacement": ""
         },
-        "firstnum":{
+        "firstnum": {
           "type": "pattern_replace",
           "pattern": "^[_]*([0-9]+)[_]*.*",
-          "replacement":"$1"
+          "replacement": "$1"
         },
-        "remove_underscore":{
-          "type":"pattern_replace",
-          "pattern":"[_]",
-          "replacement":""
+        "remove_underscore": {
+          "type": "pattern_replace",
+          "pattern": "[_]",
+          "replacement": ""
         }
       },
-      "filter":{
-        "my_asciifolding":{
-          "type":"asciifolding",
-          "preserve_original" : false
+      "filter": {
+        "my_asciifolding": {
+          "type": "asciifolding",
+          "preserve_original": false
         },
-        "filter_shingles":{
-          "type":"shingle",
-          "max_shingle_size":4,
-          "min_shingle_size":2,
-          "output_unigrams":"false"
+        "filter_shingles": {
+          "type": "shingle",
+          "max_shingle_size": 4,
+          "min_shingle_size": 2,
+          "output_unigrams": "false"
         },
-        "filter_french_word":{
-          "type":"stop",
-          "stopwords":"_french_"
+        "filter_french_word": {
+          "type": "stop",
+          "stopwords": "_french_"
         }
       },
-      "analyzer":{
-        "analyzer:shingles":{
-          "type":"custom",
-          "tokenizer":"standard",
-          "filter":["lowercase","my_asciifolding","icu_normalizer","filter_french_word","filter_shingles"]
-        }
-      },
-      "normalizer":{
-        "title:normalizer":{
+      "analyzer": {
+        "analyzer:shingles": {
           "type": "custom",
-          "char_filter":["whitespace_remove","punctuation_remove"],
-          "filter":["lowercase","my_asciifolding","icu_normalizer"]
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "my_asciifolding",
+            "icu_normalizer",
+            "filter_french_word",
+            "filter_shingles"
+          ]
+        }
+      },
+      "normalizer": {
+        "title:normalizer": {
+          "type": "custom",
+          "char_filter": [
+            "whitespace_remove",
+            "punctuation_remove"
+          ],
+          "filter": [
+            "lowercase",
+            "my_asciifolding",
+            "icu_normalizer"
+          ]
         },
-        "author:normalizer":{
-          "type":"custom",
-          "char_filter":["whitespace_remove","punctuation_remove"],
-          "filter":["lowercase","my_asciifolding","icu_normalizer"]
+        "author:normalizer": {
+          "type": "custom",
+          "char_filter": [
+            "whitespace_remove",
+            "punctuation_remove"
+          ],
+          "filter": [
+            "lowercase",
+            "my_asciifolding",
+            "icu_normalizer"
+          ]
         },
-        "id:normalizer":{
-          "type":"custom",
-          "char_filter":["alphanum"],
-          "filter":["lowercase"]
+        "id:normalizer": {
+          "type": "custom",
+          "char_filter": [
+            "alphanum"
+          ],
+          "filter": [
+            "lowercase"
+          ]
         },
-        "volpage:normalizer":{
-          "type":"custom",
-          "char_filter":["spacenum","firstnum","remove_underscore"]
+        "volpage:normalizer": {
+          "type": "custom",
+          "char_filter": [
+            "spacenum",
+            "firstnum",
+            "remove_underscore"
+          ]
         },
-        "issue:normalizer":{
-          "type":"custom",
-          "char_filter":["num"]
+        "issue:normalizer": {
+          "type": "custom",
+          "char_filter": [
+            "num"
+          ]
         },
-        "publicationDate:normalizer":{
-          "type":"custom",
-          "char_filter":["annee"]
+        "publicationDate:normalizer": {
+          "type": "custom",
+          "char_filter": [
+            "annee"
+          ]
         }
       }
     }
   },
-  "mappings":{
+  "mappings": {
     "record": {
       "dynamic": "false",
       "properties": {
-        "fingerprint":{
-          "type":"text",
-          "analyzer":"analyzer:shingles",
+        "fingerprint": {
+          "type": "text",
+          "analyzer": "analyzer:shingles",
           "similarity": "dfi_similarity"
         },
-        "idConditor":{
-          "type":"keyword"
+        "idConditor": {
+          "type": "keyword"
         },
-        "sourceId":{
-          "type":"keyword"
+        "sourceId": {
+          "type": "keyword"
         },
-        "sourceUid":{
-          "type":"keyword"
+        "sourceUid": {
+          "type": "keyword"
         },
-        "sessionName":{
-          "type":"keyword"
+        "sessionName": {
+          "type": "keyword"
         },
-        "path":{
-          "type":"text",
-          "index":false
+        "path": {
+          "type": "text",
+          "index": false
         },
-        "teiBlob":{
-          "type":"binary"
+        "teiBlob": {
+          "type": "binary"
         },
         "first3AuthorNames": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"author:normalizer"
-              }
-            },
-          "copy_to":"fingerprint"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "author:normalizer"
+            }
+          },
+          "copy_to": "fingerprint"
         },
         "first3AuthorNamesWithInitials": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"author:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "author:normalizer"
             }
           }
         },
-        "authorNames":{
-          "type":"text"
+        "authorNames": {
+          "type": "text"
         },
-        "authors":{
+        "authors": {
           "dynamic": "false",
-          "type":"nested",
+          "type": "nested",
           "properties": {
-            "surname":{
-              "type":"text",
-              "fields":{
-                "normalized":{
-                  "type":"keyword"
+            "surname": {
+              "type": "text",
+              "fields": {
+                "normalized": {
+                  "type": "keyword"
                 }
               }
             },
-            "forename":{
-              "type":"text",
-              "fields":{
-                "normalized":{
-                  "type":"keyword"
+            "forename": {
+              "type": "text",
+              "fields": {
+                "normalized": {
+                  "type": "keyword"
                 }
               }
             },
-            "halAuthorId":{
-              "type":"keyword"
+            "halAuthorId": {
+              "type": "keyword"
             },
-            "idHal":{
-              "type":"keyword"
+            "idHal": {
+              "type": "keyword"
             },
-            "researcherId":{
-              "type":"keyword"
+            "researcherId": {
+              "type": "keyword"
             },
-            "affiliations":{
-              "type":"nested",
+            "affiliations": {
+              "type": "nested",
               "properties": {
-                "ref":{
-                  "type":"keyword"
+                "ref": {
+                  "type": "keyword"
                 },
-                "address":{
+                "address": {
                   "type": "text"
                 },
-                "isni":{
-                  "type":"keyword"
+                "isni": {
+                  "type": "keyword"
                 },
-                "idRef":{
-                  "type":"keyword"
+                "idRef": {
+                  "type": "keyword"
                 },
-                "rnsr":{
-                  "type":"keyword"
+                "rnsr": {
+                  "type": "keyword"
                 }
               }
             },
-            "idRef":{
-              "type":"keyword"
+            "idRef": {
+              "type": "keyword"
             },
             "isni": {
-              "type":"keyword"
+              "type": "keyword"
             },
             "orcId": {
-              "type":"keyword"
+              "type": "keyword"
             },
-            "viaf":{
-              "type":"keyword"
+            "viaf": {
+              "type": "keyword"
             }
           }
         },
         "doi": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
-         "pii": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+        "pii": {
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
-       },
+        },
         "hasDoi": {
           "type": "boolean"
         },
         "idHal": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "halId": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "idProdinra": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "halAuthorId": {
-          "type":"keyword"
+          "type": "keyword"
         },
         "orcId": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "researcherId": {
-          "type":"keyword"
+          "type": "keyword"
         },
         "viaf": {
-          "type":"keyword"
+          "type": "keyword"
         },
         "arxiv": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "pmId": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "nnt": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "patentNumber": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "utKey": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "issn": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "eissn": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "xissn": {
-          "type":"keyword",
-          "normalizer":"id:normalizer"
+          "type": "keyword",
+          "normalizer": "id:normalizer"
         },
         "isbn": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "isni": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "rnsr": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
-        "ppn":{
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+        "ppn": {
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "articleNumber": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "bibCode": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "eisbn": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "ensam": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "ineris": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "inspire": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "ird": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "irstea": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "localRef": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "oatao": {
-         "type":"text",
-         "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "okina": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "otherNumber": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "pmc": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "sciencespo": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "reportNumber": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "cern": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
             }
           }
         },
         "issue": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"issue:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "issue:normalizer"
             }
           }
         },
         "specialIssue": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"issue:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "issue:normalizer"
             }
           }
         },
-        "meetingAbstractNumber":{
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"id:normalizer" 
-           }
+        "meetingAbstractNumber": {
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "id:normalizer"
+            }
           }
         },
         "pageRange": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"volpage:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "volpage:normalizer"
             }
           }
         },
@@ -696,236 +728,243 @@
           "dynamic": "false",
           "properties": {
             "default": {
-              "type":"text",
-              "fields":{
-                "normalized":{
-                  "type":"keyword",
-                  "normalizer":"title:normalizer"
+              "type": "text",
+              "fields": {
+                "normalized": {
+                  "type": "keyword",
+                  "normalizer": "title:normalizer"
                 }
               },
-              "copy_to":"fingerprint"
+              "copy_to": "fingerprint"
             },
             "fr": {
-              "type":"text",
-              "fields":{
-                "normalized":{
-                  "type":"keyword",
-                  "normalizer":"title:normalizer"
+              "type": "text",
+              "fields": {
+                "normalized": {
+                  "type": "keyword",
+                  "normalizer": "title:normalizer"
                 }
               },
-              "copy_to":"fingerprint"
+              "copy_to": "fingerprint"
             },
             "en": {
-              "type":"text",
-              "fields":{
-                "normalized":{
-                  "type":"keyword",
-                  "normalizer":"title:normalizer"
+              "type": "text",
+              "fields": {
+                "normalized": {
+                  "type": "keyword",
+                  "normalizer": "title:normalizer"
                 }
               },
-              "copy_to":"fingerprint"
+              "copy_to": "fingerprint"
             },
             "meeting": {
-              "type":"text",
+              "type": "text",
               "fields": {
-                "normalized":{
-                  "type":"keyword",
-                  "normalizer":"title:normalizer" 
-               }
+                "normalized": {
+                  "type": "keyword",
+                  "normalizer": "title:normalizer"
+                }
               },
-              "copy_to":"fingerprint"
+              "copy_to": "fingerprint"
             },
             "monography": {
-              "type":"text",
-              "fields":{
-                "normalized":{
-                  "type":"keyword",
-                  "normalizer":"title:normalizer"
+              "type": "text",
+              "fields": {
+                "normalized": {
+                  "type": "keyword",
+                  "normalizer": "title:normalizer"
                 }
               },
-              "copy_to":"fingerprint"
+              "copy_to": "fingerprint"
             },
             "journal": {
-              "type":"text",
-              "fields":{
-                "normalized":{
-                  "type":"keyword",
-                  "normalizer":"title:normalizer"
+              "type": "text",
+              "fields": {
+                "normalized": {
+                  "type": "keyword",
+                  "normalizer": "title:normalizer"
                 }
               },
-              "copy_to":"fingerprint"
+              "copy_to": "fingerprint"
             }
           }
         },
         "volume": {
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"volpage:normalizer"
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "volpage:normalizer"
             }
           }
         },
-        "part":{
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"volpage:normalizer"
+        "part": {
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "volpage:normalizer"
             }
           }
         },
-        "supplement":{
-          "type":"text",
-          "fields":{
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"volpage:normalizer"
+        "supplement": {
+          "type": "text",
+          "fields": {
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "volpage:normalizer"
             }
           }
         },
         "documentType": {
-          "type":"keyword"
+          "type": "keyword"
         },
-        "typeConditor":{
-          "type":"text",
-          "index":true,
-          "fields":{
-            "normalized":{
-              "type":"keyword"
+        "typeConditor": {
+          "type": "text",
+          "index": true,
+          "fields": {
+            "normalized": {
+              "type": "keyword"
             }
           }
         },
         "isDuplicate": {
           "type": "boolean"
         },
-        "isDeduplicable":{
-          "type":"boolean"
+        "isDeduplicable": {
+          "type": "boolean"
         },
-        "hasTransDuplicate":{
-          "type":"boolean"
+        "hasTransDuplicate": {
+          "type": "boolean"
         },
-        "duplicates":{
-          "type":"nested",
-          "properties":{
-            "idConditor":{
-              "type":"keyword"
+        "duplicates": {
+          "type": "nested",
+          "properties": {
+            "idConditor": {
+              "type": "keyword"
             },
-            "rules":{
-              "type":"text"
+            "rules": {
+              "type": "text"
             },
-            "sessionName":{
-              "type":"keyword"
+            "sessionName": {
+              "type": "keyword"
             },
-            "source":{
-              "type":"keyword"
+            "source": {
+              "type": "keyword"
             },
-            "isValidatedByUser":{
-              "type":"boolean"
-	    }
+            "isValidatedByUser": {
+              "type": "boolean"
+            }
           }
         },
-        "duplicateRules":{
-          "type":"keyword"
+        "duplicateRules": {
+          "type": "keyword"
         },
-        "idDuplicate":{
-          "type":"nested"
+        "idDuplicate": {
+          "type": "nested"
         },
-        "idChain":{
-          "type":"keyword"
+        "idChain": {
+          "type": "keyword"
         },
-        "abstract":{
-          "type":"text",
-          "copy_to":"fingerprint"
+        "abstract": {
+          "type": "text",
+          "copy_to": "fingerprint"
         },
         "publicationDate": {
-          "type":"text",
-          "fields":{
-            "date":{
-              "type":"date",
+          "type": "text",
+          "fields": {
+            "date": {
+              "type": "date",
               "format": "yyy-MM-dd HH:mm:ss||yyy-MM-dd||yyy-MM||yyyy",
               "ignore_malformed": true
             },
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"publicationDate:normalizer"
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "publicationDate:normalizer"
             }
           }
         },
         "electronicPublicationDate": {
-          "type":"text",
-          "fields":{
-            "date":{
-              "type":"date",
+          "type": "text",
+          "fields": {
+            "date": {
+              "type": "date",
               "format": "yyy-MM-dd HH:mm:ss||yyy-MM-dd||yyy-MM||yyyy",
               "ignore_malformed": true
             },
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"publicationDate:normalizer"
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "publicationDate:normalizer"
             }
           }
         },
         "xPublicationDate": {
-          "type":"text",
-          "fields":{
-            "date":{
-              "type":"date",
+          "type": "text",
+          "fields": {
+            "date": {
+              "type": "date",
               "format": "yyy-MM-dd HH:mm:ss||yyy-MM-dd||yyy-MM||yyyy",
               "ignore_malformed": true
             },
-            "normalized":{
-              "type":"keyword",
-              "normalizer":"publicationDate:normalizer"
+            "normalized": {
+              "type": "keyword",
+              "normalizer": "publicationDate:normalizer"
             }
           }
         },
-        "nearDuplicates":{
-          "type":"nested",
-          "properties":{
-            "idConditor":{
-              "type":"keyword"
+        "nearDuplicates": {
+          "type": "nested",
+          "properties": {
+            "idConditor": {
+              "type": "keyword"
             },
-            "duplicateBySymmetry":{
-              "type":"boolean"
+            "duplicateBySymmetry": {
+              "type": "boolean"
             },
-            "similarityRate":{
-              "type":"float"
+            "similarityRate": {
+              "type": "float"
             },
-            "source":{
-              "type":"keyword"
+            "source": {
+              "type": "keyword"
             },
             "type": {
-              "type":"text"
+              "type": "text"
             }
           }
         },
         "nearDuplicatesDetectedBySimilarity": {
-          "type":"nested",
+          "type": "nested",
           "properties": {
             "idConditor": {
-              "type":"keyword"
+              "type": "keyword"
             },
             "duplicateBySymmetry": {
-              "type":"boolean"
+              "type": "boolean"
             },
             "similarityRate": {
-              "type":"float"
+              "type": "float"
             },
             "source": {
-              "type":"keyword"
+              "type": "keyword"
             },
             "type": {
-              "type":"text"
+              "type": "text"
             }
           }
         },
-        "isNearDuplicate":{
-          "type":"boolean"
+        "isNearDuplicate": {
+          "type": "boolean"
         },
-        "creationDate":{
-          "type":"date",
+        "creationDate": {
+          "type": "date",
           "format": "yyy-MM-dd HH:mm:ss||yyy-MM-dd||epoch_millis"
+        },
+        "hasFulltext": {
+          "type": "boolean"
+        },
+        "fulltextPath": {
+          "type": "text",
+          "index": false
         }
       }
     }

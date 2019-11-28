@@ -1,5 +1,15 @@
 [
   {
+    "name": "hasFulltext",
+    "type": "boolean",
+    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:ref[@type='file' and @n=1]/@target != ''"
+  },
+  {
+    "name": "fulltextPath",
+    "type": "simpleString",
+    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:ref[@type='file' and @n=1]/@target"
+  },
+  {
     "name": "title",
     "type": "object",
     "fields": [
