@@ -21,12 +21,12 @@
       {
         "name": "fr",
         "type": "simpleString",
-        "path": "normalize-space(//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title[@xml:lang='fr'])"
+        "path": "process-title(//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title[@xml:lang='fr'])"
       },
       {
         "name": "en",
         "type": "simpleString",
-        "path": "normalize-space(//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title[@xml:lang='en'])"
+        "path": "process-title(//TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title[@xml:lang='en'])"
       },
       {
         "name": "monography",
