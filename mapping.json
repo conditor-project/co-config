@@ -5,7 +5,8 @@
       "query": {
         "default_field": [
           "_id",
-          "abstract",
+          "abstract.en",
+          "abstract.fr",
           "articleNumber",
           "articleNumber.normalized",
           "arxiv",
@@ -64,8 +65,6 @@
           "localRef.normalized",
           "meetingAbstractNumber",
           "meetingAbstractNumber.normalized",
-          "title.meeting",
-          "title.meeting.normalized",
           "nnt",
           "nnt.normalized",
           "oatao",
@@ -110,6 +109,8 @@
           "title.fr.normalized",
           "title.journal",
           "title.journal.normalized",
+          "title.meeting",
+          "title.meeting.normalized",
           "title.monography",
           "title.monography.normalized",
           "typeConditor",
@@ -867,8 +868,17 @@
           "type": "keyword"
         },
         "abstract": {
-          "type": "text",
-          "copy_to": "fingerprint"
+          "dynamic": "false",
+          "properties": {
+            "fr": {
+              "type": "text",
+              "copy_to": "fingerprint"
+            },
+            "en": {
+              "type": "text",
+              "copy_to": "fingerprint"
+            }
+          }
         },
         "publicationDate": {
           "type": "text",

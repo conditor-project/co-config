@@ -441,8 +441,19 @@
   },
   {
     "name": "abstract",
-    "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract/text()"
+    "type": "object",
+    "fields": [
+      {
+        "name": "en",
+        "type": "simpleString",
+        "path": "//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract[@xml:lang='en']/text()"
+      },
+      {
+        "name": "fr",
+        "type": "simpleString",
+        "path": "//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract[@xml:lang='fr']/text()"
+      }
+    ]
   },
   {
     "name": "documentType",
