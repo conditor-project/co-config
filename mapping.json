@@ -23,6 +23,7 @@
           "doi",
           "doi.normalized",
           "duplicates.idConditor",
+          "duplicates.sourceUid",
           "duplicates.sessionName",
           "duplicates.rules",
           "duplicates.source",
@@ -844,6 +845,9 @@
             "idConditor": {
               "type": "keyword"
             },
+            "sourceUid": {
+              "type": "keyword"
+            },
             "rules": {
               "type": "text"
             },
@@ -928,6 +932,9 @@
             "idConditor": {
               "type": "keyword"
             },
+            "sourceUid": {
+              "type": "keyword"
+            },
             "duplicateBySymmetry": {
               "type": "boolean"
             },
@@ -946,6 +953,9 @@
           "type": "nested",
           "properties": {
             "idConditor": {
+              "type": "keyword"
+            },
+            "sourceUid": {
               "type": "keyword"
             },
             "duplicateBySymmetry": {
