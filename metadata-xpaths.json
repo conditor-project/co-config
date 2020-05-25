@@ -123,6 +123,47 @@
     }
   },
   {
+    "name": "defenseOrganisms",
+    "type": "bloc",
+    "path": "//TEI:monogr",
+      "fields": {
+        "type": "struct",
+        "fields": [
+              {
+                "name": "degreeGrantor",
+                "type": "simpleString",
+                "path": "//TEI:editor[@role='dgg']//TEI:orgName[@type='institution']"
+              },
+              {
+                "name": "degreeGrantorIdRef",
+                "type": "simpleString",
+                "path": "//TEI:editor[@role='dgg']//TEI:idno[@type='idRef']"
+              },
+              {
+                "name": "associatedLaboratory",
+                "type": "simpleString",
+                "path": "//TEI:editor[@role='tal']//TEI:orgName[@type='institution']"
+              },
+              {
+                "name": "associatedLaboratoryIdRef",
+                "type": "simpleString",
+                "path": "//TEI:editor[@role='tal']//TEI:idno[@type='idRef']"
+              },
+              {
+                "name": "doctoralSchool",
+                "type": "simpleString",
+                "path": "//TEI:editor[@role='dos']//TEI:orgName[@type='institution']"
+              },
+              {
+                "name": "doctoralSchoolIdRef",
+                "type": "simpleString",
+                "path": "//TEI:editor[@role='dos']//TEI:idno[@type='idRef']"
+              }
+            ]
+          }
+        },
+
+  {
     "name": "authors",
     "type": "bloc",
     "path": "//TEI:body/TEI:listBibl/TEI:biblFull/TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']",
