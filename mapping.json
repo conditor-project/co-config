@@ -311,6 +311,32 @@
         "authorNames": {
           "type": "text"
         },
+        
+        "defenseOrganisms": {
+          "dynamic": "false",
+          "type": "nested",
+          "properties": {
+            "degreeGrantor": {
+              "type": "text"
+            },
+            "degreeGrantorIdRef": {
+                  "type": "keyword"
+            },
+            "associatedLaboratory": {
+              "type": "text"
+            },
+            "associatedLaboratoryIdRef": {
+                  "type": "keyword"
+            },
+            "doctoralSchool": {
+              "type": "text"
+            },
+            "doctoralSchoolIdRef": {
+                  "type": "keyword"
+            }
+          }
+        },
+
         "authors": {
           "dynamic": "false",
           "type": "nested",
