@@ -26,12 +26,24 @@
     }
 },
 {
-    "source":"sudoc",
+    "source":"sudoc thèses",
     "nameID":"ppn",
     "mapping":{
       "Thèse d'exercice":"Thèse",
       "Thèse de doctorat":"Thèse"
    }
+},
+ {
+    "source":"sudoc ouvrages",
+    "nameID":"ppn",
+    "mapping":{
+      "Biographies":"Ouvrage",
+      "Catalogues d'exposition":"Autre", 
+      "Congrès":"Conférence", 
+      "Encyclopédies":"Ouvrage", 
+      "Mélanges":"Ouvrage",
+      "Ouvrage":"Ouvrage", 
+    }
 },
 {
     "source":"pubmed",
