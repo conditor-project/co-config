@@ -113,7 +113,15 @@
     "source":"crossref",
     "nameID":"doi",
     "mapping":{
-        "Journal article": "Article"
+        "Journal article":"Article",
+        "conference_paper":"Conférence",
+        "chapter":"Chapitre",
+        "section":"Chapitre",
+        "reference_entry":"Chapitre",
+        "monograph":"Ouvrage",
+        "edited_book":"Ouvrage",
+        "reference":"Ouvrage",
+        "other":"Ouvrage"
     }
 }
 ]
