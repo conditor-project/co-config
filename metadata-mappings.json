@@ -121,7 +121,7 @@
         "monograph":"Ouvrage",
         "edited_book":"Ouvrage",
         "reference":"Ouvrage",
-        "other":"Ouvrage"
+        "book":"Ouvrage"
     }
 }
 ]
