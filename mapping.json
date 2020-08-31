@@ -889,12 +889,10 @@
           "dynamic": "false",
           "properties": {
             "fr": {
-              "type": "text",
-              "copy_to": "fingerprint"
+              "type": "text"
             },
             "en": {
-              "type": "text",
-              "copy_to": "fingerprint"
+              "type": "text"
             }
           }
         },
