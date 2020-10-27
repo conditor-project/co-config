@@ -44,15 +44,15 @@
     "type": "object",
     "fields": [
        {
-        "name": "without",
+        "name": "undetermined",
         "type": "object",
         "fields": [{
             "name": "author",
             "type": "bloc",
-            "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='']",
+            "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='und']",
             "fields": {
               "type": "simpleString",
-              "path": "//TEI:term[@xml:lang='']"
+              "path": "//TEI:term[@xml:lang='und']"
             }
           }
         ]
