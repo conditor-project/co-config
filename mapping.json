@@ -1072,7 +1072,7 @@
 								}
 							}
 						},
-						"categories": {
+						"classifications": {
 							"properties": {
 								"scopus": {
 									"type": "nested",
@@ -1105,7 +1105,7 @@
 				},
 				"keywords": {
 					"properties": {
-						"without": {
+						"undetermined": {
 							"properties": {
 								"author": {
 									"type": "keyword"
