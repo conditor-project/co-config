@@ -37,12 +37,15 @@
     "source":"sudoc-ouvrages",
     "nameID":"ppn",
     "mapping":{
+      "Actes de congrès":"Ouvrage", 
       "Biographies":"Ouvrage",
       "Catalogues d'exposition":"Autre", 
       "Congrès":"Conférence", 
       "Encyclopédies":"Ouvrage", 
       "Mélanges":"Ouvrage",
-      "Ouvrage":"Ouvrage"
+      "Mélanges et hommages":"Ouvrage",        
+      "Ouvrage":"Ouvrage",
+      "Monographie":"Ouvrage"
     }
 },
 {
