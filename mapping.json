@@ -29,6 +29,7 @@
 					"duplicates.source",
 					"duplicates.isValidatedByUser",
 					"duplicateRules",
+					"editor",
 					"eisbn",
 					"eisbn.normalized",
 					"eissn",
@@ -94,6 +95,7 @@
 					"publicationDate",
 					"publicationDate.normalized",
 					"publisher",
+					"publishingDirector",
 					"electronicPublicationDate",
 					"electronicPublicationDate.normalized",
 					"pmc",
@@ -1043,10 +1045,10 @@
 					"index": false
 				},
 				"language": {
-					"type": "text"
+					"type": "keyword"
 				},
 				"publisher": {
-					"type": "text"
+					"type": "keyword"
 				},
 				"funders": {
 					"dynamic": "false",
@@ -1153,6 +1155,36 @@
 						},
 						"thesisDomain": {
 							"type": "keyword"
+						}
+					}
+				},
+				"publishingDirector": {
+					"dynamic": "false",
+					"type": "nested",
+					"properties": {
+						"surname": {
+							"type": "text"
+						},
+						"forename": {
+							"type": "keyword"
+						},
+						"idRef": {
+							"type": "text"
+						}
+					}
+				},
+				"editor": {
+					"dynamic": "false",
+					"type": "nested",
+					"properties": {
+						"surname": {
+							"type": "text"
+						},
+						"forename": {
+							"type": "keyword"
+						},
+						"idRef": {
+							"type": "text"
 						}
 					}
 				}
