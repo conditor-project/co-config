@@ -1,4 +1,5 @@
-[{
+[
+  {
     "name": "language",
     "type": "bloc",
     "path": "//TEI:body//TEI:profileDesc//TEI:langUsage/TEI:language",
@@ -55,8 +56,7 @@
       ]
     }
   },
-    
-    {
+  {
     "name": "classification",
     "type": "object",
     "fields": [{
@@ -219,11 +219,6 @@
     "name": "publisher",
     "type": "simpleString",
     "path": "string(//TEI:body//TEI:imprint//TEI:publisher)"
-  },
-  {
-    "name": "language",
-    "type": "simpleString",
-    "path": "//TEI:body//TEI:profileDesc//TEI:langUsage/TEI:language"
   },
   {
     "name": "hasFulltext",
