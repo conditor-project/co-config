@@ -30,7 +30,8 @@
     "nameID":"ppn",
     "mapping":{
       "Thèse d'exercice":"Thèse",
-      "Thèse de doctorat":"Thèse"
+      "Thèse de doctorat":"Thèse",
+      "Thèse d’exercice"::"Thèse"
    }
 },
  {
