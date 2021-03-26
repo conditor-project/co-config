@@ -31,7 +31,7 @@
     "mapping":{
       "Thèse d'exercice":"Thèse",
       "Thèse de doctorat":"Thèse",
-      "Thèse d’exercice"::"Thèse"
+      "Thèse d’exercice":"Thèse"
    }
 },
  {
@@ -125,7 +125,8 @@
         "monograph":"Ouvrage",
         "edited_book":"Ouvrage",
         "reference":"Ouvrage",
-        "book":"Ouvrage"
+        "book":"Ouvrage",
+        "other":"Chapitre"
     }
 }
 ]
