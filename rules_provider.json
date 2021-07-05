@@ -18,38 +18,20 @@
     }
   },
   {
-    "source": "wos",
+    "source": "sudoc-theses",
     "non_empty": [
-      "utKey"
+      "ppn"
     ],
     "query": {
       "bool": {
         "must": [
           {
             "term": {
-              "utKey.normalized": "utKey"
+              "ppn.normalized": "ppn"
             }
           }
         ],
-        "_name": "provider::wos"
-      }
-    }
-  },
-  {
-    "source": "prodinra",
-    "non_empty": [
-      "idProdinra"
-    ],
-    "query": {
-      "bool": {
-        "must": [
-          {
-            "term": {
-              "idProdinra.normalized": "idProdinra"
-            }
-          }
-        ],
-        "_name": "provider::prodinra"
+        "_name": "provider::sudoc-theses"
       }
     }
   },
