@@ -359,9 +359,9 @@
       "type": "simpleString",
       "path": "normalize-space(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:monogr/TEI:meeting/TEI:settlement)"
     },{
-      "name": "end",
+      "name": "country",
       "type": "simpleString",
-      "path": "lower-case(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:monogr/TEI:meeting/TEI:country/@type)"
+      "path": "translate(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:monogr/TEI:meeting/TEI:country/@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')"
     }]
   },
   {
