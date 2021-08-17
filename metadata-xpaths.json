@@ -340,6 +340,31 @@
     }
   },
   {
+  "name": "meeting",
+  "type": "object",
+  "fields": [{
+      "name": "title",
+      "type": "simpleString",
+      "path": "normalize-space(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:monogr/TEI:meeting/TEI:title)"
+    },{
+      "name": "start",
+      "type": "simpleString",
+      "path": "normalize-space(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:monogr/TEI:meeting/TEI:date[@type='start'])"
+    },{
+      "name": "end",
+      "type": "simpleString",
+      "path": "normalize-space(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:monogr/TEI:meeting/TEI:date[@type='end'])"
+    },{
+      "name": "settlement",
+      "type": "simpleString",
+      "path": "normalize-space(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:monogr/TEI:meeting/TEI:settlement)"
+    },{
+      "name": "end",
+      "type": "simpleString",
+      "path": "lower-case(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:monogr/TEI:meeting/TEI:country/@type)"
+    }]
+  },
+  {
     "name": "defenseOrganisms",
     "type": "bloc",
     "path": "//TEI:monogr",
