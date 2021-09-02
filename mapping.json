@@ -267,7 +267,6 @@
 		}
 	},
 	"mappings": {
-		"record": {
 			"dynamic": "false",
 			"properties": {
 				"fingerprint": {
@@ -1158,5 +1157,4 @@
 				}
 			}
 		}
-	}
 }
