@@ -189,7 +189,7 @@
 					"type": "shingle",
 					"max_shingle_size": 4,
 					"min_shingle_size": 2,
-					"output_unigrams": "false"
+					"output_unigrams": false
 				},
 				"filter_french_word": {
 					"type": "stop",
@@ -267,7 +267,7 @@
 		}
 	},
 	"mappings": {
-			"dynamic": "false",
+			"dynamic": false,
 			"properties": {
 				"fingerprint": {
 					"type": "text",
@@ -316,7 +316,7 @@
 					"type": "text"
 				},
 				"thesisAdvisor": {
-					"dynamic": "false",
+					"dynamic": false,
 					"type": "nested",
 					"properties": {
 						"surname": {
@@ -331,7 +331,7 @@
 					}
 				},
 				"defenseOrganisms": {
-					"dynamic": "false",
+					"dynamic": false,
 					"type": "nested",
 					"properties": {
 						"degreeGrantor": {
@@ -355,7 +355,7 @@
 					}
 				},
 				"authors": {
-					"dynamic": "false",
+					"dynamic": false,
 					"type": "nested",
 					"properties": {
 						"surname": {
@@ -784,7 +784,7 @@
 					"type": "keyword"
 				},
 				"title": {
-					"dynamic": "false",
+					"dynamic": false,
 					"properties": {
 						"default": {
 							"type": "text",
@@ -929,7 +929,7 @@
 					"type": "keyword"
 				},
 				"abstract": {
-					"dynamic": "false",
+					"dynamic": false,
 					"properties": {
 						"fr": {
 							"type": "text"
@@ -1048,7 +1048,7 @@
 					"type": "text"
 				},
 				"funders": {
-					"dynamic": "false",
+					"dynamic": false,
 					"type": "nested",
 					"properties": {
 						"name": {
