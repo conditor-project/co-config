@@ -171,15 +171,11 @@
     "rule": "7",
     "non_empty": [
       "title.default",
-      "volume",
-      "issue",
-      "pageRange",
+      "host.volume",
+      "host.issue",
+      "host.pages.pageRange",
       "xPublicationDate",
-      "xissn"
-    ],
-    "is_empty": [
-      "meetingAbstractNumber",
-      "specialIssue"
+      "host.xissn"
     ],
     "query": {
       "bool": {
@@ -191,17 +187,17 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.pageRange": "host.pages.pageRange"
             }
           },
           {
@@ -211,7 +207,7 @@
           },
           {
             "match": {
-              "xissn": "xissn"
+              "host.xissn": "host.xissn"
             }
           }
         ],
