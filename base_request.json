@@ -1,10 +1,8 @@
 {
-    "query": {
-        "bool": {
-            "should": [
-               
-            ],
-            "minimum_should_match": 1
-        }
+  "query": {
+    "bool": {
+      "should": [],
+      "minimum_should_match": 1
     }
+  }
 }

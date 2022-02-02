@@ -1,7 +1,9 @@
-[{
+[
+  {
     "name": "classification",
     "type": "object",
-    "fields": [{
+    "fields": [
+      {
         "name": "hal",
         "type": "bloc",
         "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:classCode[@scheme='halDomain']",
@@ -43,10 +45,11 @@
     "name": "keywords",
     "type": "object",
     "fields": [
-       {
+      {
         "name": "without",
         "type": "object",
-        "fields": [{
+        "fields": [
+          {
             "name": "author",
             "type": "bloc",
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='']",
@@ -60,7 +63,8 @@
       {
         "name": "en",
         "type": "object",
-        "fields": [{
+        "fields": [
+          {
             "name": "author",
             "type": "bloc",
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='en']",
@@ -83,7 +87,8 @@
       {
         "name": "fr",
         "type": "object",
-        "fields": [{
+        "fields": [
+          {
             "name": "author",
             "type": "bloc",
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='fr']",
@@ -120,7 +125,8 @@
     "path": "//TEI:body/TEI:listBibl/TEI:biblFull//TEI:funder",
     "fields": {
       "type": "struct",
-      "fields": [{
+      "fields": [
+        {
           "name": "name",
           "type": "simpleString",
           "path": "string(//TEI:name)"
@@ -139,7 +145,8 @@
     "path": "//TEI:monogr//TEI:editor[@role='ths' or @role='ths_opn']",
     "fields": {
       "type": "struct",
-      "fields": [{
+      "fields": [
+        {
           "name": "surname",
           "type": "simpleString",
           "path": "string(//TEI:persName//TEI:surname)"
@@ -180,7 +187,8 @@
   {
     "name": "title",
     "type": "object",
-    "fields": [{
+    "fields": [
+      {
         "name": "default",
         "type": "simpleString",
         "path": "process-title(//TEI:text/TEI:body//TEI:biblFull//TEI:sourceDesc//TEI:analytic/TEI:title)"
@@ -223,7 +231,8 @@
       "type": "array",
       "concat": true,
       "separator": " ",
-      "fields": [{
+      "fields": [
+        {
           "name": "surname",
           "type": "simpleString",
           "path": "string(//TEI:surname)"
@@ -246,7 +255,8 @@
       "type": "array",
       "concat": true,
       "separator": " ",
-      "fields": [{
+      "fields": [
+        {
           "name": "surname",
           "type": "simpleString",
           "path": "string(//TEI:surname)"
@@ -270,7 +280,8 @@
       "separator": " ",
       "type": "array",
       "concat": true,
-      "fields": [{
+      "fields": [
+        {
           "name": "surname",
           "type": "simpleString",
           "path": "string(//TEI:surname)"
@@ -292,7 +303,8 @@
     "path": "//TEI:monogr",
     "fields": {
       "type": "struct",
-      "fields": [{
+      "fields": [
+        {
           "name": "degreeGrantor",
           "type": "simpleString",
           "path": "//TEI:editor[@role='dgg']//TEI:orgName[@type='institution']"
@@ -331,7 +343,8 @@
     "path": "//TEI:body/TEI:listBibl/TEI:biblFull/TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']",
     "fields": {
       "type": "struct",
-      "fields": [{
+      "fields": [
+        {
           "name": "surname",
           "type": "simpleString",
           "path": "string(//TEI:persName//TEI:surname)"
@@ -362,7 +375,8 @@
           "path": "//TEI:affiliation",
           "fields": {
             "type": "struct",
-            "fields": [{
+            "fields": [
+              {
                 "type": "simpleString",
                 "name": "ref",
                 "path": "first-of-split(concat(normalize-space(//@ref),';',normalize-space(//@n)),';')"
@@ -643,7 +657,8 @@
   {
     "name": "abstract",
     "type": "object",
-    "fields": [{
+    "fields": [
+      {
         "name": "en",
         "type": "simpleString",
         "path": "//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract[@xml:lang='en']/text()"
