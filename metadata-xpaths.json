@@ -124,7 +124,7 @@
     "type": "bloc",
     "path": "//TEI:body/TEI:listBibl/TEI:biblFull//TEI:funder",
     "fields": {
-      "type": "struct",
+      "type": "object",
       "fields": [
         {
           "name": "name",
@@ -144,7 +144,7 @@
     "type": "bloc",
     "path": "//TEI:monogr//TEI:editor[@role='ths' or @role='ths_opn']",
     "fields": {
-      "type": "struct",
+      "type": "object",
       "fields": [
         {
           "name": "surname",
@@ -302,7 +302,7 @@
     "type": "bloc",
     "path": "//TEI:monogr",
     "fields": {
-      "type": "struct",
+      "type": "object",
       "fields": [
         {
           "name": "degreeGrantor",
@@ -342,7 +342,7 @@
     "type": "bloc",
     "path": "//TEI:body/TEI:listBibl/TEI:biblFull/TEI:sourceDesc//TEI:author[@role='aut' or @role='crp']",
     "fields": {
-      "type": "struct",
+      "type": "object",
       "fields": [
         {
           "name": "surname",
@@ -374,7 +374,7 @@
           "name": "affiliations",
           "path": "//TEI:affiliation",
           "fields": {
-            "type": "struct",
+            "type": "object",
             "fields": [
               {
                 "type": "simpleString",
