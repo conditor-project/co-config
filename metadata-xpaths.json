@@ -1,5 +1,64 @@
 [
   {
+    "name": "language",
+    "type": "bloc",
+    "path": "//TEI:body//TEI:profileDesc//TEI:langUsage/TEI:language",
+    "fields": {
+      "type": "simpleString",
+      "path": "TEI:language"
+    }
+  },
+  {
+    "name": "publishingDirector",
+    "type": "bloc",
+    "path": "//TEI:monogr//TEI:editor[@role='pbd']",
+    "fields": {
+      "type": "struct",
+      "fields": [
+        {
+          "name": "surname",
+          "type": "simpleString",
+          "path": "string(//TEI:persName//TEI:surname)"
+        },
+        {
+          "name": "forename",
+          "type": "simpleString",
+          "path": "string(//TEI:persName//TEI:forename)"
+        },
+        {
+          "name": "idRef",
+          "type": "simpleString",
+          "path": "//TEI:idno[@type='idRef']"
+        }
+      ]
+    }
+  },
+  {
+    "name": "editor",
+    "type": "bloc",
+    "path": "//TEI:monogr//TEI:editor[@role='edt']",
+    "fields": {
+      "type": "struct",
+      "fields": [
+        {
+          "name": "surname",
+          "type": "simpleString",
+          "path": "string(//TEI:persName//TEI:surname)"
+        },
+        {
+          "name": "forename",
+          "type": "simpleString",
+          "path": "string(//TEI:persName//TEI:forename)"
+        },
+        {
+          "name": "idRef",
+          "type": "simpleString",
+          "path": "//TEI:idno[@type='idRef']"
+        }
+      ]
+    }
+  },
+  {
     "name": "classification",
     "type": "object",
     "fields": [
@@ -46,16 +105,16 @@
     "type": "object",
     "fields": [
       {
-        "name": "without",
+        "name": "undetermined",
         "type": "object",
         "fields": [
           {
             "name": "author",
             "type": "bloc",
-            "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='']",
+            "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='und']",
             "fields": {
               "type": "simpleString",
-              "path": "//TEI:term[@xml:lang='']"
+              "path": "//TEI:term[@xml:lang='und']"
             }
           }
         ]
@@ -112,7 +171,7 @@
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='rameau']",
             "fields": {
               "type": "simpleString",
-              "path": "concat(//TEI:term[@xml:lang='fr'][@type='topicalName'],'--',//TEI:term[@xml:lang='fr'][@type='subdivisionTopic'])"
+              "path": "concat(//TEI:term[@xml:lang='fr'][@type='topicalName'],'--',//TEI:term[@xml:lang='fr'][@type='subdivisionTopic' or @type='subdivisionGeo' or @type='subdivisionChrono'])"
             }
           }
         ]
@@ -168,11 +227,6 @@
     "name": "publisher",
     "type": "simpleString",
     "path": "string(//TEI:body//TEI:imprint//TEI:publisher)"
-  },
-  {
-    "name": "language",
-    "type": "simpleString",
-    "path": "//TEI:body//TEI:profileDesc//TEI:langUsage/TEI:language"
   },
   {
     "name": "hasFulltext",

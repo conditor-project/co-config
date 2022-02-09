@@ -32,19 +32,23 @@
     "nameID": "ppn",
     "mapping": {
       "Thèse d'exercice": "Thèse",
-      "Thèse de doctorat": "Thèse"
+      "Thèse de doctorat": "Thèse",
+      "Thèse d’exercice": "Thèse"
     }
   },
   {
     "source": "sudoc-ouvrages",
     "nameID": "ppn",
     "mapping": {
+      "Actes de congrès": "Ouvrage",
       "Biographies": "Ouvrage",
       "Catalogues d'exposition": "Autre",
       "Congrès": "Conférence",
       "Encyclopédies": "Ouvrage",
       "Mélanges": "Ouvrage",
-      "Ouvrage": "Ouvrage"
+      "Mélanges et hommages": "Ouvrage",
+      "Ouvrage": "Ouvrage",
+      "Monographie": "Ouvrage"
     }
   },
   {
@@ -65,6 +69,8 @@
       "Clinical Trial, Phase II": "Article",
       "Clinical Trial, Phase III": "Article",
       "Clinical Trial, Phase IV": "Article",
+      "Clinical Trial Protocol": "Article",
+      "Clinical Trial, Veterinary": "Article",
       "Comment": "Article",
       "Comparative Study": "Article",
       "Congress": "Article",
@@ -104,11 +110,28 @@
       "Retracted Publication": "Article",
       "Retraction of Publication": "Article",
       "Review": "Autre",
+      "Systematic Review": "Article",
       "Technical Report": "Article",
       "Twin Study": "Article",
       "Validation Studies": "Article",
       "Video-Audio Media": "Article",
       "Webcasts": "Article"
+    }
+  },
+  {
+    "source": "crossref",
+    "nameID": "doi",
+    "mapping": {
+      "Journal article": "Article",
+      "conference_paper": "Conférence",
+      "chapter": "Chapitre",
+      "section": "Chapitre",
+      "reference_entry": "Chapitre",
+      "monograph": "Ouvrage",
+      "edited_book": "Ouvrage",
+      "reference": "Ouvrage",
+      "book": "Ouvrage",
+      "other": "Chapitre"
     }
   },
   {
