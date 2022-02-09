@@ -177,11 +177,8 @@
   },
   {
     "name": "bibCode",
-    "type": "simpleString"
-    /* TODO: find correct XPATH
-       //TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='bibcode']/text()"
-       //TEI:body//TEI:biblFull//TEI:idno[@type='bibcode']/text()
-    */
+    "type": "simpleString",
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='bibcode']/text()"
   },
   {
     "name": "_business",
@@ -275,32 +272,6 @@
     "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='doi']/text()"
   },
   {
-    "name": "editor",
-    "type": "bloc",
-    "path": "//TEI:monogr//TEI:editor",
-    "fields": [
-      {
-        "name": "forename",
-        "type": "simpleString",
-        "path": "?" // TODO: find path to get editors' forename
-      },
-      {
-        "type": "bloc",
-        "name": "idRef",
-        "path": "?", // TODO: find xpath to get editors' idRef
-        "fields": {
-          "type": "simpleString",
-          "path": "normalize-space(.)"
-        }
-      },
-      {
-        "name": "surname",
-        "type": "simpleString",
-        "path": "?" // TODO: find path to get editors' surname
-      }
-    ]
-  },
-  {
     "name": "ensam",
     "type": "simpleString",
     "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='ensam']/text()"
@@ -370,14 +341,18 @@
     "fields": {
       "type": "object",
       "fields": [
-        // TODO: add DOI?
+        {
+          "name": "doi",
+          "type": "simpleString",
+          "path": "string(//TEI:idno[@type='doi'])" // TODO: find TEI example to confirm xpath
+        },
         {
           "name": "grantNumber",
           "type": "simpleString",
           "path": "string(//TEI:idno[@type='grantNumber'])"
         },
         {
-          "name": "name", // name of fullname?
+          "name": "name",
           "type": "simpleString",
           "path": "string(//TEI:name)"
         }
@@ -393,6 +368,50 @@
     "name": "host",
     "type": "object",
     "fields": [
+      {
+        "name": "editor",
+        "type": "bloc",
+        "path": "//TEI:monogr//TEI:editor",
+        "fields": {
+          "type": "object",
+          "fields": [
+            {
+              "name": "forename",
+              "type": "simpleString",
+              "path": "string(//TEI:persName//TEI:forename)"
+            },
+            {
+              "name": "fullname",
+              "type": "simpleString",
+              "path": "normalize-space(concat(//TEI:persName//TEI:forename,' ',//TEI:persName//TEI:surname))"
+            },
+            {
+              "name": "idRef",
+              "type": "bloc",
+              "path": "//TEI:idno[@type='idRef']",
+              "fields": {
+                "type": "simpleString",
+                "path": "normalize-space(.)"
+              }
+            },
+            {
+              "name": "orgName",
+              "type": "simpleString",
+              "path": "string(//TEI:orgName[@type='institution'])"
+            },
+            {
+              "name": "roles",
+              "type": "simpleString",
+              "path": "//./@role"
+            },
+            {
+              "name": "surname",
+              "type": "simpleString",
+              "path": "string(//TEI:persName//TEI:surname)"
+            }
+          ]
+        }
+      },
       {
         "name": "eisbn",
         "type": "simpleString",
