@@ -81,7 +81,7 @@
               {
                 "name": "ref",
                 "type": "simpleString",
-                "path": "first-of-split(concat(//@ref,';',//@n),';')"
+                "path": "//@ref | //@n"
               },
               {
                 "name": "rnsr",
