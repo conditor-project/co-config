@@ -6,12 +6,12 @@
       {
         "name": "en",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract[@xml:lang='en']/text()"
+        "path": "//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract[@xml:lang='en']"
       },
       {
         "name": "fr",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract[@xml:lang='fr']/text()"
+        "path": "//TEI:body//TEI:biblFull//TEI:profileDesc//TEI:abstract[@xml:lang='fr']"
       },
       {
         "name": "default",
@@ -39,12 +39,12 @@
         {
           "name": "surname",
           "type": "simpleString",
-          "path": "string(//TEI:surname)"
+          "path": "//TEI:surname"
         },
         {
           "name": "forename",
           "type": "simpleString",
-          "path": "string(//TEI:forename)"
+          "path": "//TEI:forename"
         }
       ]
     }
@@ -64,43 +64,32 @@
             "type": "object",
             "fields": [
               {
-                "type": "simpleString",
                 "name": "address",
+                "type": "simpleString",
                 "path": "normalize-space(//text())"
               },
               {
-                "type": "bloc",
                 "name": "idRef",
-                "path": "//TEI:org",
-                "fields": {
-                  "type": "simpleString",
-                  "path": "normalize-space(child::*/TEI:idno[@type='idRef'])",
-                  "allowEmpty": false
-                }
-              },
-              {
-                "type": "bloc",
-                "name": "isni",
-                "path": "//TEI:org",
-                "fields": {
-                  "type": "simpleString",
-                  "path": "normalize-space(child::*/TEI:idno[@type='isni'])",
-                  "allowEmpty": false
-                }
-              },
-              {
                 "type": "simpleString",
-                "name": "ref",
-                "path": "first-of-split(concat(normalize-space(//@ref),';',normalize-space(//@n)),';')"
+                "path": "//TEI:org/TEI:idno[@type='idRef']"
               },
               {
-                "type": "bloc",
+                "name": "isni",
+                "type": "simpleString",
+                "path": "//TEI:org/TEI:idno[@type='isni']"
+              },
+              {
+                "name": "ref",
+                "type": "simpleString",
+                "path": "first-of-split(concat(//@ref,';',//@n),';')"
+              },
+              {
                 "name": "rnsr",
-                "path": "//TEI:org",
+                "type": "bloc",
+                "path": "//TEI:org/TEI:idno[@type='rnsr']",
                 "fields": {
                   "type": "simpleString",
-                  "path": "normalize-space(child::*/TEI:idno[@type='rnsr'])",
-                  "allowEmpty": false
+                  "path": "."
                 }
               }
             ]
@@ -109,54 +98,66 @@
         {
           "name": "forename",
           "type": "simpleString",
-          "path": "string(//TEI:persName//TEI:forename)"
+          "path": "//TEI:persName/TEI:forename"
         },
         {
           "name": "fullname",
           "type": "simpleString",
-          "path": "concat(//TEI:persName//TEI:forename,' ',//TEI:persName//TEI:surname)"
+          "path": "concat(//TEI:persName/TEI:forename,' ',//TEI:persName/TEI:surname)"
         },
         {
           "name": "halAuthorId",
-          "type": "simpleString",
-          "path": "string(//TEI:idno[lower-case(@type)='halauthorid'])"
+          "type": "bloc",
+          "path": "//TEI:idno[lower-case(@type)='halauthorid']",
+          "fields": {
+            "type": "simpleString",
+            "path": "."
+          }
         },
         {
           "name": "idHal",
-          "type": "simpleString",
-          "path": "string(//TEI:idno[lower-case(@type)='idhal' and @notation='numeric'])"
+          "type": "bloc",
+          "path": "//TEI:idno[lower-case(@type)='idhal' and @notation='numeric']",
+          "fields": {
+            "type": "simpleString",
+            "path": "."
+          }
         },
         {
-          "type": "bloc",
           "name": "idRef",
-          "path": "child::*/TEI:idno[lower-case(@type)='idref']",
+          "type": "bloc",
+          "path": "//TEI:idno[lower-case(@type)='idref']",
           "fields": {
             "type": "simpleString",
-            "path": "normalize-space(.)"
+            "path": "."
           }
         },
         {
-          "type": "bloc",
           "name": "isni",
-          "path": "child::*/TEI:idno[lower-case(@type)='isni']",
+          "type": "bloc",
+          "path": "//TEI:idno[lower-case(@type)='isni']",
           "fields": {
             "type": "simpleString",
-            "path": "normalize-space(.)"
+            "path": "."
           }
         },
         {
-          "type": "bloc",
           "name": "orcId",
-          "path": "child::*/TEI:idno[lower-case(@type)='orcid']",
+          "type": "bloc",
+          "path": "//TEI:idno[lower-case(@type)='orcid']",
           "fields": {
             "type": "simpleString",
-            "path": "normalize-space(.)"
+            "path": "."
           }
         },
         {
           "name": "researcherId",
-          "type": "simpleString",
-          "path": "string(//TEI:idno[lower-case(@type)='researcherid'])"
+          "type": "bloc",
+          "path": "//TEI:idno[lower-case(@type)='researcherid']",
+          "fields": {
+            "type": "simpleString",
+            "path": "."
+          }
         },
         {
           "name": "surname",
@@ -166,10 +167,10 @@
         {
           "type": "bloc",
           "name": "viaf",
-          "path": "child::*/TEI:idno[lower-case(@type)='viaf']",
+          "path": "//TEI:idno[lower-case(@type)='viaf']",
           "fields": {
             "type": "simpleString",
-            "path": "normalize-space(.)"
+            "path": "."
           }
         }
       ]
@@ -201,28 +202,20 @@
       },
       {
         "name": "xissn",
-        "type": "bloc",
-        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='issn' or @type='eissn']",
-        "fields": {
-          "type": "simpleString",
-          "path": "//TEI:idno"
-        }
+        "type": "simpleString",
+        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='issn' or @type='eissn']"
       },
       {
         "name": "xPublicationDate",
-        "type": "bloc",
-        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date",
-        "fields": {
-          "type": "simpleString",
-          "path": "//TEI:date"
-        }
+        "type": "simpleString",
+        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date"
       }
     ]
   },
   {
     "name": "cern",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='cern']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='cern']"
   },
   {
     "name": "classification",
@@ -234,7 +227,7 @@
         "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:classCode[@scheme='Dewey']",
         "fields": {
           "type": "simpleString",
-          "path": "//TEI:classCode[@scheme='Dewey']"
+          "path": "."
         }
       },
       {
@@ -243,7 +236,7 @@
         "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:classCode[@scheme='halDomain']",
         "fields": {
           "type": "simpleString",
-          "path": "//TEI:classCode[@scheme='halDomain']"
+          "path": "."
         }
       },
       {
@@ -252,7 +245,7 @@
         "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:classCode[@scheme='TEF']",
         "fields": {
           "type": "simpleString",
-          "path": "//TEI:classCode[@scheme='TEF']"
+          "path": "."
         }
       },
       {
@@ -261,7 +254,7 @@
         "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:classCode[@scheme='thesisDomain']",
         "fields": {
           "type": "simpleString",
-          "path": "//TEI:classCode[@scheme='thesisDomain']"
+          "path": "."
         }
       }
     ]
@@ -269,12 +262,12 @@
   {
     "name": "doi",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='doi']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='doi']"
   },
   {
     "name": "ensam",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='ensam']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='ensam']"
   },
   {
     "name": "first3AuthorNames",
@@ -291,12 +284,12 @@
         {
           "name": "surname",
           "type": "simpleString",
-          "path": "string(//TEI:surname)"
+          "path": "//TEI:surname"
         },
         {
           "name": "forename",
           "type": "simpleString",
-          "path": "string(//TEI:forename)"
+          "path": "//TEI:forename"
         }
       ]
     }
@@ -316,11 +309,11 @@
         {
           "name": "surname",
           "type": "simpleString",
-          "path": "string(//TEI:surname)"
+          "path": "//TEI:surname"
         },
         {
           "name": "forename",
-          "path": "string(//TEI:forename)",
+          "path": "//TEI:forename",
           "type": "simpleString",
           "regexp": "(?:\\s*\\b)([a-zA-Z])(?:[^\\s-]*)",
           "flag": "gm",
@@ -344,17 +337,17 @@
         {
           "name": "doi",
           "type": "simpleString",
-          "path": "string(//TEI:idno[@type='doi'])"
+          "path": "//TEI:idno[@type='doi']"
         },
         {
           "name": "grantNumber",
           "type": "simpleString",
-          "path": "string(//TEI:idno[@type='grantNumber'])"
+          "path": "//TEI:idno[@type='grantNumber']"
         },
         {
           "name": "name",
           "type": "simpleString",
-          "path": "string(//TEI:name)"
+          "path": "//TEI:name"
         }
       ]
     }
@@ -378,21 +371,17 @@
             {
               "name": "forename",
               "type": "simpleString",
-              "path": "string(//TEI:persName//TEI:forename)"
+              "path": "//TEI:persName/TEI:forename"
             },
             {
               "name": "fullname",
               "type": "simpleString",
-              "path": "normalize-space(concat(//TEI:persName//TEI:forename,' ',//TEI:persName//TEI:surname))"
+              "path": "normalize-space(concat(//TEI:persName/TEI:forename,' ',//TEI:persName/TEI:surname))"
             },
             {
               "name": "idRef",
-              "type": "bloc",
-              "path": "//TEI:idno[@type='idRef']",
-              "fields": {
-                "type": "simpleString",
-                "path": "normalize-space(.)"
-              }
+              "type": "simpleString",
+              "path": "//TEI:idno[@type='idRef']"
             },
             {
               "name": "orgName",
@@ -415,54 +404,46 @@
       {
         "name": "eisbn",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='eisbn']/text()"
+        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='eisbn']"
       },
       {
         "name": "eissn",
-        "type": "bloc",
-        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='eissn']",
-        "fields": {
-          "type": "simpleString",
-          "path": "//TEI:idno"
-        }
+        "type": "simpleString",
+        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='eissn']"
       },
       {
         "name": "electronicPublicationDate",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='dateEpub']/text()"
+        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='dateEpub']"
       },
       {
         "name": "isbn",
-        "type": "bloc",
-        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='isbn']",
-        "fields": {
-          "type": "simpleString",
-          "path": "//TEI:idno"
-        }
+        "type": "simpleString",
+        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='isbn']"
       },
       {
         "name": "issn",
-        "type": "bloc",
-        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='issn']",
-        "fields": {
-          "type": "simpleString",
-          "path": "//TEI:idno"
-        }
+        "type": "simpleString",
+        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='issn']"
       },
       {
         "name": "issue",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblScope[@unit='issue']/text()"
+        "path": "//TEI:body//TEI:biblScope[@unit='issue']"
       },
       {
         "name": "language",
-        "type": "simpleString",
-        "path": "//TEI:body//TEI:profileDesc//TEI:langUsage/TEI:language"
+        "type": "bloc",
+        "path": "//TEI:body//TEI:profileDesc//TEI:langUsage/TEI:language",
+        "fields": {
+          "type": "simpleString",
+          "path": "."
+        }
       },
       {
         "name": "part",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='part']/text()"
+        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='part']"
       },
       {
         "name": "pages",
@@ -471,66 +452,66 @@
           {
             "name": "range",
             "type": "simpleString",
-            "path": "//TEI:body//TEI:biblScope[@unit='pp']/text()"
+            "path": "//TEI:body//TEI:biblScope[@unit='pp']"
           }
         ]
       },
       {
         "name": "publicationDate",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type!='dateEpub']/text()"
+        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type!='dateEpub']"
       },
       {
         "name": "publisher",
         "type": "simpleString",
-        "path": "string(//TEI:body//TEI:imprint//TEI:publisher)"
+        "path": "//TEI:body//TEI:imprint//TEI:publisher"
       },
       {
         "name": "specialIssue",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblScope[@unit='specialIssue']/text()"
+        "path": "//TEI:body//TEI:biblScope[@unit='specialIssue']"
       },
       {
         "name": "supplement",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='supplement']/text()"
+        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='supplement']"
       },
       {
         "name": "title",
         "type": "simpleString",
-        "path": "normalize-space(//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:monogr//TEI:title[@level='j']/text())"
+        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:monogr//TEI:title[@level='j']"
       },
       {
         "name": "volume",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblScope[@unit='volume']/text()"
+        "path": "//TEI:body//TEI:biblScope[@unit='volume']"
       }
     ]
   },
   {
     "name": "idProdinra",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='idprodinra']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='idprodinra']"
   },
   {
     "name": "ineris",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='ineris']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='ineris']"
   },
   {
     "name": "inspire",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='inspire']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='inspire']"
   },
   {
     "name": "ird",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='ird']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='ird']"
   },
   {
     "name": "irstea",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='irstea']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='irstea']"
   },
   {
     "name": "keywords",
@@ -546,7 +527,7 @@
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='en']",
             "fields": {
               "type": "simpleString",
-              "path": "//TEI:term[@xml:lang='en']"
+              "path": "."
             }
           },
           {
@@ -555,7 +536,7 @@
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='meshHeading' or @scheme='meshChemical']//TEI:term[@xml:lang='en']",
             "fields": {
               "type": "simpleString",
-              "path": "//TEI:term[@xml:lang='en']"
+              "path": "."
             }
           }
         ]
@@ -570,7 +551,7 @@
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='fr']",
             "fields": {
               "type": "simpleString",
-              "path": "//TEI:term[@xml:lang='fr']"
+              "path": "."
             }
           },
           {
@@ -603,7 +584,7 @@
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='']",
             "fields": {
               "type": "simpleString",
-              "path": "//TEI:term[@xml:lang='']"
+              "path": "."
             }
           }
         ]
@@ -613,71 +594,67 @@
   {
     "name": "localRef",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='localRef']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='localRef']"
   },
   {
     "name": "meetingAbstractNumber",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:imprint//TEI:biblScope[@unit='meetAbstrNo']/text()"
+    "path": "//TEI:body//TEI:imprint//TEI:biblScope[@unit='meetAbstrNo']"
   },
   {
     "name": "nnt",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='nnt']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='nnt']"
   },
   {
     "name": "oatao",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='oatao']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='oatao']"
   },
   {
     "name": "okina",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='okina']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='okina']"
   },
   {
     "name": "originalGenre",
-    "type": "bloc",
-    "path": "//TEI:body//TEI:biblFull//TEI:classCode[@scheme='typology']",
-    "fields": {
-      "type": "simpleString",
-      "path": "//TEI:classCode"
-    }
+    "type": "simpleString",
+    "path": "//TEI:body//TEI:biblFull//TEI:classCode[@scheme='typology']"
   },
   {
     "name": "patentNumber",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='patentNumber']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='patentNumber']"
   },
   {
     "name": "pii",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='pii']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='pii']"
   },
   {
     "name": "pmId",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='pubmed']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='pubmed']"
   },
   {
     "name": "pmcId",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='pmc']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='pmc']"
   },
   {
     "name": "ppn",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='ppnSudoc']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='ppnSudoc']"
   },
   {
     "name": "reportNumber",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='reportNumber']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='reportNumber']"
   },
   {
     "name": "sciencespo",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='sciencespo']/text()"
+    "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='sciencespo']"
   },
   {
     "name": "title",
