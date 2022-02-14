@@ -21,9 +21,14 @@
     ]
   },
   {
+    "name": "articleNumber",
+    "type": "simpleString",
+    "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='artNo']"
+  },
+  {
     "name": "arxiv",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='arxiv']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='arxiv']"
   },
   {
     "name": "authorNames",
@@ -179,21 +184,16 @@
   {
     "name": "bibCode",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='bibcode']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='bibcode']"
   },
   {
     "name": "_business",
     "type": "object",
     "fields": [
       {
-        "name": "articleNumber",
-        "type": "simpleString",
-        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='artNo']/text()"
-      },
-      {
         "name": "hasDoi",
         "type": "boolean",
-        "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='doi']/text() != ''"
+        "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='doi'] != ''"
       },
       {
         "name": "hasFulltext",
@@ -355,12 +355,38 @@
   {
     "name": "halId",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='halId']/text()"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='halId']"
   },
   {
     "name": "host",
     "type": "object",
     "fields": [
+      {
+        "name": "conference",
+        "type": "object",
+        "fields": [
+          {
+            "name": "name",
+            "type": "simpleString",
+            "path": "//TEI:body//TEI:meeting/TEI:title"
+          },
+          {
+            "name": "date",
+            "type": "simpleString",
+            "path": "//TEI:body//TEI:meeting/TEI:date[@type='start']"
+          },
+          {
+            "name": "place",
+            "type": "simpleString",
+            "path": "//TEI:body//TEI:meeting/TEI:settlement"
+          },
+          {
+            "name": "country",
+            "type": "simpleString",
+            "path": "//TEI:body//TEI:meeting/TEI:country"
+          }
+        ]
+      },
       {
         "name": "editor",
         "type": "bloc",
@@ -441,6 +467,11 @@
         }
       },
       {
+        "name": "otherNumber",
+        "type": "simpleString",
+        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='otherNumber']"
+      },
+      {
         "name": "part",
         "type": "simpleString",
         "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:biblScope[@unit='part']"
@@ -479,7 +510,7 @@
       {
         "name": "title",
         "type": "simpleString",
-        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:monogr//TEI:title[@level='j']"
+        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:monogr//TEI:title[@level='j' or @level='m']"
       },
       {
         "name": "volume",
@@ -491,7 +522,7 @@
   {
     "name": "idProdinra",
     "type": "simpleString",
-    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='idprodinra']"
+    "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='prodinra']"
   },
   {
     "name": "ineris",
@@ -581,7 +612,7 @@
           {
             "name": "author",
             "type": "bloc",
-            "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='']",
+            "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='und']",
             "fields": {
               "type": "simpleString",
               "path": "."
