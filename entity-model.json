@@ -1,0 +1,472 @@
+{
+  "abstract": {
+    "en": "STRING",
+    "fr": "STRING",
+    "default": "STRING"
+  },
+  "accessCondition": "STRING",
+  "ark": {
+    "istex": "STRING",
+    "publisher": "STRING"
+  },
+  "articleNumber": "STRING",
+  "arxiv": "STRING",
+  "authorNames": "STRING",
+  "authors": [
+    {
+      "affiliations": [
+        {
+          "address": "STRING",
+          "idRef": "STRING",
+          "isni": "STRING",
+          "ref": "STRING",
+          "rnsr": ["STRING"],
+          "enrichments": {
+            "rnsr": ["STRING"]
+          }
+        }
+      ],
+      "enrichments": {
+        "idHal": ["STRING"],
+        "idRef": ["STRING"],
+        "orcId": ["STRING"]
+      },
+      "forename": "STRING",
+      "fullname": "STRING",
+      "halAuthorId": ["STRING"],
+      "idHal": ["STRING"],
+      "idRef": ["STRING"],
+      "isni": ["STRING"],
+      "orcId": ["STRING"],
+      "researcherId": ["STRING"],
+      "surname": "STRING",
+      "viaf": ["STRING"]
+    }
+  ],
+  "bibCode": "STRING",
+  "_business": {
+    "duplicateGenre": "STRING",
+    "duplicates": [
+      {
+        "idConditor": "STRING",
+        "isValidatedByUser": "BOOLEAN",
+        "source": "STRING",
+        "sourceUid": "STRING",
+        "sessionName": "STRING",
+        "rules": ["STRING"]
+      }
+    ],
+    "duplicateRules": ["STRING"],
+    "first3AuthorNames": "STRING",
+    "first3AuthorNamesWithInitials": "STRING",
+    "hasDoi": "BOOLEAN",
+    "hasFulltext": "BOOLEAN",
+    "hasTransDuplicate": "BOOLEAN",
+    "isDeduplicable": "BOOLEAN",
+    "isDuplicate": "BOOLEAN",
+    "name": "STRING",
+    "sourceUidChain": "STRING",
+    "xissn": "STRING",
+    "xPublicationDate": "STRING"
+  },
+  "cern": "STRING",
+  "classification": {
+    "dewey": ["STRING"],
+    "hal": ["STRING"],
+    "tef": ["STRING"],
+    "thesisDomain": ["STRING"]
+  },
+  "copyrightDate": "STRING",
+  "corpusName": "STRING",
+  "doi": "STRING",
+  "enrichmentTypes": ["STRING"],
+  "enrichments": {
+    "teeft": ["STRING"],
+    "categories": {
+      "bso": ["STRING"]
+    },
+    "openAccess": {
+      "core": ["STRING"],
+      "unpaywall": ["STRING"]
+    },
+    "namedEntities": {
+      "nerd": "STRING",
+      "unitex": {
+        "bibl": "STRING",
+        "date": "STRING",
+        "geogName": "STRING",
+        "orgName": "STRING",
+        "orgName_funder": "STRING",
+        "orgName_provider": "STRING",
+        "persName": "STRING",
+        "placeName": "STRING",
+        "ref_bibl": "STRING",
+        "ref_url": "STRING"
+      }
+    }
+  },
+  "ensam": "STRING",
+  "erratumOf": "STRING",
+  "files":{
+    "annexes": [
+      {
+        "extension": "STRING",
+        "mime": "STRING",
+        "original": "BOOLEAN",
+        "uri": "STRING"
+      }
+    ],
+    "covers": [
+      {
+        "extension": "STRING",
+        "mime": "STRING",
+        "original": "BOOLEAN",
+        "uri": "STRING"
+      }
+    ],
+    "fulltext": [
+      {
+        "extension": "STRING",
+        "mime": "STRING",
+        "original": "BOOLEAN",
+        "uri": "STRING"
+      }
+    ],
+    "metadata": [
+      {
+        "extension": "STRING",
+        "mime": "STRING",
+        "original": "BOOLEAN",
+        "uri": "STRING"
+      }
+    ],
+    "enrichments": {
+      "grobidFulltext": [
+        {
+          "extension": "STRING",
+          "mime": "STRING",
+          "original": "BOOLEAN",
+          "uri": "STRING"
+        }
+      ],
+      "multicat": [
+        {
+          "extension": "STRING",
+          "mime": "STRING",
+          "original": "BOOLEAN",
+          "uri": "STRING"
+        }
+      ],
+      "nb": [
+        {
+          "extension": "STRING",
+          "mime": "STRING",
+          "original": "BOOLEAN",
+          "uri": "STRING"
+        }
+      ],
+      "nerd": [
+        {
+          "extension": "STRING",
+          "mime": "STRING",
+          "original": "BOOLEAN",
+          "uri": "STRING"
+        }
+      ],
+      "ocr": [
+        {
+          "extension": "STRING",
+          "mime": "STRING",
+          "original": "BOOLEAN",
+          "uri": "STRING"
+        }
+      ],
+      "refBibs": [
+        {
+          "extension": "STRING",
+          "mime": "STRING",
+          "original": "BOOLEAN",
+          "uri": "STRING"
+        }
+      ],
+      "teeft": [
+        {
+          "extension": "STRING",
+          "mime": "STRING",
+          "original": "BOOLEAN",
+          "uri": "STRING"
+        }
+      ],
+      "unitex": [
+        {
+          "extension": "STRING",
+          "mime": "STRING",
+          "original": "BOOLEAN",
+          "uri": "STRING"
+        }
+      ]
+    }
+  },
+  "first3AuthorNames": "STRING",
+  "first3AuthorNamesWithInitials": "STRING",
+  "fulltextUrl": "STRING",
+  "funders": [
+    {
+      "doi": "STRING",
+      "grantNumber": "STRING",
+      "name": "STRING"
+    }
+  ],
+  "genre": "STRING",
+  "halId": "host",
+  "host": {
+    "authors": [
+      {
+        "forename": "STRING",
+        "fullname": "STRING",
+        "halAuthorId": ["STRING"],
+        "idHal": ["STRING"],
+        "idRef": ["STRING"],
+        "isni": ["STRING"],
+        "orcId": ["STRING"],
+        "researcherId": ["STRING"],
+        "surname": "STRING",
+        "viaf": ["STRING"]
+      }
+    ],
+    "bookId": "STRING",
+    "conference": {
+      "name": "STRING",
+      "date": "STRING",
+      "place": "STRING",
+      "country": "STRING"
+    },
+    "copyrightDate": "STRING",
+    "doi": "STRING",
+    "editor": [
+      {
+        "forename": "STRING",
+        "fullname": "STRING",
+        "idRef": "STRING",
+        "orgName": "STRING",
+        "roles": "STRING",
+        "surname": "STRING"
+      }
+    ],
+    "eisbn": "STRING",
+    "eissn": "STRING",
+    "electronicPublicationDate": "STRING",
+    "enrichments": {
+      "categories": {
+        "inist": [
+          {
+            "level": "STRING",
+            "value": "STRING"
+          }
+        ],
+        "scienceMetrix": [
+          {
+            "level": "STRING",
+            "value": "STRING"
+          }
+        ],
+        "scopus": [
+          {
+            "level": "STRING",
+            "value": "STRING"
+          }
+        ],
+        "wos": [
+          {
+            "level": "STRING",
+            "value": "STRING"
+          }
+        ]
+      }
+    },
+    "genre": "STRING",
+    "isbn": "STRING",
+    "issn": "STRING",
+    "issue": "STRING",
+    "journalId": "STRING",
+    "language": ["STRING"],
+    "meetingAbstractNumber": "STRING",
+    "otherNumber": "STRING",
+    "part": "STRING",
+    "pages": {
+      "first": "STRING",
+      "last": "STRING",
+      "range": "STRING",
+      "total": "NUMBER"
+    },
+    "publicationDate": "STRING",
+    "publisher": "STRING",
+    "publisherId": "STRING",
+    "sici": "STRING",
+    "specialIssue": "STRING",
+    "subject": {
+      "lang": "STRING",
+      "value": "STRING"
+    },
+    "supplement": "STRING",
+    "title": "STRING",
+    "volume": "STRING"
+  },
+  "idIstex": "STRING",
+  "idProdinra": "STRING",
+  "ineris": "STRING",
+  "inspire": "STRING",
+  "ird": "STRING",
+  "irstea": "STRING",
+  "keywords": {
+    "en": {
+      "author": ["STRING"],
+      "mesh": ["STRING"]
+    },
+    "fr": {
+      "author": ["STRING"],
+      "mesh": ["STRING"],
+      "rameau": ["STRING"]
+    },
+    "und": {
+      "author": ["STRING"]
+    },
+    "other": {
+      "author": ["STRING"],
+      "mesh": ["STRING"]
+    }
+  },
+  "language": ["STRING"],
+  "localRef": "STRING",
+  "meetingAbstractNumber": "STRING",
+  "_mergedDocuments": {
+    "sources": ["STRING"],
+    "sourceIds": ["STRING"],
+    "sourceUids": ["STRING"]
+  },
+  "nnt": "STRING",
+  "oatao": "STRING",
+  "okina": "STRING",
+  "originalGenre": "STRING",
+  "patentNumber": "STRING",
+  "pii": "STRING",
+  "pmId": "STRING",
+  "pmcId": "STRING",
+  "ppn": "STRING",
+  "qualityIndicators": {
+    "abstractCharCount": "NUMBER",
+    "abstractWordCount": "NUMBER",
+    "pdfCharCount": "NUMBER",
+    "pdfPageCount": "NUMBER",
+    "pdfText": "BOOLEAN",
+    "pdfVersion": "STRING",
+    "pdfWordCount": "NUMBER",
+    "pdfWordsPerPage": "NUMBER",
+    "refBibsNative": "BOOLEAN",
+    "score": "NUMBER"
+  },
+  "refBibs": [
+    {
+      "arkIstex": "STRING",
+      "authors": [
+        {
+          "forename": "STRING",
+          "fullname": "STRING",
+          "surname": "STRING"
+        }
+      ],
+      "doi": "STRING",
+      "host": {
+        "authors": [
+          {
+            "forename": "STRING",
+            "fullname": "STRING",
+            "surname": "STRING"
+          }
+        ],
+        "doi": "STRING",
+        "editor": "STRING",
+        "isbn": "STRING",
+        "issn": "STRING",
+        "issue": "STRING",
+        "pages": [
+          {
+            "first": "STRING",
+            "last": "STRING"
+          }
+        ],
+        "publicationDate": "STRING",
+        "title": "STRING",
+        "volume": "STRING"
+      },
+      "idIstex": "STRING",
+      "pmcId": "STRING",
+      "pmId": "STRING",
+      "publisher": "STRING",
+      "serie": {
+        "doi": "STRING",
+        "issn": "STRING",
+        "issue": "STRING",
+        "pages": [
+          {
+            "first": "STRING",
+            "last": "STRING"
+          }
+        ],
+        "title": "STRING",
+        "volume": "STRING"
+      },
+      "title": "STRING"
+    }
+  ],
+  "reportNumber": "STRING",
+  "sciencespo": "STRING",
+  "serie": {
+    "conference": {
+      "name": "STRING"
+    },
+    "copyrightDate": "STRING",
+    "doi": "STRING",
+    "editor": {
+      "affiliations": [
+        {
+          "address": "STRING",
+          "country": "STRING",
+          "orgName": "STRING"
+        }
+      ],
+      "forename": "STRING",
+      "fullname": "STRING",
+      "surname": "STRING"
+    },
+    "eissn": "STRING",
+    "issn": "STRING",
+    "issue": "STRING",
+    "language": "STRING",
+    "pages": {
+      "first": "STRING",
+      "last": "STRING",
+      "total": "NUMBER"
+    },
+    "publicationDate": "STRING",
+    "title": "STRING"
+  },
+  "sici": "STRING",
+  "source": "STRING",
+  "sourceId": "STRING",
+  "sourceUid": "STRING",
+  "_technical": {
+    "sessionName": "STRING",
+    "creationDate": "STRING",
+    "modificationDate": "STRING",
+    "deletionDate": "STRING",
+    "teiXsltVersion": "STRING",
+    "modsXsltVersion": "STRING"
+  },
+  "title": {
+    "default": "STRING",
+    "en": "STRING",
+    "fr": "STRING"
+  },
+  "utKey": "STRING"
+}
