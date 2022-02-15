@@ -366,9 +366,9 @@
         "type": "object",
         "fields": [
           {
-            "name": "name",
+            "name": "country",
             "type": "simpleString",
-            "path": "//TEI:body//TEI:meeting/TEI:title"
+            "path": "//TEI:body//TEI:meeting/TEI:country"
           },
           {
             "name": "date",
@@ -376,14 +376,14 @@
             "path": "//TEI:body//TEI:meeting/TEI:date[@type='start']"
           },
           {
+            "name": "name",
+            "type": "simpleString",
+            "path": "//TEI:body//TEI:meeting/TEI:title"
+          },
+          {
             "name": "place",
             "type": "simpleString",
             "path": "//TEI:body//TEI:meeting/TEI:settlement"
-          },
-          {
-            "name": "country",
-            "type": "simpleString",
-            "path": "//TEI:body//TEI:meeting/TEI:country"
           }
         ]
       },
