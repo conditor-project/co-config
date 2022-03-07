@@ -66,8 +66,8 @@
     "isDuplicate": "BOOLEAN",
     "name": "STRING",
     "sourceUidChain": "STRING",
-    "xissn": "STRING",
-    "xPublicationDate": "STRING"
+    "xissn": ["STRING"],
+    "xPublicationDate": ["STRING"]
   },
   "cern": "STRING",
   "classification": {

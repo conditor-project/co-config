@@ -202,13 +202,21 @@
       },
       {
         "name": "xissn",
-        "type": "simpleString",
-        "path": "concat(//TEI:body//TEI:biblFull//TEI:idno[@type='issn'],',',//TEI:body//TEI:biblFull//TEI:idno[@type='eissn'])"
+        "type": "bloc",
+        "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='issn' or @type='eissn']",
+        "fields": {
+          "type": "simpleString",
+          "path": "."
+        }
       },
       {
         "name": "xPublicationDate",
-        "type": "simpleString",
-        "path": "concat(//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='datePub'],',',//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='dateEpub'])"
+        "type": "bloc",
+        "path": "//TEI:body//TEI:biblFull//TEI:biblStruct//TEI:imprint//TEI:date[@type='datePub' or @type='dateEpub']",
+        "fields": {
+          "type": "simpleString",
+          "path": "."
+        }
       }
     ]
   },
