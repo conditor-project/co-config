@@ -171,15 +171,15 @@
     "rule": "7",
     "non_empty": [
       "title.default",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate",
-      "xissn"
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -191,31 +191,31 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC+xissn+volume+issue+page+annee"
+        "_name": "2Collation:TiC+_business.xissn+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -223,15 +223,15 @@
     "rule": "8",
     "non_empty": [
       "title.default",
-      "issue",
-      "pageRange",
-      "xPublicationDate",
-      "xissn"
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -243,26 +243,26 @@
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC+xissn+issue+page+annee"
+        "_name": "2Collation:TiC+_business.xissn+host.issue+page+annee"
       }
     }
   },
@@ -270,14 +270,14 @@
     "rule": "9",
     "non_empty": [
       "title.default",
-      "volume",
-      "pageRange",
-      "xPublicationDate",
-      "xissn"
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -290,26 +290,26 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC+xissn+volume+page+annee"
+        "_name": "2Collation:TiC+_business.xissn+host.volume+page+annee"
       }
     }
   },
@@ -509,15 +509,15 @@
     "rule": "27",
     "non_empty": [
       "title.fr",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate",
-      "xissn"
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -529,31 +529,31 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+xissn+volume+issue+page+annee"
+        "_name": "2Collation:TiC_FRE+_business.xissn+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -561,15 +561,15 @@
     "rule": "28",
     "non_empty": [
       "title.fr",
-      "issue",
-      "pageRange",
-      "xPublicationDate",
-      "xissn"
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -581,26 +581,26 @@
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+xissn+issue+page+annee"
+        "_name": "2Collation:TiC_FRE+_business.xissn+host.issue+page+annee"
       }
     }
   },
@@ -608,15 +608,15 @@
     "rule": "29",
     "non_empty": [
       "title.fr",
-      "volume",
-      "pageRange",
-      "xPublicationDate",
-      "xissn"
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "issue",
+      "host.issue",
       "meetingAbstractNumber",
-      "specialissue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -628,26 +628,26 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+xissn+volume+page+annee"
+        "_name": "2Collation:TiC_FRE+_business.xissn+host.volume+page+annee"
       }
     }
   },
@@ -655,15 +655,15 @@
     "rule": "39",
     "non_empty": [
       "title.en",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate",
-      "xissn"
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -675,31 +675,31 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+xissn+volume+issue+page+annee"
+        "_name": "2Collation:TiC_ENG+_business.xissn+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -707,15 +707,15 @@
     "rule": "40",
     "non_empty": [
       "title.en",
-      "issue",
-      "pageRange",
-      "xPublicationDate",
-      "xissn"
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -727,26 +727,26 @@
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+xissn+issue+page+annee"
+        "_name": "2Collation:TiC_ENG+_business.xissn+host.issue+page+annee"
       }
     }
   },
@@ -754,14 +754,14 @@
     "rule": "41",
     "non_empty": [
       "title.en",
-      "volume",
-      "pageRange",
-      "xPublicationDate",
-      "xissn"
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -774,26 +774,26 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+xissn+volume+page+annee"
+        "_name": "2Collation:TiC_ENG+_business.xissn+host.volume+page+annee"
       }
     }
   },
@@ -873,7 +873,7 @@
     "rule": "156",
     "non_empty": [
       "title.default",
-      "isbn"
+      "host.isbn"
     ],
     "query": {
       "bool": {
@@ -885,11 +885,11 @@
           },
           {
             "match": {
-              "isbn.normalized": "isbn"
+              "host.isbn.normalized": "host.isbn"
             }
           }
         ],
-        "_name": "1ID:isbn+TiC"
+        "_name": "1ID:host.isbn+TiC"
       }
     }
   },
@@ -897,7 +897,7 @@
     "rule": "159",
     "non_empty": [
       "title.fr",
-      "isbn"
+      "host.isbn"
     ],
     "query": {
       "bool": {
@@ -909,11 +909,11 @@
           },
           {
             "match": {
-              "isbn.normalized": "isbn"
+              "host.isbn.normalized": "host.isbn"
             }
           }
         ],
-        "_name": "1ID:isbn+TiC_FRE"
+        "_name": "1ID:host.isbn+TiC_FRE"
       }
     }
   },
@@ -921,7 +921,7 @@
     "rule": "162",
     "non_empty": [
       "title.en",
-      "isbn"
+      "host.isbn"
     ],
     "query": {
       "bool": {
@@ -933,11 +933,11 @@
           },
           {
             "match": {
-              "isbn.normalized": "isbn"
+              "host.isbn.normalized": "host.isbn"
             }
           }
         ],
-        "_name": "1ID:isbn+TiC_ENG"
+        "_name": "1ID:host.isbn+TiC_ENG"
       }
     }
   },
@@ -946,7 +946,7 @@
     "non_empty": [
       "first3AuthorNames",
       "title.default",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -963,7 +963,7 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -976,7 +976,7 @@
     "non_empty": [
       "first3AuthorNames",
       "title.fr",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -993,7 +993,7 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -1006,7 +1006,7 @@
     "non_empty": [
       "first3AuthorNames",
       "title.en",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -1023,7 +1023,7 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -1036,7 +1036,7 @@
     "non_empty": [
       "first3AuthorNamesWithInitials",
       "title.default",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -1053,7 +1053,7 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -1066,7 +1066,7 @@
     "non_empty": [
       "first3AuthorNamesWithInitials",
       "title.fr",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -1083,7 +1083,7 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -1096,7 +1096,7 @@
     "non_empty": [
       "first3AuthorNamesWithInitials",
       "title.en",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -1113,7 +1113,7 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -1125,15 +1125,15 @@
     "rule": "192",
     "non_empty": [
       "title.en",
-      "title.journal",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.title",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -1145,26 +1145,26 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_Source+issue+page+annee"
+        "_name": "2Collation:TiC_ENG+Ti_Source+host.issue+page+annee"
       }
     }
   },
@@ -1172,14 +1172,14 @@
     "rule": "193",
     "non_empty": [
       "title.en",
-      "title.journal",
-      "volume",
-      "pageRange",
-      "xPublicationDate"
+      "host.title",
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -1192,26 +1192,26 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_Source+volume+page+annee"
+        "_name": "2Collation:TiC_ENG+Ti_Source+host.volume+page+annee"
       }
     }
   },
@@ -1219,15 +1219,15 @@
     "rule": "194",
     "non_empty": [
       "title.fr",
-      "title.journal",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.title",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -1239,26 +1239,26 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_Source+issue+page+annee"
+        "_name": "2Collation:TiC_FRE+Ti_Source+host.issue+page+annee"
       }
     }
   },
@@ -1266,14 +1266,14 @@
     "rule": "195",
     "non_empty": [
       "title.fr",
-      "title.journal",
-      "volume",
-      "pageRange",
-      "xPublicationDate"
+      "host.title",
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -1286,26 +1286,26 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_Source+volume+page+annee"
+        "_name": "2Collation:TiC_FRE+Ti_Source+host.volume+page+annee"
       }
     }
   },
@@ -1313,15 +1313,15 @@
     "rule": "196",
     "non_empty": [
       "title.default",
-      "title.journal",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.title",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -1333,26 +1333,26 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_Source+issue+page+annee"
+        "_name": "2Collation:TiC+Ti_Source+host.issue+page+annee"
       }
     }
   },
@@ -1360,14 +1360,14 @@
     "rule": "197",
     "non_empty": [
       "title.default",
-      "title.journal",
-      "volume",
-      "pageRange",
-      "xPublicationDate"
+      "host.title",
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -1380,26 +1380,26 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_Source+volume+page+annee"
+        "_name": "2Collation:TiC+Ti_Source+host.volume+page+annee"
       }
     }
   },
@@ -1407,15 +1407,15 @@
     "rule": "212",
     "non_empty": [
       "title.en",
-      "issue",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate",
-      "xissn"
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -1427,7 +1427,7 @@
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -1437,16 +1437,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+xissn+issue+numArt+annee"
+        "_name": "2Collation:TiC_ENG+_business.xissn+host.issue+numArt+annee"
       }
     }
   },
@@ -1454,15 +1454,15 @@
     "rule": "213",
     "non_empty": [
       "title.en",
-      "volume",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate",
-      "xissn"
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -1474,7 +1474,7 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -1484,16 +1484,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+xissn+volume+numArt+annee"
+        "_name": "2Collation:TiC_ENG+_business.xissn+host.volume+numArt+annee"
       }
     }
   },
@@ -1501,15 +1501,15 @@
     "rule": "216",
     "non_empty": [
       "title.fr",
-      "issue",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate",
-      "xissn"
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -1521,7 +1521,7 @@
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -1531,16 +1531,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+xissn+issue+numArt+annee"
+        "_name": "2Collation:TiC_FRE+_business.xissn+host.issue+numArt+annee"
       }
     }
   },
@@ -1548,15 +1548,15 @@
     "rule": "217",
     "non_empty": [
       "title.fr",
-      "volume",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate",
-      "xissn"
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -1568,7 +1568,7 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -1578,16 +1578,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+xissn+volume+numArt+annee"
+        "_name": "2Collation:TiC_FRE+_business.xissn+host.volume+numArt+annee"
       }
     }
   },
@@ -1595,15 +1595,15 @@
     "rule": "220",
     "non_empty": [
       "title.default",
-      "issue",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate",
-      "xissn"
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -1615,7 +1615,7 @@
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -1625,16 +1625,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC+xissn+issue+numArt+annee"
+        "_name": "2Collation:TiC+_business.xissn+host.issue+numArt+annee"
       }
     }
   },
@@ -1642,15 +1642,15 @@
     "rule": "221",
     "non_empty": [
       "title.default",
-      "volume",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate",
-      "xissn"
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -1662,7 +1662,7 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -1672,16 +1672,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC+xissn+volume+numArt+annee"
+        "_name": "2Collation:TiC+_business.xissn+host.volume+numArt+annee"
       }
     }
   },
@@ -1689,15 +1689,15 @@
     "rule": "229",
     "non_empty": [
       "title.fr",
-      "volume",
-      "issue",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate",
-      "xissn"
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -1709,12 +1709,12 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -1724,16 +1724,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+xissn+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC_FRE+_business.xissn+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -1741,15 +1741,15 @@
     "rule": "231",
     "non_empty": [
       "title.default",
-      "volume",
-      "issue",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate",
-      "xissn"
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -1761,12 +1761,12 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -1776,16 +1776,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC+xissn+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC+_business.xissn+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -1793,15 +1793,15 @@
     "rule": "232",
     "non_empty": [
       "title.en",
-      "volume",
-      "issue",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate",
-      "xissn"
+      "_business_xPublicationDate",
+      "_business.xissn"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -1813,12 +1813,12 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -1828,16 +1828,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+xissn+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC_ENG+_business.xissn+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -1845,15 +1845,15 @@
     "rule": "237",
     "non_empty": [
       "title.en",
-      "title.journal",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.title",
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -1865,31 +1865,31 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_Source+volume+issue+page+annee"
+        "_name": "2Collation:TiC_ENG+Ti_Source+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -1897,15 +1897,15 @@
     "rule": "238",
     "non_empty": [
       "title.fr",
-      "title.journal",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.title",
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -1917,31 +1917,31 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_Source+volume+issue+page+annee"
+        "_name": "2Collation:TiC_FRE+Ti_Source+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -1949,15 +1949,15 @@
     "rule": "239",
     "non_empty": [
       "title.default",
-      "title.journal",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.title",
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -1969,31 +1969,31 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_Source+volume+issue+page+annee"
+        "_name": "2Collation:TiC+Ti_Source+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -2001,15 +2001,15 @@
     "rule": "243",
     "non_empty": [
       "title.en",
-      "title.journal",
-      "volume",
-      "issue",
+      "host.title",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2021,17 +2021,17 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -2041,11 +2041,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_Source+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC_ENG+Ti_Source+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -2053,15 +2053,15 @@
     "rule": "244",
     "non_empty": [
       "title.fr",
-      "title.journal",
-      "volume",
-      "issue",
+      "host.title",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2073,17 +2073,17 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -2093,11 +2093,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_Source+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC_FRE+Ti_Source+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -2105,15 +2105,15 @@
     "rule": "245",
     "non_empty": [
       "title.default",
-      "title.journal",
-      "volume",
-      "issue",
+      "host.title",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2125,17 +2125,17 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -2145,11 +2145,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_Source+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC+Ti_Source+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -2157,24 +2157,24 @@
     "rule": "253",
     "non_empty": [
       "first3AuthorNames",
-      "isbn",
-      "pageRange"
+      "host.isbn",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
         "must": [
           {
             "match": {
-              "isbn.normalized": "isbn"
+              "host.isbn.normalized": "host.isbn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "3Auteurs+Collation:auteur+isbn+page"
+        "_name": "3Auteurs+Collation:auteur+host.isbn+page"
       }
     }
   },
@@ -2182,24 +2182,24 @@
     "rule": "254",
     "non_empty": [
       "first3AuthorNamesWithInitials",
-      "isbn",
-      "pageRange"
+      "host.isbn",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
         "must": [
           {
             "match": {
-              "isbn.normalized": "isbn"
+              "host.isbn.normalized": "host.isbn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "3Auteurs+Collation:auteur_init+isbn+page"
+        "_name": "3Auteurs+Collation:auteur_init+host.isbn+page"
       }
     }
   },
@@ -2207,20 +2207,20 @@
     "rule": "255",
     "non_empty": [
       "first3AuthorNames",
-      "title.monography",
-      "pageRange"
+      "host_title",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
         "must": [
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
@@ -2232,20 +2232,20 @@
     "rule": "256",
     "non_empty": [
       "first3AuthorNamesWithInitials",
-      "title.monography",
-      "pageRange"
+      "host_title",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
         "must": [
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
@@ -2257,15 +2257,15 @@
     "rule": "263",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -2277,26 +2277,26 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_SourceM+issue+page+annee"
+        "_name": "2Collation:TiC_ENG+Ti_SourceM+host.issue+page+annee"
       }
     }
   },
@@ -2304,14 +2304,14 @@
     "rule": "264",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "volume",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -2324,26 +2324,26 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_SourceM+volume+page+annee"
+        "_name": "2Collation:TiC_ENG+Ti_SourceM+host.volume+page+annee"
       }
     }
   },
@@ -2351,15 +2351,15 @@
     "rule": "265",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -2371,26 +2371,26 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_SourceM+issue+page+annee"
+        "_name": "2Collation:TiC_FRE+Ti_SourceM+host.issue+page+annee"
       }
     }
   },
@@ -2398,14 +2398,14 @@
     "rule": "266",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "volume",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -2418,26 +2418,26 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_SourceM+volume+page+annee"
+        "_name": "2Collation:TiC_FRE+Ti_SourceM+host.volume+page+annee"
       }
     }
   },
@@ -2445,15 +2445,15 @@
     "rule": "267",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -2465,26 +2465,26 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_SourceM+issue+page+annee"
+        "_name": "2Collation:TiC+Ti_SourceM+host.issue+page+annee"
       }
     }
   },
@@ -2492,14 +2492,14 @@
     "rule": "268",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "volume",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -2512,26 +2512,26 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_SourceM+volume+page+annee"
+        "_name": "2Collation:TiC+Ti_SourceM+host.volume+page+annee"
       }
     }
   },
@@ -2539,15 +2539,15 @@
     "rule": "275",
     "non_empty": [
       "title.en",
-      "title.journal",
-      "issue",
+      "host.title",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2559,12 +2559,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -2574,11 +2574,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_Source+issue+numArt+annee"
+        "_name": "2Collation:TiC_ENG+Ti_Source+host.issue+numArt+annee"
       }
     }
   },
@@ -2586,15 +2586,15 @@
     "rule": "276",
     "non_empty": [
       "title.en",
-      "title.journal",
-      "volume",
+      "host.title",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2606,12 +2606,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -2621,11 +2621,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_Source+volume+numArt+annee"
+        "_name": "2Collation:TiC_ENG+Ti_Source+host.volume+numArt+annee"
       }
     }
   },
@@ -2633,15 +2633,15 @@
     "rule": "277",
     "non_empty": [
       "title.fr",
-      "title.journal",
-      "issue",
+      "host.title",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2653,12 +2653,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -2668,11 +2668,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_Source+issue+numArt+annee"
+        "_name": "2Collation:TiC_FRE+Ti_Source+host.issue+numArt+annee"
       }
     }
   },
@@ -2680,15 +2680,15 @@
     "rule": "278",
     "non_empty": [
       "title.fr",
-      "title.journal",
-      "volume",
+      "host.title",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2700,12 +2700,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -2715,11 +2715,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_Source+volume+numArt+annee"
+        "_name": "2Collation:TiC_FRE+Ti_Source+host.volume+numArt+annee"
       }
     }
   },
@@ -2727,15 +2727,15 @@
     "rule": "279",
     "non_empty": [
       "title.default",
-      "title.journal",
-      "issue",
+      "host.title",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2747,12 +2747,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -2762,11 +2762,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_Source+issue+numArt+annee"
+        "_name": "2Collation:TiC+Ti_Source+host.issue+numArt+annee"
       }
     }
   },
@@ -2774,15 +2774,15 @@
     "rule": "280",
     "non_empty": [
       "title.default",
-      "title.journal",
-      "volume",
+      "host.title",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2794,12 +2794,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -2809,11 +2809,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_Source+volume+numArt+annee"
+        "_name": "2Collation:TiC+Ti_Source+host.volume+numArt+annee"
       }
     }
   },
@@ -2821,15 +2821,15 @@
     "rule": "287",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "issue",
+      "host_title",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2841,12 +2841,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -2856,11 +2856,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_SourceM+issue+numArt+annee"
+        "_name": "2Collation:TiC_ENG+Ti_SourceM+host.issue+numArt+annee"
       }
     }
   },
@@ -2868,15 +2868,15 @@
     "rule": "288",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "volume",
+      "host_title",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2888,12 +2888,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -2903,11 +2903,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_SourceM+volume+numArt+annee"
+        "_name": "2Collation:TiC_ENG+Ti_SourceM+host.volume+numArt+annee"
       }
     }
   },
@@ -2915,15 +2915,15 @@
     "rule": "289",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "issue",
+      "host_title",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2935,12 +2935,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -2950,11 +2950,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_SourceM+issue+numArt+annee"
+        "_name": "2Collation:TiC_FRE+Ti_SourceM+host.issue+numArt+annee"
       }
     }
   },
@@ -2962,15 +2962,15 @@
     "rule": "290",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "volume",
+      "host_title",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -2982,12 +2982,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -2997,11 +2997,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_SourceM+volume+numArt+annee"
+        "_name": "2Collation:TiC_FRE+Ti_SourceM+host.volume+numArt+annee"
       }
     }
   },
@@ -3009,15 +3009,15 @@
     "rule": "291",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "issue",
+      "host_title",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3029,12 +3029,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -3044,11 +3044,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_SourceM+issue+numArt+annee"
+        "_name": "2Collation:TiC+Ti_SourceM+host.issue+numArt+annee"
       }
     }
   },
@@ -3056,15 +3056,15 @@
     "rule": "292",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "volume",
+      "host_title",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3076,12 +3076,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -3091,11 +3091,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_SourceM+volume+numArt+annee"
+        "_name": "2Collation:TiC+Ti_SourceM+host.volume+numArt+annee"
       }
     }
   },
@@ -3103,15 +3103,15 @@
     "rule": "296",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -3123,31 +3123,31 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_SourceM+volume+issue+page+annee"
+        "_name": "2Collation:TiC_ENG+Ti_SourceM+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -3155,15 +3155,15 @@
     "rule": "297",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -3175,31 +3175,31 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_SourceM+volume+issue+page+annee"
+        "_name": "2Collation:TiC_FRE+Ti_SourceM+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -3207,15 +3207,15 @@
     "rule": "298",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -3227,31 +3227,31 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_SourceM+volume+issue+page+annee"
+        "_name": "2Collation:TiC+Ti_SourceM+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -3259,15 +3259,15 @@
     "rule": "302",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "volume",
-      "issue",
+      "host_title",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3279,17 +3279,17 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -3299,11 +3299,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_SourceM+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC_ENG+Ti_SourceM+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -3311,15 +3311,15 @@
     "rule": "303",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "volume",
-      "issue",
+      "host_title",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3331,17 +3331,17 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -3351,11 +3351,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_SourceM+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC_FRE+Ti_SourceM+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -3363,15 +3363,15 @@
     "rule": "304",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "volume",
-      "issue",
+      "host_title",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3383,17 +3383,17 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -3403,11 +3403,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_SourceM+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC+Ti_SourceM+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -3415,15 +3415,15 @@
     "rule": "311",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -3435,26 +3435,26 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+MeetingTitle+issue+page+annee"
+        "_name": "2Collation:TiC_ENG+MeetingTitle+host.issue+page+annee"
       }
     }
   },
@@ -3462,14 +3462,14 @@
     "rule": "312",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "volume",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -3482,26 +3482,26 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+MeetingTitle+volume+page+annee"
+        "_name": "2Collation:TiC_ENG+MeetingTitle+host.volume+page+annee"
       }
     }
   },
@@ -3509,15 +3509,15 @@
     "rule": "313",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -3529,26 +3529,26 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+MeetingTitle+issue+page+annee"
+        "_name": "2Collation:TiC_FRE+MeetingTitle+host.issue+page+annee"
       }
     }
   },
@@ -3556,14 +3556,14 @@
     "rule": "314",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "volume",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -3576,26 +3576,26 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+MeetingTitle+volume+page+annee"
+        "_name": "2Collation:TiC_FRE+MeetingTitle+host.volume+page+annee"
       }
     }
   },
@@ -3603,15 +3603,15 @@
     "rule": "315",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -3623,26 +3623,26 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+MeetingTitle+issue+page+annee"
+        "_name": "2Collation:TiC+MeetingTitle+host.issue+page+annee"
       }
     }
   },
@@ -3650,14 +3650,14 @@
     "rule": "316",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "volume",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.volume",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
+      "host.issue",
+      "specialhost.issue",
       "meetingAbstractNumber"
     ],
     "query": {
@@ -3670,26 +3670,26 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+MeetingTitle+volume+page+annee"
+        "_name": "2Collation:TiC+MeetingTitle+host.volume+page+annee"
       }
     }
   },
@@ -3697,15 +3697,15 @@
     "rule": "323",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "issue",
+      "host.conference.name",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3717,12 +3717,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -3732,11 +3732,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+MeetingTitle+issue+numArt+annee"
+        "_name": "2Collation:TiC_ENG+MeetingTitle+host.issue+numArt+annee"
       }
     }
   },
@@ -3744,15 +3744,15 @@
     "rule": "324",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "volume",
+      "host.conference.name",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3764,12 +3764,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -3779,11 +3779,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+MeetingTitle+volume+numArt+annee"
+        "_name": "2Collation:TiC_ENG+MeetingTitle+host.volume+numArt+annee"
       }
     }
   },
@@ -3791,15 +3791,15 @@
     "rule": "325",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "issue",
+      "host.conference.name",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3811,12 +3811,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -3826,11 +3826,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+MeetingTitle+issue+numArt+annee"
+        "_name": "2Collation:TiC_FRE+MeetingTitle+host.issue+numArt+annee"
       }
     }
   },
@@ -3838,15 +3838,15 @@
     "rule": "326",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "volume",
+      "host.conference.name",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3858,12 +3858,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -3873,11 +3873,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+MeetingTitle+volume+numArt+annee"
+        "_name": "2Collation:TiC_FRE+MeetingTitle+host.volume+numArt+annee"
       }
     }
   },
@@ -3885,15 +3885,15 @@
     "rule": "327",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "issue",
+      "host.conference.name",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue",
-      "pageRange"
+      "host.volume",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3905,12 +3905,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -3920,11 +3920,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+MeetingTitle+issue+numArt+annee"
+        "_name": "2Collation:TiC+MeetingTitle+host.issue+numArt+annee"
       }
     }
   },
@@ -3932,15 +3932,15 @@
     "rule": "328",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "volume",
+      "host.conference.name",
+      "host.volume",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue",
-      "pageRange"
+      "host.issue",
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -3952,12 +3952,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -3967,11 +3967,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+MeetingTitle+volume+numArt+annee"
+        "_name": "2Collation:TiC+MeetingTitle+host.volume+numArt+annee"
       }
     }
   },
@@ -3979,15 +3979,15 @@
     "rule": "332",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -3999,31 +3999,31 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+MeetingTitle+volume+issue+page+annee"
+        "_name": "2Collation:TiC_ENG+MeetingTitle+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -4031,15 +4031,15 @@
     "rule": "333",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4051,31 +4051,31 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+MeetingTitle+volume+issue+page+annee"
+        "_name": "2Collation:TiC_FRE+MeetingTitle+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -4083,15 +4083,15 @@
     "rule": "334",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "volume",
-      "issue",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.volume",
+      "host.issue",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "is_empty": [
       "meetingAbstractNumber",
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4103,31 +4103,31 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+MeetingTitle+volume+issue+page+annee"
+        "_name": "2Collation:TiC+MeetingTitle+host.volume+host.issue+page+annee"
       }
     }
   },
@@ -4135,15 +4135,15 @@
     "rule": "338",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "volume",
-      "issue",
+      "host.conference.name",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -4155,17 +4155,17 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4175,11 +4175,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+MeetingTitle+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC_ENG+MeetingTitle+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -4187,15 +4187,15 @@
     "rule": "339",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "volume",
-      "issue",
+      "host.conference.name",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -4207,17 +4207,17 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4227,11 +4227,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+MeetingTitle+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC_FRE+MeetingTitle+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -4239,15 +4239,15 @@
     "rule": "340",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "volume",
-      "issue",
+      "host.conference.name",
+      "host.volume",
+      "host.issue",
       "articleNumber",
-      "xPublicationDate"
+      "_business_xPublicationDate"
     ],
     "is_empty": [
-      "specialIssue",
-      "pageRange"
+      "specialhost.issue",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -4259,17 +4259,17 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4279,11 +4279,11 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
-        "_name": "2Collation:TiC+MeetingTitle+volume+issue+numArt+annee"
+        "_name": "2Collation:TiC+MeetingTitle+host.volume+host.issue+numArt+annee"
       }
     }
   },
@@ -4291,15 +4291,15 @@
     "rule": "347",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "issue",
+      "host.conference.name",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4311,12 +4311,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4326,16 +4326,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+MeetingTitle+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+MeetingTitle+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4343,15 +4343,15 @@
     "rule": "348",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "volume",
+      "host.conference.name",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4363,12 +4363,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -4378,16 +4378,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+MeetingTitle+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+MeetingTitle+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4395,15 +4395,15 @@
     "rule": "349",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "issue",
+      "host.conference.name",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4415,12 +4415,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4430,16 +4430,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+MeetingTitle+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+MeetingTitle+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4447,15 +4447,15 @@
     "rule": "350",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "volume",
+      "host.conference.name",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4467,12 +4467,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -4482,16 +4482,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+MeetingTitle+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+MeetingTitle+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4499,15 +4499,15 @@
     "rule": "351",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "issue",
+      "host.conference.name",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4519,12 +4519,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4534,16 +4534,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+MeetingTitle+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+MeetingTitle+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4551,15 +4551,15 @@
     "rule": "352",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "volume",
+      "host.conference.name",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4571,12 +4571,12 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -4586,16 +4586,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+MeetingTitle+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+MeetingTitle+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4603,15 +4603,15 @@
     "rule": "356",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "volume",
-      "issue",
+      "host.conference.name",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4623,17 +4623,17 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4643,16 +4643,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+MeetingTitle+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+MeetingTitle+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4660,15 +4660,15 @@
     "rule": "357",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "volume",
-      "issue",
+      "host.conference.name",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4680,17 +4680,17 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4700,16 +4700,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+MeetingTitle+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+MeetingTitle+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4717,15 +4717,15 @@
     "rule": "358",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "volume",
-      "issue",
+      "host.conference.name",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4737,17 +4737,17 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4757,16 +4757,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+MeetingTitle+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+MeetingTitle+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4774,15 +4774,15 @@
     "rule": "365",
     "non_empty": [
       "title.en",
-      "title.journal",
-      "issue",
+      "host.title",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4794,12 +4794,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4809,16 +4809,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_Source+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+Ti_Source+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4826,15 +4826,15 @@
     "rule": "366",
     "non_empty": [
       "title.en",
-      "title.journal",
-      "volume",
+      "host.title",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4846,12 +4846,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -4861,16 +4861,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_Source+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+Ti_Source+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4878,15 +4878,15 @@
     "rule": "367",
     "non_empty": [
       "title.fr",
-      "title.journal",
-      "issue",
+      "host.title",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4898,12 +4898,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -4913,16 +4913,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_Source+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+Ti_Source+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4930,15 +4930,15 @@
     "rule": "368",
     "non_empty": [
       "title.fr",
-      "title.journal",
-      "volume",
+      "host.title",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -4950,12 +4950,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -4965,16 +4965,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_Source+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+Ti_Source+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -4982,15 +4982,15 @@
     "rule": "369",
     "non_empty": [
       "title.default",
-      "title.journal",
-      "issue",
+      "host.title",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5002,12 +5002,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5017,16 +5017,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_Source+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+Ti_Source+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5034,15 +5034,15 @@
     "rule": "370",
     "non_empty": [
       "title.default",
-      "title.journal",
-      "volume",
+      "host.title",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5054,12 +5054,12 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -5069,16 +5069,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_Source+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+Ti_Source+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5086,15 +5086,15 @@
     "rule": "374",
     "non_empty": [
       "title.en",
-      "title.journal",
-      "volume",
-      "issue",
+      "host.title",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5106,17 +5106,17 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5126,16 +5126,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_Source+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+Ti_Source+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5143,15 +5143,15 @@
     "rule": "375",
     "non_empty": [
       "title.fr",
-      "title.journal",
-      "volume",
-      "issue",
+      "host.title",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5163,17 +5163,17 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5183,16 +5183,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_Source+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+Ti_Source+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5200,15 +5200,15 @@
     "rule": "376",
     "non_empty": [
       "title.default",
-      "title.journal",
-      "volume",
-      "issue",
+      "host.title",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5220,17 +5220,17 @@
           },
           {
             "match": {
-              "title.journal.normalized": "title.journal"
+              "host.title.normalized": "host.title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5240,16 +5240,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_Source+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+Ti_Source+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5257,15 +5257,15 @@
     "rule": "383",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "issue",
+      "host_title",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5277,12 +5277,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5292,16 +5292,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_SourceM+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+Ti_SourceM+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5309,15 +5309,15 @@
     "rule": "384",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "volume",
+      "host_title",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5329,12 +5329,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -5344,16 +5344,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_SourceM+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+Ti_SourceM+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5361,15 +5361,15 @@
     "rule": "385",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "issue",
+      "host_title",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5381,12 +5381,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5396,16 +5396,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_SourceM+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+Ti_SourceM+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5413,15 +5413,15 @@
     "rule": "386",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "volume",
+      "host_title",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5433,12 +5433,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -5448,16 +5448,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_SourceM+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+Ti_SourceM+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5465,15 +5465,15 @@
     "rule": "387",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "issue",
+      "host_title",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5485,12 +5485,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5500,16 +5500,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_SourceM+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+Ti_SourceM+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5517,15 +5517,15 @@
     "rule": "388",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "volume",
+      "host_title",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5537,12 +5537,12 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -5552,16 +5552,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_SourceM+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+Ti_SourceM+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5569,15 +5569,15 @@
     "rule": "392",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "volume",
-      "issue",
+      "host_title",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5589,17 +5589,17 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5609,16 +5609,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+Ti_SourceM+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+Ti_SourceM+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5626,15 +5626,15 @@
     "rule": "393",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "volume",
-      "issue",
+      "host_title",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5646,17 +5646,17 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5666,16 +5666,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+Ti_SourceM+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+Ti_SourceM+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5683,15 +5683,15 @@
     "rule": "394",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "volume",
-      "issue",
+      "host_title",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "pageRange"
+      "_business_xPublicationDate",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -5703,17 +5703,17 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -5723,16 +5723,16 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+Ti_SourceM+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+Ti_SourceM+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -5740,9 +5740,9 @@
     "rule": "395",
     "non_empty": [
       "title.fr",
-      "title.monography",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -5754,17 +5754,17 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -5776,9 +5776,9 @@
     "rule": "396",
     "non_empty": [
       "title.en",
-      "title.monography",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -5790,17 +5790,17 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -5812,9 +5812,9 @@
     "rule": "397",
     "non_empty": [
       "title.default",
-      "title.monography",
-      "pageRange",
-      "xPublicationDate"
+      "host_title",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -5826,17 +5826,17 @@
           },
           {
             "match": {
-              "title.monography.normalized": "title.monography"
+              "host_title.normalized": "host_title"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -5848,8 +5848,8 @@
     "rule": "398",
     "non_empty": [
       "title.default",
-      "isbn",
-      "pageRange"
+      "host.isbn",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -5861,16 +5861,16 @@
           },
           {
             "match": {
-              "isbn.normalized": "isbn"
+              "host.isbn.normalized": "host.isbn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+isbn+page"
+        "_name": "2Collation:TiC+host.isbn+page"
       }
     }
   },
@@ -5878,8 +5878,8 @@
     "rule": "399",
     "non_empty": [
       "title.fr",
-      "isbn",
-      "pageRange"
+      "host.isbn",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -5891,16 +5891,16 @@
           },
           {
             "match": {
-              "isbn.normalized": "isbn"
+              "host.isbn.normalized": "host.isbn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+isbn+page"
+        "_name": "2Collation:TiC_FRE+host.isbn+page"
       }
     }
   },
@@ -5908,8 +5908,8 @@
     "rule": "400",
     "non_empty": [
       "title.en",
-      "isbn",
-      "pageRange"
+      "host.isbn",
+      "host.pages.range"
     ],
     "query": {
       "bool": {
@@ -5921,16 +5921,16 @@
           },
           {
             "match": {
-              "isbn.normalized": "isbn"
+              "host.isbn.normalized": "host.isbn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+isbn+page"
+        "_name": "2Collation:TiC_ENG+host.isbn+page"
       }
     }
   },
@@ -5938,9 +5938,9 @@
     "rule": "404",
     "non_empty": [
       "title.default",
-      "title.meeting",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -5952,17 +5952,17 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -5974,9 +5974,9 @@
     "rule": "405",
     "non_empty": [
       "title.fr",
-      "title.meeting",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -5988,17 +5988,17 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -6010,9 +6010,9 @@
     "rule": "406",
     "non_empty": [
       "title.en",
-      "title.meeting",
-      "pageRange",
-      "xPublicationDate"
+      "host.conference.name",
+      "host.pages.range",
+      "_business_xPublicationDate"
     ],
     "query": {
       "bool": {
@@ -6024,17 +6024,17 @@
           },
           {
             "match": {
-              "title.meeting.normalized": "title.meeting"
+              "host.conference.name.normalized": "host.conference.name"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           }
         ],
@@ -6190,15 +6190,15 @@
     "rule": "422",
     "non_empty": [
       "title.en",
-      "issue",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "xissn",
-      "pageRange"
+      "_business_xPublicationDate",
+      "_business.xissn",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -6210,7 +6210,7 @@
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -6220,21 +6220,21 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+xissn+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+_business.xissn+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -6242,15 +6242,15 @@
     "rule": "423",
     "non_empty": [
       "title.en",
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "xissn",
-      "pageRange"
+      "_business_xPublicationDate",
+      "_business.xissn",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -6262,7 +6262,7 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -6272,21 +6272,21 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+xissn+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+_business.xissn+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -6294,15 +6294,15 @@
     "rule": "424",
     "non_empty": [
       "title.fr",
-      "issue",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "xissn",
-      "pageRange"
+      "_business_xPublicationDate",
+      "_business.xissn",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -6314,7 +6314,7 @@
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -6324,21 +6324,21 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+xissn+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+_business.xissn+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -6346,15 +6346,15 @@
     "rule": "425",
     "non_empty": [
       "title.fr",
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "xissn",
-      "pageRange"
+      "_business_xPublicationDate",
+      "_business.xissn",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -6366,7 +6366,7 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -6376,21 +6376,21 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+xissn+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+_business.xissn+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -6398,15 +6398,15 @@
     "rule": "426",
     "non_empty": [
       "title.default",
-      "issue",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "xissn",
-      "pageRange"
+      "_business_xPublicationDate",
+      "_business.xissn",
+      "host.pages.range"
     ],
     "is_empty": [
-      "volume",
-      "specialIssue"
+      "host.volume",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -6418,7 +6418,7 @@
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -6428,21 +6428,21 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+xissn+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+_business.xissn+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -6450,15 +6450,15 @@
     "rule": "427",
     "non_empty": [
       "title.default",
-      "volume",
+      "host.volume",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "xissn",
-      "pageRange"
+      "_business_xPublicationDate",
+      "_business.xissn",
+      "host.pages.range"
     ],
     "is_empty": [
-      "issue",
-      "specialIssue"
+      "host.issue",
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -6470,7 +6470,7 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
@@ -6480,21 +6480,21 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+xissn+volume+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+_business.xissn+host.volume+meetingAbstractNumber+annee"
       }
     }
   },
@@ -6502,15 +6502,15 @@
     "rule": "431",
     "non_empty": [
       "title.fr",
-      "volume",
-      "issue",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "xissn",
-      "pageRange"
+      "_business_xPublicationDate",
+      "_business.xissn",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -6522,12 +6522,12 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -6537,21 +6537,21 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_FRE+xissn+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_FRE+_business.xissn+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -6559,15 +6559,15 @@
     "rule": "432",
     "non_empty": [
       "title.default",
-      "volume",
-      "issue",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "xissn",
-      "pageRange"
+      "_business_xPublicationDate",
+      "_business.xissn",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -6579,12 +6579,12 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -6594,21 +6594,21 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC+xissn+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC+_business.xissn+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
@@ -6616,15 +6616,15 @@
     "rule": "433",
     "non_empty": [
       "title.en",
-      "volume",
-      "issue",
+      "host.volume",
+      "host.issue",
       "meetingAbstractNumber",
-      "xPublicationDate",
-      "xissn",
-      "pageRange"
+      "_business_xPublicationDate",
+      "_business.xissn",
+      "host.pages.range"
     ],
     "is_empty": [
-      "specialIssue"
+      "specialhost.issue"
     ],
     "query": {
       "bool": {
@@ -6636,12 +6636,12 @@
           },
           {
             "match": {
-              "volume.normalized": "volume"
+              "host.volume.normalized": "host.volume"
             }
           },
           {
             "match": {
-              "issue.normalized": "issue"
+              "host.issue.normalized": "host.issue"
             }
           },
           {
@@ -6651,21 +6651,21 @@
           },
           {
             "match": {
-              "xPublicationDate": "xPublicationDate"
+              "_business_xPublicationDate": "_business_xPublicationDate"
             }
           },
           {
             "match": {
-              "xissn": "xissn"
+              "_business.xissn": "_business.xissn"
             }
           },
           {
             "match": {
-              "pageRange.normalized": "pageRange"
+              "host.pages.range.normalized": "host.pages.range"
             }
           }
         ],
-        "_name": "2Collation:TiC_ENG+xissn+volume+issue+meetingAbstractNumber+annee"
+        "_name": "2Collation:TiC_ENG+_business.xissn+host.volume+host.issue+meetingAbstractNumber+annee"
       }
     }
   },
