@@ -108,7 +108,7 @@
         {
           "name": "fullname",
           "type": "simpleString",
-          "path": "concat(/TEI:author/TEI:persName/TEI:forename,' ',/TEI:author/TEI:persName/TEI:surname)"
+          "path": "normalize-space(concat(/TEI:author/TEI:persName/TEI:forename,' ',/TEI:author/TEI:persName/TEI:surname))"
         },
         {
           "name": "halAuthorId",
@@ -587,7 +587,7 @@
           {
             "name": "author",
             "type": "bloc",
-            "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']//TEI:term[@xml:lang='fr']",
+            "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='author']/TEI:term[@xml:lang='fr']",
             "fields": {
               "type": "simpleString",
               "path": "."
@@ -598,8 +598,19 @@
             "type": "bloc",
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='fmesh']",
             "fields": {
-              "type": "simpleString",
-              "path": "concat(//TEI:term[@xml:lang='fr'][@type='topicalName'],'--',//TEI:term[@xml:lang='fr'][@type='subdivisionTopic'])"
+              "type": "array",
+              "concat": true,
+              "separator": "--",
+              "fields": [
+                {
+                  "type": "simpleString",
+                  "path": "//TEI:term[@xml:lang='fr'][@type='topicalName']/TEI:term"
+                },
+                {
+                  "type": "simpleString",
+                  "path": "//TEI:term[@xml:lang='fr'][@type='subdivisionTopic']/TEI:term"
+                }
+              ]
             }
           },
           {
@@ -607,8 +618,19 @@
             "type": "bloc",
             "path": "//TEI:body//TEI:profileDesc//TEI:textClass//TEI:keywords[@scheme='rameau']",
             "fields": {
-              "type": "simpleString",
-              "path": "concat(//TEI:term[@xml:lang='fr'][@type='topicalName'],'--',//TEI:term[@xml:lang='fr'][@type='subdivisionTopic'])"
+              "type": "array",
+              "concat": true,
+              "separator": "--",
+              "fields": [
+                {
+                  "type": "simpleString",
+                  "path": "//TEI:term[@xml:lang='fr'][@type='topicalName']/TEI:term"
+                },
+                {
+                  "type": "simpleString",
+                  "path": "//TEI:term[@xml:lang='fr'][@type='subdivisionTopic']/TEI:term"
+                }
+              ]
             }
           }
         ]
