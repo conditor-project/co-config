@@ -187,7 +187,7 @@
     "path": "//TEI:body//TEI:biblFull/TEI:sourceDesc/TEI:biblStruct//TEI:idno[@type='bibcode']"
   },
   {
-    "name": "_business",
+    "name": "business",
     "type": "object",
     "fields": [
       {

@@ -44,7 +44,7 @@
     }
   ],
   "bibCode": "STRING",
-  "_business": {
+  "business": {
     "duplicateGenre": "STRING",
     "duplicates": [
       {
@@ -455,7 +455,7 @@
   "source": "STRING",
   "sourceId": "STRING",
   "sourceUid": "STRING",
-  "_technical": {
+  "technical": {
     "sessionName": "STRING",
     "creationDate": "STRING",
     "modificationDate": "STRING",
