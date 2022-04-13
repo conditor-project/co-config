@@ -24,7 +24,12 @@
       "MEM": "Thèse",
       "PRESCONF": "Autre",
       "OTHERREPORT": "Autre",
-      "NOTE": "Autre"
+      "NOTE": "Autre",
+      "MEMLIC":"Thèse",
+      "CREPORT":"Rapport",
+      "REPACT":"Rapport",
+      "SYNTHESE":"Rapport",
+      "ETABTHESE":"Thèse"
     }
   },
   {
