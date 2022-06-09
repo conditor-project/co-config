@@ -466,15 +466,6 @@
         "path": "//TEI:body//TEI:biblScope[@unit='issue']"
       },
       {
-        "name": "language",
-        "type": "bloc",
-        "path": "//TEI:body//TEI:profileDesc//TEI:langUsage/TEI:language",
-        "fields": {
-          "type": "simpleString",
-          "path": "."
-        }
-      },
-      {
         "name": "otherNumber",
         "type": "simpleString",
         "path": "//TEI:body//TEI:biblFull//TEI:idno[@type='otherNumber']"
@@ -651,6 +642,15 @@
         ]
       }
     ]
+  },
+  {
+    "name": "language",
+    "type": "bloc",
+    "path": "//TEI:body//TEI:profileDesc//TEI:langUsage/TEI:language",
+    "fields": {
+    "type": "simpleString",
+    "path": "."
+    }
   },
   {
     "name": "localRef",
